@@ -12,6 +12,9 @@
 		5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FA19A1519500DBFDA0 /* Main.storyboard */; };
 		5EE523FE19A1519500DBFDA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FD19A1519500DBFDA0 /* Images.xcassets */; };
 		5EE5240A19A1519500DBFDA0 /* ManhattanForumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5240919A1519500DBFDA0 /* ManhattanForumTests.swift */; };
+		5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241619A166F200DBFDA0 /* Credentials.swift */; };
+		5EE5241919A1676700DBFDA0 /* Credentials.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241819A1676700DBFDA0 /* Credentials.example.plist */; };
+		5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */; };
 		A20DA45C23214A0FAE2C43C8 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,9 @@
 		5EE5240819A1519500DBFDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5EE5240919A1519500DBFDA0 /* ManhattanForumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManhattanForumTests.swift; sourceTree = "<group>"; };
 		5EE5241319A155CE00DBFDA0 /* ManhattanForum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ManhattanForum-Bridging-Header.h"; path = "ManhattanForum/ManhattanForum-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		5EE5241619A166F200DBFDA0 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		5EE5241819A1676700DBFDA0 /* Credentials.example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.example.plist; sourceTree = "<group>"; };
+		5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
 		F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.xcconfig"; path = "Pods/Pods-ManhattanForum.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +93,7 @@
 				5EE523FA19A1519500DBFDA0 /* Main.storyboard */,
 				5EE523FD19A1519500DBFDA0 /* Images.xcassets */,
 				5EE523F419A1519500DBFDA0 /* Supporting Files */,
+				5EE5241619A166F200DBFDA0 /* Credentials.swift */,
 			);
 			path = ManhattanForum;
 			sourceTree = "<group>";
@@ -96,6 +103,8 @@
 			children = (
 				5EE5241319A155CE00DBFDA0 /* ManhattanForum-Bridging-Header.h */,
 				5EE523F519A1519500DBFDA0 /* Info.plist */,
+				5EE5241819A1676700DBFDA0 /* Credentials.example.plist */,
+				5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,8 +216,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */,
 				5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */,
 				5EE523FE19A1519500DBFDA0 /* Images.xcassets in Resources */,
+				5EE5241919A1676700DBFDA0 /* Credentials.example.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */,
 				5EE523F919A1519500DBFDA0 /* ViewController.swift in Sources */,
 				5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */,
 			);
@@ -314,6 +326,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENVIRONMENT = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -381,6 +394,7 @@
 				INFOPLIST_FILE = ManhattanForum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -397,6 +411,7 @@
 				INFOPLIST_FILE = ManhattanForum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D RELEASE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 			};
