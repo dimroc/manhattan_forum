@@ -5,4 +5,4 @@
 #import "DynamoDB.h"
 #import "S3.h"
 #import "Cognito.h"
-#import "RNCryptor.h"
+#import "RNDecryptor.h"

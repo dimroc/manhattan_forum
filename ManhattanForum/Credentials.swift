@@ -32,6 +32,16 @@ class Credentials {
     }
     
     func objectForKey(key: NSString) -> NSString {
-        return credentials.objectForKey(key) as NSString
+        let encrypted = credentials.objectForKey(key) as NSString
+        return decrypt(encrypted)
+    }
+    
+    func decrypt(value: NSString) -> NSString {
+        let data = NSData(base64EncodedString: value, options: NSDataBase64DecodingOptions.fromRaw(0)!)
+        var error = NSErrorPointer()
+        let decrypted = RNDecryptor.decryptData(data, withPassword: NSStringFromClass(AppDelegate), error: error)
+        let rval = NSString(data: decrypted, encoding: NSUTF8StringEncoding)
+        assert(rval != nil)
+        return rval
     }
 }
