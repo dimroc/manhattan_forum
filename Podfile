@@ -2,9 +2,8 @@
 platform :ios, "7.0"
 
 target "ManhattanForum" do
-  pod "AWSiOSSDKv2"
-  pod "AWSCognitoSync"
   pod "RNCryptor"
+  pod "Parse"
 end
 
 target "ManhattanForumTests" do

@@ -34,5 +34,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FacebookAppID</key>
+	<string>329730807190401</string>
+	<key>FacebookDisplayName</key>
+	<string>CityForum-dev</string>
 </dict>
 </plist>

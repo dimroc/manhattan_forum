@@ -32,8 +32,8 @@ class Credentials {
     }
     
     func objectForKey(key: NSString) -> NSString {
-        let encrypted = credentials.objectForKey(key) as NSString
-        return decrypt(encrypted)
+        let rval = credentials.objectForKey(key) as NSString
+        return rval
     }
     
     func decrypt(value: NSString) -> NSString {

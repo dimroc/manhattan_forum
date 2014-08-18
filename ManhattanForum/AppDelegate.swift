@@ -14,28 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
+    func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
-        let credentialsProvider = AWSStaticCredentialsProvider.credentialsWithAccessKey(
-            Credentials.objectForKey("AWS_ACCESS_KEY"),
-            secretKey: Credentials.objectForKey("AWS_SECRET_KEY"))
-        
-        let defaultServiceConfiguration = AWSServiceConfiguration(region: AWSRegionType.USEast1, credentialsProvider: credentialsProvider)
-        AWSServiceManager.defaultServiceManager().setDefaultServiceConfiguration(defaultServiceConfiguration)
-        
-        let dynamoDB = AWSDynamoDB.defaultDynamoDB()
-        let listTableInput = AWSDynamoDBListTablesInput()
-        dynamoDB.listTables(listTableInput).continueWithBlock{
-            (task: BFTask!) -> AnyObject! in
-            let listTablesOutput = task.result() as AWSDynamoDBListTablesOutput
-            
-            for tableName : AnyObject in listTablesOutput.tableNames {
-                println("\(tableName)")
-            }
-            
-            return nil
-        }
-        
+        ParseHelper.launch(launchOptions)
         return true
     }
 
