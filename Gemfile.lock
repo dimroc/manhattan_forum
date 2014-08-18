@@ -1,0 +1,23 @@
+GIT
+  remote: git@github.com:RNCryptor/ruby_rncryptor.git
+  revision: 5fff939759d04c6e6c73f2cb35fec59e50445912
+  specs:
+    ruby_rncryptor (3.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.0)
+    method_source (0.8.2)
+    pry (0.10.1)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pry
+  ruby_rncryptor!
