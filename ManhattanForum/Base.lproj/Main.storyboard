@@ -118,7 +118,7 @@
         <!--Topics-->
         <scene sceneID="dTL-qB-AUX">
             <objects>
-                <tableViewController id="PUh-eJ-EnZ" customClass="TopicsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PUh-eJ-EnZ" userLabel="Topics" customClass="TopicsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WZh-KA-h0C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +139,9 @@
                             <outlet property="delegate" destination="PUh-eJ-EnZ" id="nSW-fL-5Cw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Topics" id="6Wv-jC-BSg"/>
+                    <navigationItem key="navigationItem" title="Topics" id="iDh-La-eqh" userLabel="Topics">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Vf0-ix-la0"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSP-uX-LD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK5-B1-cIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="-127"/>
+            <point key="canvasLocation" x="780" y="-127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="A9o-Rr-QGi">
