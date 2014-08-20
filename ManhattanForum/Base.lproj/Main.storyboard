@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sdj-D8-bEI">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
@@ -109,7 +108,9 @@
                             <outlet property="delegate" destination="fUO-T8-Qmn" id="ySU-gv-Aq9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Boroughs" id="iSQ-vF-hOH"/>
+                    <navigationItem key="navigationItem" title="Boroughs" id="iSQ-vF-hOH">
+                        <barButtonItem key="leftBarButtonItem" image="lines" id="2WD-Jj-ogD"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNu-XO-iJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -179,7 +180,7 @@
         <scene sceneID="A9o-Rr-QGi">
             <objects>
                 <navigationController id="sdj-D8-bEI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vFt-eW-A7f">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" backIndicatorTransitionMaskImage="back" id="vFt-eW-A7f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -192,6 +193,10 @@
             <point key="canvasLocation" x="-513" y="-127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="11" height="21"/>
+        <image name="lines" width="100" height="100"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
@@ -203,4 +208,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="vBc-Rz-8zg"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
