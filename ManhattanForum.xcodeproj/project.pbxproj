@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DE44A19A6206A00441F43 /* DismissSegue.swift */; };
+		5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */; };
 		5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F619A1519500DBFDA0 /* AppDelegate.swift */; };
 		5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */; };
 		5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FA19A1519500DBFDA0 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0DE44A19A6206A00441F43 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
 		5EE523F119A1519500DBFDA0 /* ManhattanForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE523F519A1519500DBFDA0 /* Info.debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.debug.plist; sourceTree = "<group>"; };
 		5EE523F619A1519500DBFDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ManhattanForum/AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E0DE44919A6203800441F43 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E0DE44A19A6206A00441F43 /* DismissSegue.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		5EE523E819A1519500DBFDA0 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +107,7 @@
 			children = (
 				5EE5242019A4473E00DBFDA0 /* Misc */,
 				5EE5242119A4474B00DBFDA0 /* Controllers */,
+				5E0DE44919A6203800441F43 /* Views */,
 				5EE5242219A4478A00DBFDA0 /* User Interface */,
 				5EE523F419A1519500DBFDA0 /* Supporting Files */,
 			);
@@ -143,6 +156,7 @@
 			children = (
 				5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */,
 				5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */,
+				5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -301,6 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */,
+				5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */,
+				5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */,
 				5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */,
 				5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */,
 				5EE5241F19A446E000DBFDA0 /* TopicsViewController.swift in Sources */,
@@ -424,7 +440,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +457,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ManhattanForum/Info.release.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D RELEASE";
 				PRODUCT_NAME = "$(TARGET_NAME)";

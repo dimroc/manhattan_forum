@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sdj-D8-bEI">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
@@ -116,6 +117,31 @@
             </objects>
             <point key="canvasLocation" x="-87" y="-127"/>
         </scene>
+        <!--Create Topic View Controller-->
+        <scene sceneID="8ct-1E-TZy">
+            <objects>
+                <viewController id="CS7-7F-IgI" customClass="CreateTopicViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ofa-iA-VIc"/>
+                        <viewControllerLayoutGuide type="bottom" id="XjK-2x-ktH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3u0-UW-oJx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9l7-tt-XbK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="y8S-Jn-A3Q">
+                            <connections>
+                                <segue destination="PUh-eJ-EnZ" kind="custom" customClass="DismissSegue" id="dTa-cU-nR6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aeg-pd-2Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="-897"/>
+        </scene>
         <!--Topics-->
         <scene sceneID="dTL-qB-AUX">
             <objects>
@@ -141,7 +167,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Topics" id="iDh-La-eqh" userLabel="Topics">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Vf0-ix-la0"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Vf0-ix-la0">
+                            <connections>
+                                <segue destination="mTz-aa-kIq" kind="modal" id="97v-1f-sau"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSP-uX-LD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="780" y="-127"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Landing Navigation Controller-->
         <scene sceneID="A9o-Rr-QGi">
             <objects>
-                <navigationController id="sdj-D8-bEI" sceneMemberID="viewController">
+                <navigationController id="sdj-D8-bEI" userLabel="Landing Navigation Controller" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" backIndicatorTransitionMaskImage="back" id="vFt-eW-A7f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -192,10 +222,28 @@
             </objects>
             <point key="canvasLocation" x="-513" y="-127"/>
         </scene>
+        <!--Create Topic Navigation Controller-->
+        <scene sceneID="E2T-7F-34o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mTz-aa-kIq" userLabel="Create Topic Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="OGa-Hd-c5T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CS7-7F-IgI" kind="relationship" relationship="rootViewController" id="OxU-wv-hLz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZJ-Rj-5bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="-897"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back" width="11" height="21"/>
-        <image name="lines" width="100" height="100"/>
+        <image name="lines" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
