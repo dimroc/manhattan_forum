@@ -4,6 +4,7 @@ platform :ios, "7.0"
 target "ManhattanForum" do
   pod "RNCryptor"
   pod "Parse"
+  pod 'Tweaks'
 end
 
 target "ManhattanForumTests" do
