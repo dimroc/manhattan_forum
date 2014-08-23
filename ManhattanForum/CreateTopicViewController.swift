@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -24,7 +25,7 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     
     func actionSheet(actionSheet: UIActionSheet!, clickedButtonAtIndex buttonIndex: Int) {
         switch buttonIndex {
-        case 1: showImagePicker(UIImagePickerControllerSourceType.Camera)
+        case 1: showPhotoCamera()
         case 2: showVideoCamera()
         case 3: showImagePicker(UIImagePickerControllerSourceType.SavedPhotosAlbum)
         default:
@@ -33,7 +34,26 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     }
     
     private func showVideoCamera() {
-        println("Take video")
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+            let picker = UIImagePickerController()
+            picker.delegate = self;
+            picker.allowsEditing = true;
+            picker.videoMaximumDuration = 15.0;
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.mediaTypes = [kUTTypeMovie]
+            presentViewController(picker, animated: true) { () -> Void in
+            }
+        } else {
+            UIAlertView(title: "No Camera", message: "No Camera Available", delegate: self, cancelButtonTitle: "Ok").show()
+        }
+    }
+    
+    private func showPhotoCamera() {
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+            showImagePicker(UIImagePickerControllerSourceType.Camera)
+        } else {
+            UIAlertView(title: "No Camera", message: "No Camera Available", delegate: self, cancelButtonTitle: "Ok").show()
+        }
     }
     
     private func showImagePicker(sourceType: UIImagePickerControllerSourceType) {
