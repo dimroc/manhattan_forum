@@ -9,4 +9,9 @@
 import UIKit
 
 class CreateTopicViewController: UIViewController {
+    @IBOutlet weak var textView: UITextView!
+    
+    override func viewDidLoad() {
+        textView.becomeFirstResponder()
+    }
 }
