@@ -111,11 +111,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Boroughs" id="iSQ-vF-hOH">
                         <barButtonItem key="leftBarButtonItem" image="lines" id="2WD-Jj-ogD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FMq-KQ-Pwf">
+                            <connections>
+                                <segue destination="mTz-aa-kIq" kind="modal" id="WT8-Sh-jDH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uNu-XO-iJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="-127"/>
+            <point key="canvasLocation" x="-87" y="-129"/>
         </scene>
         <!--Create Topic View Controller-->
         <scene sceneID="8ct-1E-TZy">
@@ -302,7 +307,8 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dTa-cU-nR6"/>
+        <segue reference="WT8-Sh-jDH"/>
+        <segue reference="IwE-43-pXC"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
