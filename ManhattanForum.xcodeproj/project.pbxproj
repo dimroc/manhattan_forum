@@ -10,6 +10,7 @@
 		5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DE44A19A6206A00441F43 /* DismissSegue.swift */; };
 		5ED443B319A761470053C233 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */; };
 		5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED443B419A7643D0053C233 /* FontHelper.swift */; };
+		5ED443B719ADF18A0053C233 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */; };
 		5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */; };
 		5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F619A1519500DBFDA0 /* AppDelegate.swift */; };
 		5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */; };
@@ -39,6 +40,7 @@
 		5E0DE44A19A6206A00441F43 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
 		5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		5ED443B419A7643D0053C233 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
 		5EE523F119A1519500DBFDA0 /* ManhattanForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE523F519A1519500DBFDA0 /* Info.debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.debug.plist; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		5EE5242219A4478A00DBFDA0 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */,
 				5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */,
 				5EE523FA19A1519500DBFDA0 /* Main.storyboard */,
 				5EE523FD19A1519500DBFDA0 /* Images.xcassets */,
@@ -268,6 +271,7 @@
 			files = (
 				5ED443B319A761470053C233 /* OpenSans-Regular.ttf in Resources */,
 				5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */,
+				5ED443B719ADF18A0053C233 /* OpenSans-Bold.ttf in Resources */,
 				5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */,
 				5EE523FE19A1519500DBFDA0 /* Images.xcassets in Resources */,
 				5EE5241919A1676700DBFDA0 /* Credentials.example.plist in Resources */,

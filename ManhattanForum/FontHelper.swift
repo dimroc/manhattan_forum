@@ -10,6 +10,20 @@ import Foundation
 
 class FontHelper {
     class func launch() {
-        UILabel.appearance().font = UIFont(name: "Open Sans", size: 16.0)
+        UILabel.appearance().font = createMenu()
+    }
+    
+    class func createMenu() -> UIFont {
+        return UIFont(name: "Open Sans", size: 16.0)
+    }
+    
+    class func createNormal() -> UIFont {
+        return UIFont(name: "Open Sans", size: 17.0)
+    }
+    
+    class func createBold() -> UIFont {
+        let font = createNormal()
+        let descriptor: UIFontDescriptor = font.fontDescriptor().fontDescriptorWithSymbolicTraits(UIFontDescriptorSymbolicTraits.TraitBold)
+        return UIFont(descriptor: descriptor, size: 0)
     }
 }

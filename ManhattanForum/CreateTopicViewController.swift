@@ -15,6 +15,7 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     @IBOutlet weak var textPlaceHolder: UILabel!
     
     override func viewDidLoad() {
+        textView.font = FontHelper.createBold()
         textView.becomeFirstResponder()
     }
     
