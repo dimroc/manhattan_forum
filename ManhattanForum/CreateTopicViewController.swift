@@ -14,9 +14,21 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
     
+    // Must hold on to ivar in memory otherwise ARC GC will clean up instance prematurely and stop prompting for user location
+    var locationManager: LocationManager? = nil
+    
     override func viewDidLoad() {
         textView.font = FontHelper.createBold()
         textView.becomeFirstResponder()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        locationManager = LocationManager()
+        locationManager!.start()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        locationManager = nil
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
