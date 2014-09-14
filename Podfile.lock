@@ -2,17 +2,20 @@ PODS:
   - Bolts (1.1.2)
   - Facebook-iOS-SDK (3.17.0):
     - Bolts
+  - Google-Maps-iOS-SDK (1.8.1)
   - Parse (1.2.20):
     - Facebook-iOS-SDK (~> 3.11)
   - RNCryptor (2.2)
 
 DEPENDENCIES:
+  - Google-Maps-iOS-SDK
   - Parse
   - RNCryptor
 
 SPEC CHECKSUMS:
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
+  Google-Maps-iOS-SDK: 4fe35d952dbd1e4dacfcfa178e9cce2f06d67ecc
   Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
 
