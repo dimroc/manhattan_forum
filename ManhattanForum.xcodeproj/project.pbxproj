@@ -23,6 +23,7 @@
 		5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */; };
 		5EE5241D19A2234C00DBFDA0 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */; };
 		5EE5241F19A446E000DBFDA0 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */; };
+		5EFEA30819C601D40016B331 /* GoogleGeocoderWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EFEA30719C601D40016B331 /* GoogleGeocoderWrapper.m */; };
 		A20DA45C23214A0FAE2C43C8 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
 		5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		5EFEA30719C601D40016B331 /* GoogleGeocoderWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleGeocoderWrapper.m; sourceTree = "<group>"; };
+		5EFEA30919C601FC0016B331 /* GoogleGeocoderWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleGeocoderWrapper.h; sourceTree = "<group>"; };
 		F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.xcconfig"; path = "Pods/Pods-ManhattanForum.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +160,8 @@
 				5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */,
 				5ED443B419A7643D0053C233 /* FontHelper.swift */,
 				5ED443B819AE01DB0053C233 /* LocationManager.swift */,
+				5EFEA30719C601D40016B331 /* GoogleGeocoderWrapper.m */,
+				5EFEA30919C601FC0016B331 /* GoogleGeocoderWrapper.h */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */,
 				5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */,
 				5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */,
+				5EFEA30819C601D40016B331 /* GoogleGeocoderWrapper.m in Sources */,
 				5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */,
 				5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */,
 				5EE5241F19A446E000DBFDA0 /* TopicsViewController.swift in Sources */,

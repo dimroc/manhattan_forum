@@ -28,18 +28,26 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         let location: CLLocation = locations.last! as CLLocation
         NSLog(location.description)
-        geocode(location)
+        google_geocode(location)
         locationManager!.stopUpdatingLocation()
+    }
+    
+    private func google_geocode(location: CLLocation!) {
+        let geocoder = GMSGeocoder()
+//        CLLocationCoordinate2D
+        GoogleGeocoderWrapper.reverseGeocode(location.coordinate, completionHandler: { address, error in
+            NSLog(address.locality)
+        })
     }
     
     private func geocode(location: CLLocation!) {
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
-            if(error) {
+            if((error) != nil) {
                 NSLog(error.description)
             } else {
                 for placemark in placemarks {
-                    NSLog(placemark.description)
+                    NSLog("## INFO: Location \(placemark.description) is in the neighborhood \(placemark.subLocality), \(placemark.locality)")
                 }
             }
         })

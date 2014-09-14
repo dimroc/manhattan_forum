@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ParseHelper.launch(launchOptions)
         FontHelper.launch()
+        GMSServices.provideAPIKey(Credentials.objectForKey("GoogleApiKey"))
         return true
     }
 
