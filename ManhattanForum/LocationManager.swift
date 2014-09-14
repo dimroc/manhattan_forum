@@ -33,11 +33,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     private func google_geocode(location: CLLocation!) {
-        let geocoder = GMSGeocoder()
-//        CLLocationCoordinate2D
-        GoogleGeocoderWrapper.reverseGeocode(location.coordinate, completionHandler: { address, error in
-            NSLog(address.locality)
-        })
+        GoogleGeocoder.reverse(location.coordinate)
     }
     
     private func geocode(location: CLLocation!) {

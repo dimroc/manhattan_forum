@@ -4,7 +4,7 @@ platform :ios, "7.0"
 target "ManhattanForum" do
   pod "RNCryptor"
   pod "Parse"
-  pod "Google-Maps-iOS-SDK"
+  pod "AFNetworking", "~> 2.0"
 end
 
 target "ManhattanForumTests" do
