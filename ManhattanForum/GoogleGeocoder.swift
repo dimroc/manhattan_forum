@@ -9,17 +9,21 @@
 import Foundation
 
 class GoogleGeocoder {
-    class func reverse(coordinate: CLLocationCoordinate2D!) {
-        GoogleGeocoder().reverse(coordinate)
+    class func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse?, NSErrorPointer) -> Void) {
+        GoogleGeocoder().reverse(coordinate, callback: callback)
     }
     
-    func reverse(coordinate: CLLocationCoordinate2D!) {
+    func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse?, NSErrorPointer) -> Void) {
         let manager = AFHTTPRequestOperationManager()
         let parameters = generateParameters(coordinate)
         manager.GET(baseUrl(), parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response) in
-            NSLog(response!.description)
+            let response = GoogleGeocoderResponse(response: response!)
+            callback(response, NSErrorPointer.null())
         }) { (operation, error) in
-            NSLog(error.description)
+            NSLog("Error reverse geocoding\n\(error!.description)")
+            var errorPtr = NSErrorPointer()
+            errorPtr.memory = error
+            callback(nil, errorPtr)
         }
     }
     

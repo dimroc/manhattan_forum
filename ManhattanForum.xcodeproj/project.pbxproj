@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DE44A19A6206A00441F43 /* DismissSegue.swift */; };
+		5E3469B619C6F94D00BE2AF9 /* GoogleGeocoderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3469B519C6F94D00BE2AF9 /* GoogleGeocoderResponse.swift */; };
 		5ED443B319A761470053C233 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */; };
 		5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED443B419A7643D0053C233 /* FontHelper.swift */; };
 		5ED443B719ADF18A0053C233 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0DE44A19A6206A00441F43 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		5E3469B519C6F94D00BE2AF9 /* GoogleGeocoderResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleGeocoderResponse.swift; sourceTree = "<group>"; };
 		5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		5ED443B419A7643D0053C233 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				5ED443B419A7643D0053C233 /* FontHelper.swift */,
 				5ED443B819AE01DB0053C233 /* LocationManager.swift */,
 				5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */,
+				5E3469B519C6F94D00BE2AF9 /* GoogleGeocoderResponse.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */,
+				5E3469B619C6F94D00BE2AF9 /* GoogleGeocoderResponse.swift in Sources */,
 				5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */,
 				5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */,
 				5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */,
