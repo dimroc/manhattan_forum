@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DE44A19A6206A00441F43 /* DismissSegue.swift */; };
+		5E1EC17719C70FED0048873E /* MFLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1EC17619C70FED0048873E /* MFLocationTests.swift */; };
+		5E1EC17A19C710D70048873E /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E1EC17919C710D70048873E /* geocodeResponse.json */; };
+		5E1EC17C19C711270048873E /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1EC17B19C711270048873E /* TestHelper.swift */; };
+		5E1EC17F19C7169D0048873E /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */; };
 		5E3469B619C6F94D00BE2AF9 /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */; };
 		5ED443B319A761470053C233 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */; };
 		5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED443B419A7643D0053C233 /* FontHelper.swift */; };
@@ -18,7 +22,6 @@
 		5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */; };
 		5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FA19A1519500DBFDA0 /* Main.storyboard */; };
 		5EE523FE19A1519500DBFDA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FD19A1519500DBFDA0 /* Images.xcassets */; };
-		5EE5240A19A1519500DBFDA0 /* ManhattanForumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5240919A1519500DBFDA0 /* ManhattanForumTests.swift */; };
 		5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241619A166F200DBFDA0 /* Credentials.swift */; };
 		5EE5241919A1676700DBFDA0 /* Credentials.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241819A1676700DBFDA0 /* Credentials.example.plist */; };
 		5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */; };
@@ -26,6 +29,7 @@
 		5EE5241F19A446E000DBFDA0 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */; };
 		5EFEA30B19C61A5A0016B331 /* GoogleGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */; };
 		A20DA45C23214A0FAE2C43C8 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */; };
+		EF3824F0FC4B4EB78F6760B7 /* libPods-ManhattanForumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A8663B8FE6411F9A910307 /* libPods-ManhattanForumTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0DE44A19A6206A00441F43 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		5E1EC17619C70FED0048873E /* MFLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocationTests.swift; sourceTree = "<group>"; };
+		5E1EC17919C710D70048873E /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
+		5E1EC17B19C711270048873E /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		5E1EC17D19C7146F0048873E /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ManhattanForum.a"; path = "Pods/build/Debug-iphoneos/libPods-ManhattanForum.a"; sourceTree = "<group>"; };
 		5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocation.swift; sourceTree = "<group>"; };
 		5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		5ED443B419A7643D0053C233 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
@@ -55,7 +63,6 @@
 		5EE523FD19A1519500DBFDA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5EE5240319A1519500DBFDA0 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE5240819A1519500DBFDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EE5240919A1519500DBFDA0 /* ManhattanForumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManhattanForumTests.swift; sourceTree = "<group>"; };
 		5EE5241319A155CE00DBFDA0 /* ManhattanForum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ManhattanForum-Bridging-Header.h"; path = "ManhattanForum/ManhattanForum-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		5EE5241619A166F200DBFDA0 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		5EE5241819A1676700DBFDA0 /* Credentials.example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.example.plist; sourceTree = "<group>"; };
@@ -63,7 +70,9 @@
 		5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
 		5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleGeocoder.swift; sourceTree = "<group>"; };
+		A8A8663B8FE6411F9A910307 /* libPods-ManhattanForumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.xcconfig"; path = "Pods/Pods-ManhattanForum.xcconfig"; sourceTree = "<group>"; };
+		FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.xcconfig"; path = "Pods/Pods-ManhattanForumTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3824F0FC4B4EB78F6760B7 /* libPods-ManhattanForumTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +103,22 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		5E1EC17319C70F020048873E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5E1EC17819C710A90048873E /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				5E1EC17919C710D70048873E /* geocodeResponse.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		5EE523E819A1519500DBFDA0 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +128,7 @@
 				5EE523F219A1519500DBFDA0 /* Products */,
 				F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */,
 				B2C383D5D6074DB292DAF5FE /* Frameworks */,
+				FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5EE5242019A4473E00DBFDA0 /* Misc */,
+				5E1EC17319C70F020048873E /* Models */,
 				5EE5242119A4474B00DBFDA0 /* Controllers */,
 				5E0DE44919A6203800441F43 /* Views */,
 				5EE5242219A4478A00DBFDA0 /* User Interface */,
@@ -140,7 +168,9 @@
 		5EE5240619A1519500DBFDA0 /* ManhattanForumTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EE5240919A1519500DBFDA0 /* ManhattanForumTests.swift */,
+				5E1EC17819C710A90048873E /* Fixtures */,
+				5E1EC17619C70FED0048873E /* MFLocationTests.swift */,
+				5E1EC17B19C711270048873E /* TestHelper.swift */,
 				5EE5240719A1519500DBFDA0 /* Supporting Files */,
 			);
 			path = ManhattanForumTests;
@@ -162,7 +192,6 @@
 				5ED443B419A7643D0053C233 /* FontHelper.swift */,
 				5ED443B819AE01DB0053C233 /* LocationManager.swift */,
 				5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */,
-				5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -191,7 +220,9 @@
 		B2C383D5D6074DB292DAF5FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E1EC17D19C7146F0048873E /* libPods-ManhattanForum.a */,
 				41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */,
+				A8A8663B8FE6411F9A910307 /* libPods-ManhattanForumTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EE5241019A1519500DBFDA0 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */;
 			buildPhases = (
+				2D2D63E7473344688148D730 /* Check Pods Manifest.lock */,
 				5EE523FF19A1519500DBFDA0 /* Sources */,
 				5EE5240019A1519500DBFDA0 /* Frameworks */,
 				5EE5240119A1519500DBFDA0 /* Resources */,
+				5517053A864F4D57BE899CCA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,12 +324,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1EC17A19C710D70048873E /* geocodeResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D2D63E7473344688148D730 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5517053A864F4D57BE899CCA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ManhattanForumTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7B488F55F50D48EE8E94625E /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,7 +416,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE5240A19A1519500DBFDA0 /* ManhattanForumTests.swift in Sources */,
+				5E1EC17719C70FED0048873E /* MFLocationTests.swift in Sources */,
+				5E1EC17C19C711270048873E /* TestHelper.swift in Sources */,
+				5E1EC17F19C7169D0048873E /* MFLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +557,7 @@
 		};
 		5EE5241119A1519500DBFDA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -503,6 +570,10 @@
 				);
 				INFOPLIST_FILE = ManhattanForumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum";
 			};
@@ -510,6 +581,7 @@
 		};
 		5EE5241219A1519500DBFDA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -518,6 +590,10 @@
 				);
 				INFOPLIST_FILE = ManhattanForumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum";
 			};

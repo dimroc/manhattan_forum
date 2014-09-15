@@ -1,0 +1,512 @@
+{
+    "results" : [
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "235-299",
+                                         "short_name" : "235-299",
+                                         "types" : [ "street_number" ]
+                                         },
+                                         {
+                                         "long_name" : "East 9th Street",
+                                         "short_name" : "E 9th St",
+                                         "types" : [ "route" ]
+                                         },
+                                         {
+                                         "long_name" : "East Village",
+                                         "short_name" : "East Village",
+                                         "types" : [ "neighborhood", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "Manhattan",
+                                         "short_name" : "Manhattan",
+                                         "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "New York",
+                                         "types" : [ "locality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "10003",
+                                         "short_name" : "10003",
+                                         "types" : [ "postal_code" ]
+                                         }
+                                         ],
+                 "formatted_address" : "235-299 East 9th Street, New York, NY 10003, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.7297789,
+                 "lng" : -73.9872494
+                 },
+                 "southwest" : {
+                 "lat" : 40.7291746,
+                 "lng" : -73.9886841
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.7292449,
+                 "lng" : -73.9873784
+                 },
+                 "location_type" : "RANGE_INTERPOLATED",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.73082573029149,
+                 "lng" : -73.98661776970849
+                 },
+                 "southwest" : {
+                 "lat" : 40.7281277697085,
+                 "lng" : -73.98931573029151
+                 }
+                 }
+                 },
+                 "types" : [ "street_address" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "10003",
+                                         "short_name" : "10003",
+                                         "types" : [ "postal_code" ]
+                                         },
+                                         {
+                                         "long_name" : "Manhattan",
+                                         "short_name" : "Manhattan",
+                                         "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "New York",
+                                         "types" : [ "locality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "New York, NY 10003, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.7396728,
+                 "lng" : -73.9798639
+                 },
+                 "southwest" : {
+                 "lat" : 40.722933,
+                 "lng" : -73.9969739
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.7322535,
+                 "lng" : -73.9874105
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.7396728,
+                 "lng" : -73.9798639
+                 },
+                 "southwest" : {
+                 "lat" : 40.722933,
+                 "lng" : -73.9969739
+                 }
+                 }
+                 },
+                 "types" : [ "postal_code" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "East Village",
+                                         "short_name" : "East Village",
+                                         "types" : [ "neighborhood", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "Manhattan",
+                                         "short_name" : "Manhattan",
+                                         "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "New York",
+                                         "types" : [ "locality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "East Village, New York, NY, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.7344458,
+                 "lng" : -73.97166609999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.7187211,
+                 "lng" : -73.99264099999999
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.7264773,
+                 "lng" : -73.98153370000001
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.7344458,
+                 "lng" : -73.97166609999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.7187211,
+                 "lng" : -73.99264099999999
+                 }
+                 }
+                 },
+                 "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "Lower Manhattan",
+                                         "short_name" : "Lower Manhattan",
+                                         "types" : [ "neighborhood", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "Manhattan",
+                                         "short_name" : "Manhattan",
+                                         "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "New York",
+                                         "types" : [ "locality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "Lower Manhattan, New York, NY, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.7425263,
+                 "lng" : -73.97164459999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.7004631,
+                 "lng" : -74.01933500000001
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.7230084,
+                 "lng" : -74.00063279999999
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.7425263,
+                 "lng" : -73.97164459999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.7004631,
+                 "lng" : -74.01933500000001
+                 }
+                 }
+                 },
+                 "types" : [ "neighborhood", "political" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "Manhattan",
+                                         "short_name" : "Manhattan",
+                                         "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "New York",
+                                         "types" : [ "locality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "Manhattan, New York, NY, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.882214,
+                 "lng" : -73.907
+                 },
+                 "southwest" : {
+                 "lat" : 40.6795479,
+                 "lng" : -74.047285
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.790278,
+                 "lng" : -73.959722
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.820045,
+                 "lng" : -73.90331300000001
+                 },
+                 "southwest" : {
+                 "lat" : 40.698078,
+                 "lng" : -74.03514899999999
+                 }
+                 }
+                 },
+                 "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "New York County, NY, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.8792779,
+                 "lng" : -73.907
+                 },
+                 "southwest" : {
+                 "lat" : 40.6795929,
+                 "lng" : -74.04726289999999
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.7830603,
+                 "lng" : -73.9712488
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.8792779,
+                 "lng" : -73.907
+                 },
+                 "southwest" : {
+                 "lat" : 40.6795929,
+                 "lng" : -74.04726289999999
+                 }
+                 }
+                 },
+                 "types" : [ "administrative_area_level_2", "political" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "New York",
+                                         "types" : [ "locality", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York County",
+                                         "short_name" : "New York County",
+                                         "types" : [ "administrative_area_level_2", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "New York, NY, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 40.91525559999999,
+                 "lng" : -73.70027209999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.4959961,
+                 "lng" : -74.2590879
+                 }
+                 },
+                 "location" : {
+                 "lat" : 40.7127837,
+                 "lng" : -74.0059413
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 40.91525559999999,
+                 "lng" : -73.70027209999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.496006,
+                 "lng" : -74.25573489999999
+                 }
+                 }
+                 },
+                 "types" : [ "locality", "political" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "New York",
+                                         "short_name" : "NY",
+                                         "types" : [ "administrative_area_level_1", "political" ]
+                                         },
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "New York, USA",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 45.015865,
+                 "lng" : -71.85626429999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.4959961,
+                 "lng" : -79.76214379999999
+                 }
+                 },
+                 "location" : {
+                 "lat" : 43.2994285,
+                 "lng" : -74.21793260000001
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 45.015865,
+                 "lng" : -71.85626429999999
+                 },
+                 "southwest" : {
+                 "lat" : 40.4960191,
+                 "lng" : -79.76214379999999
+                 }
+                 }
+                 },
+                 "types" : [ "administrative_area_level_1", "political" ]
+                 },
+                 {
+                 "address_components" : [
+                                         {
+                                         "long_name" : "United States",
+                                         "short_name" : "US",
+                                         "types" : [ "country", "political" ]
+                                         }
+                                         ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                 "bounds" : {
+                 "northeast" : {
+                 "lat" : 71.389888,
+                 "lng" : -66.94976079999999
+                 },
+                 "southwest" : {
+                 "lat" : 18.9110642,
+                 "lng" : 172.4458955
+                 }
+                 },
+                 "location" : {
+                 "lat" : 37.09024,
+                 "lng" : -95.712891
+                 },
+                 "location_type" : "APPROXIMATE",
+                 "viewport" : {
+                 "northeast" : {
+                 "lat" : 49.38,
+                 "lng" : -66.94
+                 },
+                 "southwest" : {
+                 "lat" : 25.82,
+                 "lng" : -124.39
+                 }
+                 }
+                 },
+                 "types" : [ "country", "political" ]
+                 }
+                 ],
+    "status" : "OK"
+}
