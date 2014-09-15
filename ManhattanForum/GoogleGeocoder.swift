@@ -8,22 +8,25 @@
 
 import Foundation
 
+enum GoogleGeocoderResponse {
+    case Response(MFLocation)
+    case Error(NSError)
+}
+
 class GoogleGeocoder {
-    class func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse?, NSErrorPointer) -> Void) {
+    class func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse) -> Void) {
         GoogleGeocoder().reverse(coordinate, callback: callback)
     }
     
-    func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse?, NSErrorPointer) -> Void) {
+    func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse) -> Void) {
         let manager = AFHTTPRequestOperationManager()
         let parameters = generateParameters(coordinate)
+        
         manager.GET(baseUrl(), parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response) in
-            let response = GoogleGeocoderResponse(response: response!)
-            callback(response, NSErrorPointer.null())
+            let location = MFLocation(response: response!)
+            callback(GoogleGeocoderResponse.Response(location))
         }) { (operation, error) in
-            NSLog("Error reverse geocoding\n\(error!.description)")
-            var errorPtr = NSErrorPointer()
-            errorPtr.memory = error
-            callback(nil, errorPtr)
+            callback(GoogleGeocoderResponse.Error(error))
         }
     }
     

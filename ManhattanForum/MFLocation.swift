@@ -1,5 +1,5 @@
 //
-//  GoogleGeocoderResponse.swift
+//  MFLocation.swift
 //  ManhattanForum
 //
 //  Created by Dimitri Roche on 9/15/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GoogleGeocoderResponse: Printable, DebugPrintable {
+class MFLocation: Printable, DebugPrintable {
     var payload: AnyObject
     var description: String {
         return payload.description

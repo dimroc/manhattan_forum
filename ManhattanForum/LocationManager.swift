@@ -33,11 +33,12 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     private func google_geocode(location: CLLocation!) {
-        GoogleGeocoder.reverse(location.coordinate, callback: { response, errorPtr in
-            if response != nil {
-                NSLog(response!.description)
-            } else {
-                NSLog(errorPtr.debugDescription)
+        GoogleGeocoder.reverse(location.coordinate, callback: { (response: GoogleGeocoderResponse) in
+            switch response {
+            case .Error(let error):
+                NSLog(error.description)
+            case .Response(let location):
+                NSLog(location.description)
             }
         })
     }
