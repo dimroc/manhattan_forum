@@ -12,7 +12,8 @@ import UIKit
 class DismissSegue: UIStoryboardSegue {
     override func perform() {
         let src = self.sourceViewController as UIViewController
-        src.presentingViewController.dismissViewControllerAnimated(true, completion: { () -> Void in
+        src.presentingViewController?.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
         })
     }
 }

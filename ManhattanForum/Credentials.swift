@@ -28,7 +28,7 @@ class Credentials {
         
         let resource = NSBundle.mainBundle().pathForResource(pathForResource, ofType: "plist")
         assert(resource != nil, "Resource cannot be empty. Did you create your credentials file?")
-        credentials = NSDictionary(contentsOfFile: resource)
+        credentials = NSDictionary(contentsOfFile: resource!)
     }
     
     func objectForKey(key: NSString) -> NSString {
@@ -41,7 +41,6 @@ class Credentials {
         var error = NSErrorPointer()
         let decrypted = RNDecryptor.decryptData(data, withPassword: NSStringFromClass(AppDelegate), error: error)
         let rval = NSString(data: decrypted, encoding: NSUTF8StringEncoding)
-        assert(rval != nil)
         return rval
     }
 }

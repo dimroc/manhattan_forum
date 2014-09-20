@@ -23,20 +23,25 @@ PODS:
   - Bolts (1.1.2)
   - Facebook-iOS-SDK (3.17.0):
     - Bolts
-  - Parse (1.2.20):
-    - Facebook-iOS-SDK (~> 3.11)
+  - Parse (1.4.0):
+    - Bolts (~> 1.1.2)
+  - ParseFacebookUtils (1.4.0):
+    - Facebook-iOS-SDK (~> 3.17.0)
+    - Parse (~> 1.4.0)
   - RNCryptor (2.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Parse
+  - ParseFacebookUtils
   - RNCryptor
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   Bolts: 2635e8698a630774689441047f3465d78c48d485
   Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
-  Parse: 28c0dc54f30201a369d29a2f76c09fa43b2add16
+  Parse: 217a57ed13e870a744fe746fcc01a3fef6a9b750
+  ParseFacebookUtils: 9af9a25b76402744a0675ab7897b150765e624c8
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
 
 COCOAPODS: 0.33.1
