@@ -14,6 +14,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     
     func start() {
         self.locationManager = generateLocationManager()
+        self.locationManager!.requestWhenInUseAuthorization()
         self.locationManager!.startUpdatingLocation()
     }
     
