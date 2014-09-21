@@ -7,238 +7,225 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0DE44A19A6206A00441F43 /* DismissSegue.swift */; };
-		5E1EC17719C70FED0048873E /* MFLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1EC17619C70FED0048873E /* MFLocationTests.swift */; };
-		5E1EC17A19C710D70048873E /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E1EC17919C710D70048873E /* geocodeResponse.json */; };
-		5E1EC17C19C711270048873E /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1EC17B19C711270048873E /* TestHelper.swift */; };
-		5E1EC17F19C7169D0048873E /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */; };
-		5E3469B619C6F94D00BE2AF9 /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */; };
-		5ED443B319A761470053C233 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */; };
-		5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED443B419A7643D0053C233 /* FontHelper.swift */; };
-		5ED443B719ADF18A0053C233 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */; };
-		5ED443B919AE01DB0053C233 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED443B819AE01DB0053C233 /* LocationManager.swift */; };
-		5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */; };
-		5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F619A1519500DBFDA0 /* AppDelegate.swift */; };
-		5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */; };
-		5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FA19A1519500DBFDA0 /* Main.storyboard */; };
-		5EE523FE19A1519500DBFDA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE523FD19A1519500DBFDA0 /* Images.xcassets */; };
-		5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241619A166F200DBFDA0 /* Credentials.swift */; };
-		5EE5241919A1676700DBFDA0 /* Credentials.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241819A1676700DBFDA0 /* Credentials.example.plist */; };
-		5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */; };
-		5EE5241D19A2234C00DBFDA0 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */; };
-		5EE5241F19A446E000DBFDA0 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */; };
-		5EFEA30B19C61A5A0016B331 /* GoogleGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */; };
-		A20DA45C23214A0FAE2C43C8 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */; };
-		EF3824F0FC4B4EB78F6760B7 /* libPods-ManhattanForumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A8663B8FE6411F9A910307 /* libPods-ManhattanForumTests.a */; };
+		5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */; };
+		5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9419CEFE0C008E2726 /* Main.storyboard */; };
+		5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9719CEFE0C008E2726 /* Images.xcassets */; };
+		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
+		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
+		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
+		5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157919CF025800F6EBAA /* Credentials.debug.plist */; };
+		5E9C158919CF025800F6EBAA /* Credentials.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157A19CF025800F6EBAA /* Credentials.example.plist */; };
+		5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157B19CF025800F6EBAA /* Credentials.swift */; };
+		5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157C19CF025800F6EBAA /* DismissSegue.swift */; };
+		5E9C158C19CF025800F6EBAA /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157D19CF025800F6EBAA /* FontHelper.swift */; };
+		5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157E19CF025800F6EBAA /* GoogleGeocoder.swift */; };
+		5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157F19CF025800F6EBAA /* LocationManager.swift */; };
+		5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */; };
+		5E9C159119CF025800F6EBAA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */; };
+		5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158419CF025800F6EBAA /* ParseHelper.swift */; };
+		5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158519CF025800F6EBAA /* TopicsViewController.swift */; };
+		5E9C159E19CF057000F6EBAA /* MFLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */; };
+		5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159D19CF057000F6EBAA /* TestHelper.swift */; };
+		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
+		5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5EE5240419A1519500DBFDA0 /* PBXContainerItemProxy */ = {
+		5E0C3DA119CEFE0C008E2726 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5EE523E919A1519500DBFDA0 /* Project object */;
+			containerPortal = 5E0C3D8319CEFE0C008E2726 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5EE523F019A1519500DBFDA0;
+			remoteGlobalIDString = 5E0C3D8A19CEFE0C008E2726;
 			remoteInfo = ManhattanForum;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E0DE44A19A6206A00441F43 /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
-		5E1EC17619C70FED0048873E /* MFLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocationTests.swift; sourceTree = "<group>"; };
-		5E1EC17919C710D70048873E /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
-		5E1EC17B19C711270048873E /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
-		5E1EC17D19C7146F0048873E /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ManhattanForum.a"; path = "Pods/build/Debug-iphoneos/libPods-ManhattanForum.a"; sourceTree = "<group>"; };
-		5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocation.swift; sourceTree = "<group>"; };
-		5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		5ED443B419A7643D0053C233 /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
-		5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		5ED443B819AE01DB0053C233 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
-		5EE523F119A1519500DBFDA0 /* ManhattanForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE523F519A1519500DBFDA0 /* Info.debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.debug.plist; sourceTree = "<group>"; };
-		5EE523F619A1519500DBFDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ManhattanForum/AppDelegate.swift; sourceTree = "<group>"; };
-		5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
-		5EE523FB19A1519500DBFDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5EE523FD19A1519500DBFDA0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5EE5240319A1519500DBFDA0 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EE5240819A1519500DBFDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EE5241319A155CE00DBFDA0 /* ManhattanForum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ManhattanForum-Bridging-Header.h"; path = "ManhattanForum/ManhattanForum-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		5EE5241619A166F200DBFDA0 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		5EE5241819A1676700DBFDA0 /* Credentials.example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.example.plist; sourceTree = "<group>"; };
-		5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
-		5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
-		5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
-		5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleGeocoder.swift; sourceTree = "<group>"; };
-		A8A8663B8FE6411F9A910307 /* libPods-ManhattanForumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.xcconfig"; path = "Pods/Pods-ManhattanForum.xcconfig"; sourceTree = "<group>"; };
-		FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.xcconfig"; path = "Pods/Pods-ManhattanForumTests.xcconfig"; sourceTree = "<group>"; };
+		5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0C3D8F19CEFE0C008E2726 /* Info.debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.debug.plist; sourceTree = "<group>"; };
+		5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E0C3D9519CEFE0C008E2726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E0C3D9719CEFE0C008E2726 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E0C3D9A19CEFE0C008E2726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0C3DA519CEFE0C008E2726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
+		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
+		5E9C157919CF025800F6EBAA /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
+		5E9C157A19CF025800F6EBAA /* Credentials.example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.example.plist; sourceTree = "<group>"; };
+		5E9C157B19CF025800F6EBAA /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		5E9C157C19CF025800F6EBAA /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		5E9C157D19CF025800F6EBAA /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		5E9C157E19CF025800F6EBAA /* GoogleGeocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleGeocoder.swift; sourceTree = "<group>"; };
+		5E9C157F19CF025800F6EBAA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5E9C158119CF025800F6EBAA /* MFLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocation.swift; sourceTree = "<group>"; };
+		5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		5E9C158419CF025800F6EBAA /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		5E9C158519CF025800F6EBAA /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		5E9C159919CF034C00F6EBAA /* ManhattanForum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForum-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocationTests.swift; sourceTree = "<group>"; };
+		5E9C159D19CF057000F6EBAA /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		5E9C15A019CF058300F6EBAA /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
+		F55E49809BBA40F9A30CC4B2 /* Pods-ManhattanForum.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.xcconfig"; path = "Pods/Pods-ManhattanForum.xcconfig"; sourceTree = "<group>"; };
+		FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5EE523EE19A1519500DBFDA0 /* Frameworks */ = {
+		5E0C3D8819CEFE0C008E2726 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20DA45C23214A0FAE2C43C8 /* libPods-ManhattanForum.a in Frameworks */,
+				6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EE5240019A1519500DBFDA0 /* Frameworks */ = {
+		5E0C3D9D19CEFE0C008E2726 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3824F0FC4B4EB78F6760B7 /* libPods-ManhattanForumTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E0DE44919A6203800441F43 /* Views */ = {
+		5581BA35EC9B4208A6FB3AA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5E0DE44A19A6206A00441F43 /* DismissSegue.swift */,
+				FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */,
 			);
-			name = Views;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E1EC17319C70F020048873E /* Models */ = {
+		5E0C3D8219CEFE0C008E2726 = {
 			isa = PBXGroup;
 			children = (
-				5E3469B519C6F94D00BE2AF9 /* MFLocation.swift */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		5E1EC17819C710A90048873E /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				5E1EC17919C710D70048873E /* geocodeResponse.json */,
-			);
-			name = Fixtures;
-			sourceTree = "<group>";
-		};
-		5EE523E819A1519500DBFDA0 = {
-			isa = PBXGroup;
-			children = (
-				5EE523F319A1519500DBFDA0 /* ManhattanForum */,
-				5EE523F619A1519500DBFDA0 /* AppDelegate.swift */,
-				5EE5240619A1519500DBFDA0 /* ManhattanForumTests */,
-				5EE523F219A1519500DBFDA0 /* Products */,
-				F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */,
-				B2C383D5D6074DB292DAF5FE /* Frameworks */,
-				FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */,
+				5E0C3D8D19CEFE0C008E2726 /* ManhattanForum */,
+				5E0C3DA319CEFE0C008E2726 /* ManhattanForumTests */,
+				5E0C3D8C19CEFE0C008E2726 /* Products */,
+				F55E49809BBA40F9A30CC4B2 /* Pods-ManhattanForum.xcconfig */,
+				5581BA35EC9B4208A6FB3AA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		5EE523F219A1519500DBFDA0 /* Products */ = {
+		5E0C3D8C19CEFE0C008E2726 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5EE523F119A1519500DBFDA0 /* ManhattanForum.app */,
-				5EE5240319A1519500DBFDA0 /* ManhattanForumTests.xctest */,
+				5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */,
+				5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5EE523F319A1519500DBFDA0 /* ManhattanForum */ = {
+		5E0C3D8D19CEFE0C008E2726 /* ManhattanForum */ = {
 			isa = PBXGroup;
 			children = (
-				5EE5242019A4473E00DBFDA0 /* Misc */,
-				5E1EC17319C70F020048873E /* Models */,
-				5EE5242119A4474B00DBFDA0 /* Controllers */,
-				5E0DE44919A6203800441F43 /* Views */,
-				5EE5242219A4478A00DBFDA0 /* User Interface */,
-				5EE523F419A1519500DBFDA0 /* Supporting Files */,
+				5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */,
+				5E9C159519CF028600F6EBAA /* Misc */,
+				5E9C159619CF028F00F6EBAA /* Models */,
+				5E9C159419CF026700F6EBAA /* Controllers */,
+				5E9C159719CF02CA00F6EBAA /* User Interface */,
+				5E0C3D8E19CEFE0C008E2726 /* Supporting Files */,
 			);
 			path = ManhattanForum;
 			sourceTree = "<group>";
 		};
-		5EE523F419A1519500DBFDA0 /* Supporting Files */ = {
+		5E0C3D8E19CEFE0C008E2726 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5EE5241319A155CE00DBFDA0 /* ManhattanForum-Bridging-Header.h */,
-				5EE523F519A1519500DBFDA0 /* Info.debug.plist */,
-				5EE5241819A1676700DBFDA0 /* Credentials.example.plist */,
-				5EE5241A19A167D300DBFDA0 /* Credentials.debug.plist */,
+				5E9C159919CF034C00F6EBAA /* ManhattanForum-Bridging-Header.h */,
+				5E9C157919CF025800F6EBAA /* Credentials.debug.plist */,
+				5E9C157A19CF025800F6EBAA /* Credentials.example.plist */,
+				5E0C3D8F19CEFE0C008E2726 /* Info.debug.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5EE5240619A1519500DBFDA0 /* ManhattanForumTests */ = {
+		5E0C3DA319CEFE0C008E2726 /* ManhattanForumTests */ = {
 			isa = PBXGroup;
 			children = (
-				5E1EC17819C710A90048873E /* Fixtures */,
-				5E1EC17619C70FED0048873E /* MFLocationTests.swift */,
-				5E1EC17B19C711270048873E /* TestHelper.swift */,
-				5EE5240719A1519500DBFDA0 /* Supporting Files */,
+				5E9C15A219CF058C00F6EBAA /* Fixtures */,
+				5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */,
+				5E9C159D19CF057000F6EBAA /* TestHelper.swift */,
+				5E0C3DA419CEFE0C008E2726 /* Supporting Files */,
 			);
 			path = ManhattanForumTests;
 			sourceTree = "<group>";
 		};
-		5EE5240719A1519500DBFDA0 /* Supporting Files */ = {
+		5E0C3DA419CEFE0C008E2726 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5EE5240819A1519500DBFDA0 /* Info.plist */,
+				5E0C3DA519CEFE0C008E2726 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5EE5242019A4473E00DBFDA0 /* Misc */ = {
+		5E9C159419CF026700F6EBAA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5EE5241619A166F200DBFDA0 /* Credentials.swift */,
-				5EE5241C19A2234C00DBFDA0 /* ParseHelper.swift */,
-				5ED443B419A7643D0053C233 /* FontHelper.swift */,
-				5ED443B819AE01DB0053C233 /* LocationManager.swift */,
-				5EFEA30A19C61A5A0016B331 /* GoogleGeocoder.swift */,
-			);
-			name = Misc;
-			sourceTree = "<group>";
-		};
-		5EE5242119A4474B00DBFDA0 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5EE523F819A1519500DBFDA0 /* BoroughsViewController.swift */,
-				5EE5241E19A446E000DBFDA0 /* TopicsViewController.swift */,
-				5ED6B37019A61E320046E188 /* CreateTopicViewController.swift */,
+				5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */,
+				5E9C158519CF025800F6EBAA /* TopicsViewController.swift */,
+				5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		5EE5242219A4478A00DBFDA0 /* User Interface */ = {
+		5E9C159519CF028600F6EBAA /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				5ED443B619ADF18A0053C233 /* OpenSans-Bold.ttf */,
-				5ED443B219A75B0C0053C233 /* OpenSans-Regular.ttf */,
-				5EE523FA19A1519500DBFDA0 /* Main.storyboard */,
-				5EE523FD19A1519500DBFDA0 /* Images.xcassets */,
+				5E9C157B19CF025800F6EBAA /* Credentials.swift */,
+				5E9C157E19CF025800F6EBAA /* GoogleGeocoder.swift */,
+				5E9C158419CF025800F6EBAA /* ParseHelper.swift */,
+				5E9C157F19CF025800F6EBAA /* LocationManager.swift */,
+				5E9C157D19CF025800F6EBAA /* FontHelper.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		5E9C159619CF028F00F6EBAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C158119CF025800F6EBAA /* MFLocation.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5E9C159719CF02CA00F6EBAA /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C157C19CF025800F6EBAA /* DismissSegue.swift */,
+				5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */,
+				5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */,
+				5E0C3D9419CEFE0C008E2726 /* Main.storyboard */,
+				5E0C3D9719CEFE0C008E2726 /* Images.xcassets */,
+				5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
 		};
-		B2C383D5D6074DB292DAF5FE /* Frameworks */ = {
+		5E9C15A219CF058C00F6EBAA /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				5E1EC17D19C7146F0048873E /* libPods-ManhattanForum.a */,
-				41A69072CFE149F19CA6B65F /* libPods-ManhattanForum.a */,
-				A8A8663B8FE6411F9A910307 /* libPods-ManhattanForumTests.a */,
+				5E9C15A019CF058300F6EBAA /* geocodeResponse.json */,
 			);
-			name = Frameworks;
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5EE523F019A1519500DBFDA0 /* ManhattanForum */ = {
+		5E0C3D8A19CEFE0C008E2726 /* ManhattanForum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EE5240D19A1519500DBFDA0 /* Build configuration list for PBXNativeTarget "ManhattanForum" */;
+			buildConfigurationList = 5E0C3DAA19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForum" */;
 			buildPhases = (
-				9E6903C0467B4C1986A13E1E /* Check Pods Manifest.lock */,
-				5EE523ED19A1519500DBFDA0 /* Sources */,
-				5EE523EE19A1519500DBFDA0 /* Frameworks */,
-				5EE523EF19A1519500DBFDA0 /* Resources */,
-				7B488F55F50D48EE8E94625E /* Copy Pods Resources */,
+				AFC620B82CCF4D50B65DC117 /* Check Pods Manifest.lock */,
+				5E0C3D8719CEFE0C008E2726 /* Sources */,
+				5E0C3D8819CEFE0C008E2726 /* Frameworks */,
+				5E0C3D8919CEFE0C008E2726 /* Resources */,
+				0B97B194F85443198C27B976 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,48 +233,46 @@
 			);
 			name = ManhattanForum;
 			productName = ManhattanForum;
-			productReference = 5EE523F119A1519500DBFDA0 /* ManhattanForum.app */;
+			productReference = 5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5EE5240219A1519500DBFDA0 /* ManhattanForumTests */ = {
+		5E0C3D9F19CEFE0C008E2726 /* ManhattanForumTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5EE5241019A1519500DBFDA0 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */;
+			buildConfigurationList = 5E0C3DAD19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */;
 			buildPhases = (
-				2D2D63E7473344688148D730 /* Check Pods Manifest.lock */,
-				5EE523FF19A1519500DBFDA0 /* Sources */,
-				5EE5240019A1519500DBFDA0 /* Frameworks */,
-				5EE5240119A1519500DBFDA0 /* Resources */,
-				5517053A864F4D57BE899CCA /* Copy Pods Resources */,
+				5E0C3D9C19CEFE0C008E2726 /* Sources */,
+				5E0C3D9D19CEFE0C008E2726 /* Frameworks */,
+				5E0C3D9E19CEFE0C008E2726 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5EE5240519A1519500DBFDA0 /* PBXTargetDependency */,
+				5E0C3DA219CEFE0C008E2726 /* PBXTargetDependency */,
 			);
 			name = ManhattanForumTests;
 			productName = ManhattanForumTests;
-			productReference = 5EE5240319A1519500DBFDA0 /* ManhattanForumTests.xctest */;
+			productReference = 5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5EE523E919A1519500DBFDA0 /* Project object */ = {
+		5E0C3D8319CEFE0C008E2726 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = dimroc;
 				TargetAttributes = {
-					5EE523F019A1519500DBFDA0 = {
-						CreatedOnToolsVersion = 6.0;
+					5E0C3D8A19CEFE0C008E2726 = {
+						CreatedOnToolsVersion = 6.0.1;
 					};
-					5EE5240219A1519500DBFDA0 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 5EE523F019A1519500DBFDA0;
+					5E0C3D9F19CEFE0C008E2726 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 5E0C3D8A19CEFE0C008E2726;
 					};
 				};
 			};
-			buildConfigurationList = 5EE523EC19A1519500DBFDA0 /* Build configuration list for PBXProject "ManhattanForum" */;
+			buildConfigurationList = 5E0C3D8619CEFE0C008E2726 /* Build configuration list for PBXProject "ManhattanForum" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -295,73 +280,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 5EE523E819A1519500DBFDA0;
-			productRefGroup = 5EE523F219A1519500DBFDA0 /* Products */;
+			mainGroup = 5E0C3D8219CEFE0C008E2726;
+			productRefGroup = 5E0C3D8C19CEFE0C008E2726 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EE523F019A1519500DBFDA0 /* ManhattanForum */,
-				5EE5240219A1519500DBFDA0 /* ManhattanForumTests */,
+				5E0C3D8A19CEFE0C008E2726 /* ManhattanForum */,
+				5E0C3D9F19CEFE0C008E2726 /* ManhattanForumTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5EE523EF19A1519500DBFDA0 /* Resources */ = {
+		5E0C3D8919CEFE0C008E2726 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ED443B319A761470053C233 /* OpenSans-Regular.ttf in Resources */,
-				5EE5241B19A167D300DBFDA0 /* Credentials.debug.plist in Resources */,
-				5ED443B719ADF18A0053C233 /* OpenSans-Bold.ttf in Resources */,
-				5EE523FC19A1519500DBFDA0 /* Main.storyboard in Resources */,
-				5EE523FE19A1519500DBFDA0 /* Images.xcassets in Resources */,
-				5EE5241919A1676700DBFDA0 /* Credentials.example.plist in Resources */,
+				5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */,
+				5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */,
+				5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */,
+				5E9C159119CF025800F6EBAA /* OpenSans-Regular.ttf in Resources */,
+				5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */,
+				5E9C158919CF025800F6EBAA /* Credentials.example.plist in Resources */,
+				5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EE5240119A1519500DBFDA0 /* Resources */ = {
+		5E0C3D9E19CEFE0C008E2726 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1EC17A19C710D70048873E /* geocodeResponse.json in Resources */,
+				5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D2D63E7473344688148D730 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5517053A864F4D57BE899CCA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-ManhattanForumTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B488F55F50D48EE8E94625E /* Copy Pods Resources */ = {
+		0B97B194F85443198C27B976 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,7 +332,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-ManhattanForum-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9E6903C0467B4C1986A13E1E /* Check Pods Manifest.lock */ = {
+		AFC620B82CCF4D50B65DC117 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,57 +350,65 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5EE523ED19A1519500DBFDA0 /* Sources */ = {
+		5E0C3D8719CEFE0C008E2726 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EE5241719A166F200DBFDA0 /* Credentials.swift in Sources */,
-				5E3469B619C6F94D00BE2AF9 /* MFLocation.swift in Sources */,
-				5ED6B37119A61E320046E188 /* CreateTopicViewController.swift in Sources */,
-				5ED443B519A7643D0053C233 /* FontHelper.swift in Sources */,
-				5E0DE44B19A6206A00441F43 /* DismissSegue.swift in Sources */,
-				5EE523F919A1519500DBFDA0 /* BoroughsViewController.swift in Sources */,
-				5EE523F719A1519500DBFDA0 /* AppDelegate.swift in Sources */,
-				5EFEA30B19C61A5A0016B331 /* GoogleGeocoder.swift in Sources */,
-				5EE5241F19A446E000DBFDA0 /* TopicsViewController.swift in Sources */,
-				5EE5241D19A2234C00DBFDA0 /* ParseHelper.swift in Sources */,
-				5ED443B919AE01DB0053C233 /* LocationManager.swift in Sources */,
+				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
+				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
+				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
+				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
+				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
+				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,
+				5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */,
+				5E9C158C19CF025800F6EBAA /* FontHelper.swift in Sources */,
+				5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */,
+				5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */,
+				5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EE523FF19A1519500DBFDA0 /* Sources */ = {
+		5E0C3D9C19CEFE0C008E2726 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1EC17719C70FED0048873E /* MFLocationTests.swift in Sources */,
-				5E1EC17C19C711270048873E /* TestHelper.swift in Sources */,
-				5E1EC17F19C7169D0048873E /* MFLocation.swift in Sources */,
+				5E9C159E19CF057000F6EBAA /* MFLocationTests.swift in Sources */,
+				5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */,
+				5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5EE5240519A1519500DBFDA0 /* PBXTargetDependency */ = {
+		5E0C3DA219CEFE0C008E2726 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5EE523F019A1519500DBFDA0 /* ManhattanForum */;
-			targetProxy = 5EE5240419A1519500DBFDA0 /* PBXContainerItemProxy */;
+			target = 5E0C3D8A19CEFE0C008E2726 /* ManhattanForum */;
+			targetProxy = 5E0C3DA119CEFE0C008E2726 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5EE523FA19A1519500DBFDA0 /* Main.storyboard */ = {
+		5E0C3D9419CEFE0C008E2726 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5EE523FB19A1519500DBFDA0 /* Base */,
+				5E0C3D9519CEFE0C008E2726 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E0C3D9A19CEFE0C008E2726 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5EE5240B19A1519500DBFDA0 /* Debug */ = {
+		5E0C3DA819CEFE0C008E2726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -464,7 +428,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENVIRONMENT = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -487,7 +450,7 @@
 			};
 			name = Debug;
 		};
-		5EE5240C19A1519500DBFDA0 /* Release */ = {
+		5E0C3DA919CEFE0C008E2726 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -522,42 +485,35 @@
 			};
 			name = Release;
 		};
-		5EE5240E19A1519500DBFDA0 /* Debug */ = {
+		5E0C3DAB19CEFE0C008E2726 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */;
+			baseConfigurationReference = F55E49809BBA40F9A30CC4B2 /* Pods-ManhattanForum.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		5EE5240F19A1519500DBFDA0 /* Release */ = {
+		5E0C3DAC19CEFE0C008E2726 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2C6CECCD035409E8F137DB3 /* Pods-ManhattanForum.xcconfig */;
+			baseConfigurationReference = F55E49809BBA40F9A30CC4B2 /* Pods-ManhattanForum.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = ManhattanForum/Info.release.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-D RELEASE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 			};
 			name = Release;
 		};
-		5EE5241119A1519500DBFDA0 /* Debug */ = {
+		5E0C3DAE19CEFE0C008E2726 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -570,18 +526,13 @@
 				);
 				INFOPLIST_FILE = ManhattanForumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum";
 			};
 			name = Debug;
 		};
-		5EE5241219A1519500DBFDA0 /* Release */ = {
+		5E0C3DAF19CEFE0C008E2726 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FEE1570608314F9D92E7D135 /* Pods-ManhattanForumTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -590,10 +541,6 @@
 				);
 				INFOPLIST_FILE = ManhattanForumTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum";
 			};
@@ -602,34 +549,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5EE523EC19A1519500DBFDA0 /* Build configuration list for PBXProject "ManhattanForum" */ = {
+		5E0C3D8619CEFE0C008E2726 /* Build configuration list for PBXProject "ManhattanForum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EE5240B19A1519500DBFDA0 /* Debug */,
-				5EE5240C19A1519500DBFDA0 /* Release */,
+				5E0C3DA819CEFE0C008E2726 /* Debug */,
+				5E0C3DA919CEFE0C008E2726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EE5240D19A1519500DBFDA0 /* Build configuration list for PBXNativeTarget "ManhattanForum" */ = {
+		5E0C3DAA19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EE5240E19A1519500DBFDA0 /* Debug */,
-				5EE5240F19A1519500DBFDA0 /* Release */,
+				5E0C3DAB19CEFE0C008E2726 /* Debug */,
+				5E0C3DAC19CEFE0C008E2726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5EE5241019A1519500DBFDA0 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */ = {
+		5E0C3DAD19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5EE5241119A1519500DBFDA0 /* Debug */,
-				5EE5241219A1519500DBFDA0 /* Release */,
+				5E0C3DAE19CEFE0C008E2726 /* Debug */,
+				5E0C3DAF19CEFE0C008E2726 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5EE523E919A1519500DBFDA0 /* Project object */;
+	rootObject = 5E0C3D8319CEFE0C008E2726 /* Project object */;
 }
