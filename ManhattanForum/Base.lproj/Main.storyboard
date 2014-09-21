@@ -131,8 +131,8 @@
             <objects>
                 <viewController id="CS7-7F-IgI" customClass="CreateTopicViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ofa-iA-VIc"/>
-                        <viewControllerLayoutGuide type="bottom" id="XjK-2x-ktH"/>
+                        <viewControllerLayoutGuide type="top" id="B0Y-X7-JBw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ymP-li-xLp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3u0-UW-oJx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -159,22 +159,22 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share New York" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-CH-zic">
-                                <rect key="frame" x="99" y="313" width="123" height="21"/>
+                                <rect key="frame" x="99" y="81" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-ls-4N3">
-                                <rect key="frame" x="282" y="77" width="22" height="22"/>
-                                <state key="normal" image="location">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-Ap-e3n">
                                 <rect key="frame" x="282" y="213" width="11" height="22"/>
                                 <state key="normal" image="forwardVerySmall">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-ls-4N3">
+                                <rect key="frame" x="282" y="78" width="22" height="22"/>
+                                <state key="normal" image="location">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                         </subviews>
@@ -310,8 +310,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="WT8-Sh-jDH"/>
         <segue reference="dTa-cU-nR6"/>
+        <segue reference="97v-1f-sau"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
