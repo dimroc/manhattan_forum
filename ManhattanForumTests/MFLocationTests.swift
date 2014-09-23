@@ -23,7 +23,12 @@ class MFLocationTests: XCTestCase {
 
     func testParsingGoogleResponse() {
         let fixture = TestHelper.loadJsonFixture("geocodeResponse")
-        let location = MFLocation(response: fixture)
-        XCTAssert(true, "Pass")
+        let location = MFLocation.fromGoogleJson(fixture)
+        
+        XCTAssertEqual(location.neighborhood!, "East Village")
+        XCTAssertEqual(location.sublocality!, "Manhattan")
+        XCTAssertEqual(location.locality!, "New York")
+        XCTAssertEqual(location.coordinate!.latitude, 40.7292449)
+        XCTAssertEqual(location.coordinate!.longitude, -73.9873784)
     }
 }

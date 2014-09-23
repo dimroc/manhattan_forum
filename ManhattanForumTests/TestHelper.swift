@@ -9,8 +9,12 @@
 import Foundation
 
 class TestHelper {
-    class func loadJsonFixture(path: String!) -> NSDictionary {
-        NSLog("HELLO WORLD")
-        return NSDictionary(objectsAndKeys: "object", "key")
+    class func loadJsonFixture(path: String!) -> Dictionary<String, AnyObject> {
+        let bundle = NSBundle(forClass: self)
+        let resource = bundle.pathForResource(path, ofType: "json")
+        let inputStream = NSInputStream(fileAtPath: resource!)
+        inputStream.open()
+        
+        return NSJSONSerialization.JSONObjectWithStream(inputStream, options: NSJSONReadingOptions.allZeros, error: nil) as Dictionary<String, AnyObject>
     }
 }

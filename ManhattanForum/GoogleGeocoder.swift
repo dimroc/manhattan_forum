@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 enum GoogleGeocoderResponse {
     case Response(MFLocation)
@@ -23,11 +24,16 @@ class GoogleGeocoder {
         let parameters = generateParameters(coordinate)
         
         manager.GET(baseUrl(), parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response) in
-            let location = MFLocation(response: response!)
+            let location = GoogleGeocoder.fromResponse(response!)
+            println("Retrieved location:\n\(location.debugDescription)")
             callback(GoogleGeocoderResponse.Response(location))
         }) { (operation, error) in
             callback(GoogleGeocoderResponse.Error(error))
         }
+    }
+    
+    class func fromResponse(response: AnyObject?) -> MFLocation {
+        return MFLocation.fromGoogleJson(response as Dictionary<String, AnyObject>)
     }
     
     private func generateParameters(coordinate: CLLocationCoordinate2D) -> NSDictionary {
