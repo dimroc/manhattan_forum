@@ -14,7 +14,12 @@ struct MFLocation: Printable, DebugPrintable {
     let coordinate: CLLocationCoordinate2D?
     
     var description: String {
-        return "\(neighborhood), \(sublocality)"
+        switch (neighborhood) {
+        case (.None):
+            return "Unknown"
+        default:
+            return neighborhood!
+        }
     }
     
     var debugDescription: String {
@@ -22,7 +27,7 @@ struct MFLocation: Printable, DebugPrintable {
     }
     
     static func empty() -> MFLocation {
-        return MFLocation(neighborhood: "", sublocality: "", locality: "", coordinate: nil)
+        return MFLocation(neighborhood: nil, sublocality: nil, locality: nil, coordinate: nil)
     }
     
     // JSON Parsing in Swift: http://robots.thoughtbot.com/efficient-json-in-swift-with-functional-concepts-and-generics

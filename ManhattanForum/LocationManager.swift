@@ -10,23 +10,33 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
+    typealias Callback = (GoogleGeocoderResponse) -> Void
+
     var locationManager: CLLocationManager? = nil
+    var callback: Callback
     
-    func start() {
-        self.locationManager = generateLocationManager()
-        self.locationManager!.requestWhenInUseAuthorization()
-        self.locationManager!.startUpdatingLocation()
+    init(callback: Callback) {
+        self.callback = callback
     }
     
-    private func generateLocationManager() -> CLLocationManager! {
-        var newLocationManager = CLLocationManager()
-        newLocationManager.delegate = self
-        newLocationManager.distanceFilter = kCLDistanceFilterNone
-        newLocationManager.desiredAccuracy = kCLLocationAccuracyBest
-        return newLocationManager
+    class func start(callback: Callback) -> LocationManager {
+        var locationManager = LocationManager(callback)
+        locationManager.locationManager = generateCLLocationManager(locationManager)
+        locationManager.locationManager!.requestWhenInUseAuthorization()
+        locationManager.locationManager!.startUpdatingLocation()
+        return locationManager
+    }
+    
+    private class func generateCLLocationManager(locationManagerInstance: LocationManager) -> CLLocationManager! {
+        var cllocationManager = CLLocationManager()
+        cllocationManager.delegate = locationManagerInstance
+        cllocationManager.distanceFilter = kCLDistanceFilterNone
+        cllocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        return cllocationManager
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        println("## INFO: Updating location!")
         let location: CLLocation = locations.last! as CLLocation
         NSLog(location.description)
         google_geocode(location)
@@ -41,6 +51,8 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             case .Response(let location):
                 NSLog(location.description)
             }
+            
+            self.callback(response)
         })
     }
     

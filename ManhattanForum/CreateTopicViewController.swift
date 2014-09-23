@@ -14,7 +14,6 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
     
-    // Must hold on to ivar in memory otherwise ARC GC will clean up instance prematurely and stop prompting for user location
     var locationManager: LocationManager? = nil
     
     override func viewDidLoad() {
@@ -23,8 +22,16 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     }
     
     override func viewDidAppear(animated: Bool) {
-        locationManager = LocationManager()
-        locationManager!.start()
+        // Must hold on to ivar in memory otherwise ARC GC will clean up instance prematurely and stop prompting for user location
+        self.locationManager = LocationManager.start({ (response) -> Void in
+            switch response {
+            case .Error(let error):
+                // TODO: Show popup
+                NSLog(error.description)
+            case .Response(let location):
+                self.textPlaceHolder.text = "Share \(location.description)"
+            }
+        })
     }
     
     override func viewDidDisappear(animated: Bool) {
