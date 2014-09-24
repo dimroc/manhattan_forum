@@ -1,0 +1,59 @@
+{
+    "wrong_key": [{
+                  "address_components": [{
+                                         "long_name": "10003",
+                                         "short_name": "10003",
+                                         "types": ["postal_code"]
+                                         }, {
+                                         "long_name": "Manhattan",
+                                         "short_name": "Manhattan",
+                                         "types": ["sublocality_level_1", "sublocality", "political"]
+                                         }, {
+                                         "long_name": "New York",
+                                         "short_name": "New York",
+                                         "types": ["locality", "political"]
+                                         }, {
+                                         "long_name": "New York County",
+                                         "short_name": "New York County",
+                                         "types": ["administrative_area_level_2", "political"]
+                                         }, {
+                                         "long_name": "New York",
+                                         "short_name": "NY",
+                                         "types": ["administrative_area_level_1", "political"]
+                                         }, {
+                                         "long_name": "United States",
+                                         "short_name": "US",
+                                         "types": ["country", "political"]
+                                         }],
+                  "formatted_address": "New York, NY 10003, USA",
+                  "geometry": {
+                  "bounds": {
+                  "northeast": {
+                  "lat": 40.7396728,
+                  "lng": -73.9798639
+                  },
+                  "southwest": {
+                  "lat": 40.722933,
+                  "lng": -73.9969739
+                  }
+                  },
+                  "location": {
+                  "lat": 40.7322535,
+                  "lng": -73.9874105
+                  },
+                  "location_type": "APPROXIMATE",
+                  "viewport": {
+                  "northeast": {
+                  "lat": 40.7396728,
+                  "lng": -73.9798639
+                  },
+                  "southwest": {
+                  "lat": 40.722933,
+                  "lng": -73.9969739
+                  }
+                  }
+                  },
+                  "types": ["postal_code"]
+                  }],
+    "status": "OK"
+}

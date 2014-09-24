@@ -21,7 +21,7 @@ class MFLocationTests: XCTestCase {
         super.tearDown()
     }
 
-    func testParsingGoogleResponse() {
+    func testParsingValidGoogleResponse() {
         let fixture = TestHelper.loadJsonFixture("geocodeResponse")
         let location = MFLocation.fromGoogleJson(fixture)
         
@@ -30,5 +30,21 @@ class MFLocationTests: XCTestCase {
         XCTAssertEqual(location.locality!, "New York")
         XCTAssertEqual(location.coordinate!.latitude, 40.7292449)
         XCTAssertEqual(location.coordinate!.longitude, -73.9873784)
+    }
+    
+    func testParsingNoHoodGoogleResponse() {
+        let fixture = TestHelper.loadJsonFixture("noHoodGeocodeResponse")
+        let location = MFLocation.fromGoogleJson(fixture)
+        
+        XCTAssert(location.neighborhood == nil, "Should be nil")
+        XCTAssertEqual(location.sublocality!, "Manhattan")
+        XCTAssertEqual(location.description, "Manhattan")
+    }
+    
+    func testParsingWrongKeysGoogleResponse() {
+        let fixture = TestHelper.loadJsonFixture("wrongKeysGeocodeResponse")
+        let location = MFLocation.fromGoogleJson(fixture)
+        
+        XCTAssertEqual(location, MFLocation.empty())
     }
 }

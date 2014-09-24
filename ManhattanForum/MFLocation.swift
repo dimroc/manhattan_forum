@@ -9,16 +9,18 @@
 import Foundation
 import CoreLocation
 
-struct MFLocation: Printable, DebugPrintable {
+struct MFLocation: Printable, DebugPrintable, Equatable {
     let neighborhood, sublocality, locality: String?
     let coordinate: CLLocationCoordinate2D?
     
     var description: String {
-        switch (neighborhood) {
-        case (.None):
-            return "Unknown"
-        default:
+        switch (neighborhood, sublocality) {
+        case (.Some, _):
             return neighborhood!
+        case (.None, .Some):
+            return sublocality!
+        default:
+            return "Unknown"
         }
     }
     
@@ -76,4 +78,12 @@ struct MFLocation: Printable, DebugPrintable {
         
         return nil
     }
+}
+
+func == (lhs: MFLocation, rhs: MFLocation) -> Bool {
+    if lhs.neighborhood == rhs.neighborhood && lhs.sublocality == rhs.sublocality && lhs.locality == rhs.locality {
+        return lhs.coordinate?.latitude == rhs.coordinate?.latitude && lhs.coordinate?.longitude == rhs.coordinate?.longitude
+    }
+    
+    return false
 }

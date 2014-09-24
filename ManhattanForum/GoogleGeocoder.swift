@@ -18,7 +18,7 @@ class GoogleGeocoder {
     class func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse) -> Void) {
         GoogleGeocoder().reverse(coordinate, callback: callback)
     }
-    
+
     func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse) -> Void) {
         let manager = AFHTTPRequestOperationManager()
         let parameters = generateParameters(coordinate)
