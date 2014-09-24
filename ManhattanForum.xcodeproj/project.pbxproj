@@ -12,6 +12,8 @@
 		5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9419CEFE0C008E2726 /* Main.storyboard */; };
 		5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9719CEFE0C008E2726 /* Images.xcassets */; };
 		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
+		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
+		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
 		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
 		5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157919CF025800F6EBAA /* Credentials.debug.plist */; };
@@ -52,6 +54,8 @@
 		5E0C3D9A19CEFE0C008E2726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0C3DA519CEFE0C008E2726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
+		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
 		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
 		5E9C157919CF025800F6EBAA /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		5E9C15A219CF058C00F6EBAA /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
+				5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */,
+				5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */,
 				5E9C15A019CF058300F6EBAA /* geocodeResponse.json */,
 			);
 			name = Fixtures;
@@ -321,6 +327,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */,
+				5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */,
+				5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
