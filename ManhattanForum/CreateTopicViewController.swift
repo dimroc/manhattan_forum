@@ -17,7 +17,6 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     var locationManager: LocationManager? = nil
     
     override func viewDidLoad() {
-        textView.font = FontHelper.createBold()
         textView.becomeFirstResponder()
     }
     

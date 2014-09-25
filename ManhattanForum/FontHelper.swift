@@ -10,7 +10,7 @@ import Foundation
 
 class FontHelper {
     class func launch() {
-        UILabel.appearance().font = createMenu()
+//        UILabel.appearance().font = createMenu()
     }
     
     class func createMenu() -> UIFont {
