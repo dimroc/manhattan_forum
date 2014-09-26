@@ -37,6 +37,10 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
         locationManager = nil
     }
     
+    @IBAction func postTopic(sender: AnyObject) {
+        NSLog("Posting...")
+    }
+    
     @IBAction func showCameraActionSheet(AnyObject) {
         let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Take video", "Choose from library")
         actionSheet.showInView(view)

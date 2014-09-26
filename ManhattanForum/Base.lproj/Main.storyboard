@@ -181,7 +181,7 @@
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-pz-xgb">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-pz-xgb" userLabel="Camera">
                                 <rect key="frame" x="16" y="77" width="25" height="22"/>
                                 <state key="normal" image="whiteCamera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,13 +190,13 @@
                                     <action selector="showCameraActionSheet:" destination="CS7-7F-IgI" eventType="touchUpInside" id="TM7-bS-1ln"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-Ap-e3n">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-Ap-e3n" userLabel="BackgroundArrow">
                                 <rect key="frame" x="282" y="213" width="11" height="22"/>
-                                <state key="normal" image="forwardVerySmall">
+                                <state key="normal" image="forwardSmall">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-ls-4N3">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-ls-4N3" userLabel="Location">
                                 <rect key="frame" x="282" y="78" width="22" height="22"/>
                                 <state key="normal" image="location">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,7 +210,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="9l7-tt-XbK">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="y8S-Jn-A3Q">
@@ -218,7 +218,11 @@
                                 <segue destination="PUh-eJ-EnZ" kind="custom" customClass="DismissSegue" id="dTa-cU-nR6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="8Lz-om-t1h"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="8Lz-om-t1h">
+                            <connections>
+                                <action selector="postTopic:" destination="CS7-7F-IgI" id="Li7-h9-bgB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="9yj-bZ-fwT" id="oNk-ga-2b2"/>
@@ -385,7 +389,7 @@
     </scenes>
     <resources>
         <image name="back" width="11" height="21"/>
-        <image name="forwardVerySmall" width="7" height="11"/>
+        <image name="forwardSmall" width="9" height="16"/>
         <image name="lines" width="30" height="30"/>
         <image name="location" width="19" height="16"/>
         <image name="settings" width="40" height="40"/>
