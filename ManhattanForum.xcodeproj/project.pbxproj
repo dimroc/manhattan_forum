@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0C3D8B19CEFE0C008E2726 /* New Post City.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Post City.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0C3D8F19CEFE0C008E2726 /* Info.debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.debug.plist; sourceTree = "<group>"; };
 		5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E0C3D9519CEFE0C008E2726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		5E0C3D8C19CEFE0C008E2726 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */,
+				5E0C3D8B19CEFE0C008E2726 /* New Post City.app */,
 				5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */,
 			);
 			name = Products;
@@ -247,7 +247,7 @@
 			);
 			name = ManhattanForum;
 			productName = ManhattanForum;
-			productReference = 5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */;
+			productReference = 5E0C3D8B19CEFE0C008E2726 /* New Post City.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5E0C3D9F19CEFE0C008E2726 /* ManhattanForumTests */ = {
@@ -542,7 +542,7 @@
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "New Post City";
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -557,7 +557,7 @@
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "New Post City";
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 			};
 			name = Release;
