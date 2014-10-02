@@ -34,6 +34,7 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     }
     
     override func viewDidDisappear(animated: Bool) {
+        println("Removing location manager")
         locationManager = nil
     }
     

@@ -44,6 +44,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     private func google_geocode(location: CLLocation!) {
+        NSLog("Retrieving reverse geocode for \(location.description)")
         GoogleGeocoder.reverse(location.coordinate, callback: { (response: GoogleGeocoderResponse) in
             switch response {
             case .Error(let error):
