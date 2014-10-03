@@ -43,6 +43,12 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager!.stopUpdatingLocation()
     }
     
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        NSLog("Encountered an error retrieving location: \(error.code) - \(error.description)")
+        locationManager!.stopUpdatingLocation()
+        self.callback(GoogleGeocoderResponse.Error(error))
+    }
+    
     private func google_geocode(location: CLLocation!) {
         NSLog("Retrieving reverse geocode for \(location.description)")
         GoogleGeocoder.reverse(location.coordinate, callback: { (response: GoogleGeocoderResponse) in
