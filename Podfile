@@ -6,6 +6,7 @@ target "ManhattanForum" do
   pod "Parse"
   pod "ParseFacebookUtils"
   pod "AFNetworking", "~> 2.0"
+  pod 'MBProgressHUD', '~> 0.8'
 end
 
 target "ManhattanForumTests" do
