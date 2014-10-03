@@ -9,6 +9,9 @@ target "ManhattanForum" do
 end
 
 target "ManhattanForumTests" do
-
+  pod "RNCryptor"
+  pod "Parse"
+  pod "ParseFacebookUtils"
+  pod "AFNetworking", "~> 2.0"
 end
 
