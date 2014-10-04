@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateTopicViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
@@ -51,17 +51,29 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
-        let actionSheet = UIActionSheet(title: nil, delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Take photo", "Take video", "Choose from library")
-        actionSheet.showInView(view)
-    }
-    
-    func actionSheet(actionSheet: UIActionSheet!, clickedButtonAtIndex buttonIndex: Int) {
-        switch buttonIndex {
-        case 1: showPhotoCamera()
-        case 2: showVideoCamera()
-        case 3: showImagePicker(UIImagePickerControllerSourceType.SavedPhotosAlbum)
-        default:
-            println("Missed option in camera sheet:\(buttonIndex)")
+        var alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+            println("Canceled camera action.")
+        }
+        
+        var takePhotoAction = UIAlertAction(title: "Take photo", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.showPhotoCamera()
+        }
+        
+        var takeVideoAction = UIAlertAction(title: "Take video", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.showVideoCamera()
+        }
+        
+        var chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.showImagePicker(UIImagePickerControllerSourceType.SavedPhotosAlbum)
+        }
+        
+        alertController.addAction(takePhotoAction)
+        alertController.addAction(takeVideoAction)
+        alertController.addAction(chooseFromLibraryAction)
+        alertController.addAction(cancelAction)
+        
+        self.presentViewController(alertController, animated: true) { () -> Void in
         }
     }
     
@@ -76,7 +88,8 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
             presentViewController(picker, animated: true) { () -> Void in
             }
         } else {
-            UIAlertView(title: "No Camera", message: "No Camera Available", delegate: self, cancelButtonTitle: "Ok").show()
+            self.presentViewController(UIAlertControllerFactory.ok("No Camera", message: "No Camera Available"), animated: true, completion: { () -> Void in
+            })
         }
     }
     
@@ -84,7 +97,8 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
             showImagePicker(UIImagePickerControllerSourceType.Camera)
         } else {
-            UIAlertView(title: "No Camera", message: "No Camera Available", delegate: self, cancelButtonTitle: "Ok").show()
+            self.presentViewController(UIAlertControllerFactory.ok("No Camera", message: "No Camera Available"), animated: true, completion: { () -> Void in
+            })
         }
     }
     
