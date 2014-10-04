@@ -13,6 +13,7 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
+    @IBOutlet weak var postButton: UIBarButtonItem!
     
     var locationManager: LocationManager? = nil
     
@@ -21,14 +22,21 @@ class CreateTopicViewController: UIViewController, UIActionSheetDelegate, UIImag
     }
     
     override func viewDidAppear(animated: Bool) {
+        self.postButton.enabled = false;
+        
         // Must hold on to ivar in memory otherwise ARC GC will clean up instance prematurely and stop prompting for user location
         self.locationManager = LocationManager.start({ (response) -> Void in
             switch response {
             case .Error(let error):
-                // TODO: Show popup
                 NSLog(error.description)
+                self.presentViewController(
+                    UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\nPlease close post and try again later."),
+                    animated: true,
+                    completion: { () -> Void in }
+                )
             case .Response(let location):
                 self.textPlaceHolder.text = "Share \(location.description)"
+                self.postButton.enabled = true;
             }
         })
     }

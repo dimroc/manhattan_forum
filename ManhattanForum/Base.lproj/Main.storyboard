@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sdj-D8-bEI">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -218,7 +217,7 @@
                                 <segue destination="PUh-eJ-EnZ" kind="custom" customClass="DismissSegue" id="dTa-cU-nR6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" id="8Lz-om-t1h">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Post" id="8Lz-om-t1h">
                             <connections>
                                 <action selector="postTopic:" destination="CS7-7F-IgI" id="Li7-h9-bgB"/>
                             </connections>
@@ -226,6 +225,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="9yj-bZ-fwT" id="oNk-ga-2b2"/>
+                        <outlet property="postButton" destination="8Lz-om-t1h" id="bXG-D0-xfG"/>
                         <outlet property="textPlaceHolder" destination="McZ-CH-zic" id="BgV-Sc-n7u"/>
                         <outlet property="textView" destination="Ko0-yb-vSJ" id="Vct-J8-PBe"/>
                     </connections>
@@ -239,7 +239,7 @@
             <objects>
                 <tableViewController id="PUh-eJ-EnZ" userLabel="Topics" customClass="TopicsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WZh-KA-h0C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -280,7 +280,7 @@
             <objects>
                 <tableViewController id="Vvu-Hf-aoD" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kU7-8o-ft1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
