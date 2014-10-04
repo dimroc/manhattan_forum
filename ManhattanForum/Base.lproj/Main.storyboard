@@ -105,58 +105,6 @@
             </objects>
             <point key="canvasLocation" x="-57" y="1179"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="ZwU-xz-Fwv">
-            <objects>
-                <tableViewController id="wql-na-n9v" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="j02-Du-RqU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="BUD-4M-nrx">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2a3-Jf-YMh">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2a3-Jf-YMh" id="Vpc-Kt-wOf">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWa-wz-eaK">
-                                                    <rect key="frame" x="120" y="7" width="81" height="30"/>
-                                                    <state key="normal" title="Log Out">
-                                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sGX-pR-r8s">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sGX-pR-r8s" id="YOJ-DC-DCM">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RpE-bx-kMH">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RpE-bx-kMH" id="GvL-ET-o3R">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="wql-na-n9v" id="Yp1-z8-J4o"/>
-                            <outlet property="delegate" destination="wql-na-n9v" id="w7Z-yg-bfv"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="CjM-Ey-d8G"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vVu-D7-XdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="780" y="1178"/>
-        </scene>
         <!--Create Topic View Controller-->
         <scene sceneID="8ct-1E-TZy">
             <objects>
@@ -358,7 +306,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="fUO-T8-Qmn" kind="relationship" relationship="viewControllers" id="bly-3P-s1z"/>
-                        <segue destination="wql-na-n9v" kind="relationship" relationship="viewControllers" id="45h-aO-DCp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ums-Fi-ByU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -392,7 +339,6 @@
         <image name="forwardSmall" width="9" height="16"/>
         <image name="lines" width="30" height="30"/>
         <image name="location" width="19" height="16"/>
-        <image name="settings" width="40" height="40"/>
         <image name="whiteCamera" width="25" height="19"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
