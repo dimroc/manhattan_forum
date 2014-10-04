@@ -11,8 +11,7 @@ import UIKit
 class UIAlertControllerFactory {
     class func ok(title: String, message: String) -> UIAlertController {
         var alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
-        })
+        var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
         alertController.addAction(okAction)
         return alertController
     }

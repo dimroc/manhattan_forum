@@ -32,7 +32,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                 self.presentViewController(
                     UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\nPlease close post and try again later."),
                     animated: true,
-                    completion: { () -> Void in }
+                    completion: nil
                 )
             case .Response(let location):
                 self.textPlaceHolder.text = "Share \(location.description)"
@@ -52,9 +52,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func showCameraActionSheet(AnyObject) {
         var alertController = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in
-            println("Canceled camera action.")
-        }
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         
         var takePhotoAction = UIAlertAction(title: "Take photo", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showPhotoCamera()
@@ -73,8 +71,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         alertController.addAction(chooseFromLibraryAction)
         alertController.addAction(cancelAction)
         
-        self.presentViewController(alertController, animated: true) { () -> Void in
-        }
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     private func showVideoCamera() {
@@ -85,11 +82,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             picker.videoMaximumDuration = 15.0;
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.mediaTypes = [kUTTypeMovie]
-            presentViewController(picker, animated: true) { () -> Void in
-            }
+            presentViewController(picker, animated: true, completion: nil)
         } else {
-            self.presentViewController(UIAlertControllerFactory.ok("No Camera", message: "No Camera Available"), animated: true, completion: { () -> Void in
-            })
+            self.presentViewController(UIAlertControllerFactory.ok("No Camera", message: "No Camera Available"), animated: true, completion: nil)
         }
     }
     
@@ -97,8 +92,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
             showImagePicker(UIImagePickerControllerSourceType.Camera)
         } else {
-            self.presentViewController(UIAlertControllerFactory.ok("No Camera", message: "No Camera Available"), animated: true, completion: { () -> Void in
-            })
+            self.presentViewController(UIAlertControllerFactory.ok("No Camera", message: "No Camera Available"), animated: true, completion: nil)
         }
     }
     
@@ -107,8 +101,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         picker.allowsEditing = true
         picker.delegate = self;
         picker.sourceType = sourceType
-        presentViewController(picker, animated: true) { () -> Void in
-        }
+        presentViewController(picker, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
@@ -118,7 +111,6 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         }
         
         imageView.image = chosenImage
-        picker.dismissViewControllerAnimated(true, completion: { () -> Void in
-        })
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
