@@ -14,11 +14,11 @@ class FontHelper {
     }
     
     class func createMenu() -> UIFont {
-        return UIFont(name: "Open Sans", size: 16.0)
+        return UIFont(name: "Open Sans", size: 16.0)!
     }
     
     class func createNormal() -> UIFont {
-        return UIFont(name: "Open Sans", size: 17.0)
+        return UIFont(name: "Open Sans", size: 17.0)!
     }
     
     class func createBold() -> UIFont {

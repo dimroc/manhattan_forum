@@ -13,8 +13,8 @@ class TestHelper {
         let bundle = NSBundle(forClass: self)
         let resource = bundle.pathForResource(path, ofType: "json")
         let inputStream = NSInputStream(fileAtPath: resource!)
-        inputStream.open()
+        inputStream!.open()
         
-        return NSJSONSerialization.JSONObjectWithStream(inputStream, options: NSJSONReadingOptions.allZeros, error: nil) as Dictionary<String, AnyObject>
+        return NSJSONSerialization.JSONObjectWithStream(inputStream!, options: NSJSONReadingOptions.allZeros, error: nil) as Dictionary<String, AnyObject>
     }
 }
