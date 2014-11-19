@@ -15,6 +15,6 @@ class ParseHelper {
             clientKey: Credentials.objectForKey("ParseClientKey"))
         
         PFFacebookUtils.initializeFacebook()
-        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
     }
 }
