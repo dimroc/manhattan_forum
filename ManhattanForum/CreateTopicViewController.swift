@@ -17,6 +17,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     var locationManager: LocationManager? = nil
     var location: MFLocation? = nil
+    var videoPath: String? = nil
     
     override func viewDidLoad() {
         textView.becomeFirstResponder()
@@ -50,7 +51,13 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func postTopic(sender: AnyObject) {
         NSLog("Posting...")
-        PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image)
+        if (self.videoPath != nil) {
+            PostRepository.create(self.textView.text, location: self.location!, withVideo: self.videoPath)
+        } else {
+            PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image)
+        }
+        
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
@@ -108,12 +115,23 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
-        var chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage
-        if(chosenImage == nil) {
-            chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let mediaType = info[UIImagePickerControllerMediaType]! as String
+        
+        switch mediaType {
+        case kUTTypeVideo, kUTTypeMovie:
+            let url = info[UIImagePickerControllerMediaURL] as? NSURL
+            self.videoPath = url?.path
+        case kUTTypeImage:
+            var chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage
+            if(chosenImage == nil) {
+                chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+            }
+
+            self.imageView.image = chosenImage
+        default:
+            println("## ERROR: Unsupported Media Type: \(mediaType)")
         }
         
-        imageView.image = chosenImage
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
