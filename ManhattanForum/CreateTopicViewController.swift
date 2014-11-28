@@ -50,7 +50,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func postTopic(sender: AnyObject) {
         NSLog("Posting...")
-        PostRepository.create(self.textView.text, location: self.location!)
+        PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image)
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
