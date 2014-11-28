@@ -37,6 +37,7 @@ class PostRepository {
             
             file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
                 if(succeeded) {
+                    post["type"] = "image"
                     post["image"] = file
                     post.saveEventually()
                 } else {
@@ -45,6 +46,7 @@ class PostRepository {
                 }
             })
         } else {
+            post["type"] = "message"
             post.saveEventually()
         }
     }
@@ -62,6 +64,7 @@ class PostRepository {
         
         file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
             if(succeeded) {
+                post["type"] = "video"
                 post["video"] = file
                 post.saveEventually()
             } else {
