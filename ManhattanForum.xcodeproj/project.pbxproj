@@ -1,1553 +1,659 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0B97B194F85443198C27B976</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>27178CD24487A871C441C8D4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ManhattanForum.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>294C8FD4F34C4391B55B293D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>514533F792FA436AAA752DBE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F18FB166EB1A4FCA81EF82A0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Required</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5581BA35EC9B4208A6FB3AA1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FCB9DA149EA74D3AA3B26882</string>
-				<string>F18FB166EB1A4FCA81EF82A0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D8219CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E0C3D8D19CEFE0C008E2726</string>
-				<string>5E0C3DA319CEFE0C008E2726</string>
-				<string>5E0C3D8C19CEFE0C008E2726</string>
-				<string>5581BA35EC9B4208A6FB3AA1</string>
-				<string>6F8C3848A7A8B2750C88F532</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D8319CEFE0C008E2726</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0600</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>dimroc</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>5E0C3D8A19CEFE0C008E2726</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.0.1</string>
-					</dict>
-					<key>5E0C3D9F19CEFE0C008E2726</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>6.0.1</string>
-						<key>TestTargetID</key>
-						<string>5E0C3D8A19CEFE0C008E2726</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>5E0C3D8619CEFE0C008E2726</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5E0C3D8219CEFE0C008E2726</string>
-			<key>productRefGroup</key>
-			<string>5E0C3D8C19CEFE0C008E2726</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>5E0C3D8A19CEFE0C008E2726</string>
-				<string>5E0C3D9F19CEFE0C008E2726</string>
-			</array>
-		</dict>
-		<key>5E0C3D8619CEFE0C008E2726</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5E0C3DA819CEFE0C008E2726</string>
-				<string>5E0C3DA919CEFE0C008E2726</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5E0C3D8719CEFE0C008E2726</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5E9C158719CF025800F6EBAA</string>
-				<string>5E9C159319CF025800F6EBAA</string>
-				<string>5E9C158A19CF025800F6EBAA</string>
-				<string>5E0C3D9119CEFE0C008E2726</string>
-				<string>5E5F023519E02BD10011E8E1</string>
-				<string>5E9C158D19CF025800F6EBAA</string>
-				<string>5E9C158F19CF025800F6EBAA</string>
-				<string>5E9C158B19CF025800F6EBAA</string>
-				<string>5E9C158C19CF025800F6EBAA</string>
-				<string>5E9C159219CF025800F6EBAA</string>
-				<string>5E9C158619CF025800F6EBAA</string>
-				<string>5E9C158E19CF025800F6EBAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5E0C3D8819CEFE0C008E2726</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6CD48305893B4F379B1E09F0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5E0C3D8919CEFE0C008E2726</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5E9C158819CF025800F6EBAA</string>
-				<string>5E0C3D9619CEFE0C008E2726</string>
-				<string>5E9C159019CF025800F6EBAA</string>
-				<string>5E9C159119CF025800F6EBAA</string>
-				<string>5E0C3D9B19CEFE0C008E2726</string>
-				<string>5E9C158919CF025800F6EBAA</string>
-				<string>5E0C3D9819CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5E0C3D8A19CEFE0C008E2726</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5E0C3DAA19CEFE0C008E2726</string>
-			<key>buildPhases</key>
-			<array>
-				<string>AFC620B82CCF4D50B65DC117</string>
-				<string>5E0C3D8719CEFE0C008E2726</string>
-				<string>5E0C3D8819CEFE0C008E2726</string>
-				<string>5E0C3D8919CEFE0C008E2726</string>
-				<string>0B97B194F85443198C27B976</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ManhattanForum</string>
-			<key>productName</key>
-			<string>ManhattanForum</string>
-			<key>productReference</key>
-			<string>5E0C3D8B19CEFE0C008E2726</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>5E0C3D8B19CEFE0C008E2726</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ManhattanForum.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5E0C3D8C19CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E0C3D8B19CEFE0C008E2726</string>
-				<string>5E0C3DA019CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D8D19CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E0C3D9019CEFE0C008E2726</string>
-				<string>5E9C159519CF028600F6EBAA</string>
-				<string>5E9C159619CF028F00F6EBAA</string>
-				<string>5E9C159419CF026700F6EBAA</string>
-				<string>5E9C159719CF02CA00F6EBAA</string>
-				<string>5E0C3D8E19CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ManhattanForum</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D8E19CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E9C159919CF034C00F6EBAA</string>
-				<string>5E9C157919CF025800F6EBAA</string>
-				<string>5E9C157A19CF025800F6EBAA</string>
-				<string>5E0C3D8F19CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D8F19CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.debug.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9019CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9119CEFE0C008E2726</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E0C3D9019CEFE0C008E2726</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E0C3D9419CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E0C3D9519CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9519CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9619CEFE0C008E2726</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E0C3D9419CEFE0C008E2726</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E0C3D9719CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9819CEFE0C008E2726</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E0C3D9719CEFE0C008E2726</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E0C3D9919CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E0C3D9A19CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9A19CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3D9B19CEFE0C008E2726</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E0C3D9919CEFE0C008E2726</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E0C3D9C19CEFE0C008E2726</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5E9C159E19CF057000F6EBAA</string>
-				<string>5E9C159F19CF057000F6EBAA</string>
-				<string>5E9C15A319CF059D00F6EBAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5E0C3D9D19CEFE0C008E2726</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>514533F792FA436AAA752DBE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5E0C3D9E19CEFE0C008E2726</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5E9C15A119CF058300F6EBAA</string>
-				<string>5E3D147819D1A9820001FB84</string>
-				<string>5E3D147619D1A73C0001FB84</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5E0C3D9F19CEFE0C008E2726</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5E0C3DAD19CEFE0C008E2726</string>
-			<key>buildPhases</key>
-			<array>
-				<string>AE6089EFE9D34A52A1DA6B69</string>
-				<string>5E0C3D9C19CEFE0C008E2726</string>
-				<string>5E0C3D9D19CEFE0C008E2726</string>
-				<string>5E0C3D9E19CEFE0C008E2726</string>
-				<string>294C8FD4F34C4391B55B293D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5E0C3DA219CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ManhattanForumTests</string>
-			<key>productName</key>
-			<string>ManhattanForumTests</string>
-			<key>productReference</key>
-			<string>5E0C3DA019CEFE0C008E2726</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>5E0C3DA019CEFE0C008E2726</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ManhattanForumTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5E0C3DA119CEFE0C008E2726</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5E0C3D8319CEFE0C008E2726</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5E0C3D8A19CEFE0C008E2726</string>
-			<key>remoteInfo</key>
-			<string>ManhattanForum</string>
-		</dict>
-		<key>5E0C3DA219CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5E0C3D8A19CEFE0C008E2726</string>
-			<key>targetProxy</key>
-			<string>5E0C3DA119CEFE0C008E2726</string>
-		</dict>
-		<key>5E0C3DA319CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E9C15A219CF058C00F6EBAA</string>
-				<string>5E9C159C19CF057000F6EBAA</string>
-				<string>5E9C159D19CF057000F6EBAA</string>
-				<string>5E0C3DA419CEFE0C008E2726</string>
-				<string>5E9C15A519D11D9B00F6EBAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ManhattanForumTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3DA419CEFE0C008E2726</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E0C3DA519CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3DA519CEFE0C008E2726</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E0C3DA819CEFE0C008E2726</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5E0C3DA919CEFE0C008E2726</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5E0C3DAA19CEFE0C008E2726</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5E0C3DAB19CEFE0C008E2726</string>
-				<string>5E0C3DAC19CEFE0C008E2726</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5E0C3DAB19CEFE0C008E2726</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>27178CD24487A871C441C8D4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ManhattanForum/Info.debug.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>ManhattanForum</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ManhattanForum/ManhattanForum-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5E0C3DAC19CEFE0C008E2726</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>6873452131B38A7F009164D1</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ManhattanForum/Info.release.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>ManhattanForum</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ManhattanForum/ManhattanForum-Bridging-Header.h</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5E0C3DAD19CEFE0C008E2726</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5E0C3DAE19CEFE0C008E2726</string>
-				<string>5E0C3DAF19CEFE0C008E2726</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5E0C3DAE19CEFE0C008E2726</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>973E0306DC995B4D9A5A9534</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ManhattanForumTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ManhattanForumTests/ManhattanForumTests-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5E0C3DAF19CEFE0C008E2726</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>8CF438EE1426B0D3C85569E4</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>ManhattanForumTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>ManhattanForumTests/ManhattanForumTests-Bridging-Header.h</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5E3D147519D1A73C0001FB84</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>noHoodGeocodeResponse.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E3D147619D1A73C0001FB84</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E3D147519D1A73C0001FB84</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E3D147719D1A9820001FB84</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>wrongKeysGeocodeResponse.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E3D147819D1A9820001FB84</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E3D147719D1A9820001FB84</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E5F023419E02BD10011E8E1</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIAlertControllerFactory.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E5F023519E02BD10011E8E1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E5F023419E02BD10011E8E1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C157719CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>BoroughsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157819CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>CreateTopicViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157919CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Credentials.debug.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157A19CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Credentials.example.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157B19CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Credentials.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157C19CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>DismissSegue.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157D19CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>FontHelper.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157E19CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>GoogleGeocoder.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C157F19CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>LocationManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C158119CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MFLocation.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C158219CF025800F6EBAA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>OpenSans-Bold.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C158319CF025800F6EBAA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file</string>
-			<key>path</key>
-			<string>OpenSans-Regular.ttf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C158419CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ParseHelper.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C158519CF025800F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TopicsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C158619CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157719CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158719CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157819CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158819CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157919CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158919CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157A19CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158A19CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157B19CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158B19CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157C19CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158C19CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157D19CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158D19CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157E19CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158E19CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C157F19CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C158F19CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C158119CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C159019CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C158219CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C159119CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C158319CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C159219CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C158419CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C159319CF025800F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C158519CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C159419CF026700F6EBAA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E9C157719CF025800F6EBAA</string>
-				<string>5E9C158519CF025800F6EBAA</string>
-				<string>5E9C157819CF025800F6EBAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159519CF028600F6EBAA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E9C157B19CF025800F6EBAA</string>
-				<string>5E9C157E19CF025800F6EBAA</string>
-				<string>5E9C158419CF025800F6EBAA</string>
-				<string>5E9C157F19CF025800F6EBAA</string>
-				<string>5E9C157D19CF025800F6EBAA</string>
-				<string>5E5F023419E02BD10011E8E1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Misc</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159619CF028F00F6EBAA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E9C158119CF025800F6EBAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Models</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159719CF02CA00F6EBAA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E9C157C19CF025800F6EBAA</string>
-				<string>5E9C158219CF025800F6EBAA</string>
-				<string>5E9C158319CF025800F6EBAA</string>
-				<string>5E0C3D9419CEFE0C008E2726</string>
-				<string>5E0C3D9719CEFE0C008E2726</string>
-				<string>5E0C3D9919CEFE0C008E2726</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>User Interface</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159919CF034C00F6EBAA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ManhattanForum-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159C19CF057000F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>MFLocationTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159D19CF057000F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>TestHelper.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C159E19CF057000F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C159C19CF057000F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C159F19CF057000F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C159D19CF057000F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C15A019CF058300F6EBAA</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.json</string>
-			<key>path</key>
-			<string>geocodeResponse.json</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C15A119CF058300F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C15A019CF058300F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C15A219CF058C00F6EBAA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5E3D147719D1A9820001FB84</string>
-				<string>5E3D147519D1A73C0001FB84</string>
-				<string>5E9C15A019CF058300F6EBAA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Fixtures</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5E9C15A319CF059D00F6EBAA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5E9C158119CF025800F6EBAA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5E9C15A519D11D9B00F6EBAA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ManhattanForumTests-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6873452131B38A7F009164D1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ManhattanForum.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6CD48305893B4F379B1E09F0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FCB9DA149EA74D3AA3B26882</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6F8C3848A7A8B2750C88F532</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>27178CD24487A871C441C8D4</string>
-				<string>6873452131B38A7F009164D1</string>
-				<string>973E0306DC995B4D9A5A9534</string>
-				<string>8CF438EE1426B0D3C85569E4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CF438EE1426B0D3C85569E4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ManhattanForumTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>973E0306DC995B4D9A5A9534</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-ManhattanForumTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AE6089EFE9D34A52A1DA6B69</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>AFC620B82CCF4D50B65DC117</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F18FB166EB1A4FCA81EF82A0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-ManhattanForumTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>FCB9DA149EA74D3AA3B26882</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-ManhattanForum.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>5E0C3D8319CEFE0C008E2726</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		514533F792FA436AAA752DBE /* libPods-ManhattanForumTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F18FB166EB1A4FCA81EF82A0 /* libPods-ManhattanForumTests.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */; };
+		5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9419CEFE0C008E2726 /* Main.storyboard */; };
+		5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9719CEFE0C008E2726 /* Images.xcassets */; };
+		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
+		5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D071A28EC450033EAAE /* PostRepository.swift */; };
+		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
+		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
+		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
+		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
+		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
+		5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157919CF025800F6EBAA /* Credentials.debug.plist */; };
+		5E9C158919CF025800F6EBAA /* Credentials.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157A19CF025800F6EBAA /* Credentials.example.plist */; };
+		5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157B19CF025800F6EBAA /* Credentials.swift */; };
+		5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157C19CF025800F6EBAA /* DismissSegue.swift */; };
+		5E9C158C19CF025800F6EBAA /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157D19CF025800F6EBAA /* FontHelper.swift */; };
+		5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157E19CF025800F6EBAA /* GoogleGeocoder.swift */; };
+		5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157F19CF025800F6EBAA /* LocationManager.swift */; };
+		5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */; };
+		5E9C159119CF025800F6EBAA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */; };
+		5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158419CF025800F6EBAA /* ParseHelper.swift */; };
+		5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158519CF025800F6EBAA /* TopicsViewController.swift */; };
+		5E9C159E19CF057000F6EBAA /* MFLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */; };
+		5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159D19CF057000F6EBAA /* TestHelper.swift */; };
+		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
+		5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E0C3DA119CEFE0C008E2726 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E0C3D8319CEFE0C008E2726 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E0C3D8A19CEFE0C008E2726;
+			remoteInfo = ManhattanForum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27178CD24487A871C441C8D4 /* Pods-ManhattanForum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.debug.xcconfig"; sourceTree = "<group>"; };
+		5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManhattanForum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0C3D8F19CEFE0C008E2726 /* Info.debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.debug.plist; sourceTree = "<group>"; };
+		5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E0C3D9519CEFE0C008E2726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E0C3D9719CEFE0C008E2726 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E0C3D9A19CEFE0C008E2726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E0C3DA519CEFE0C008E2726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E193D071A28EC450033EAAE /* PostRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
+		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
+		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
+		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
+		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
+		5E9C157919CF025800F6EBAA /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
+		5E9C157A19CF025800F6EBAA /* Credentials.example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.example.plist; sourceTree = "<group>"; };
+		5E9C157B19CF025800F6EBAA /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		5E9C157C19CF025800F6EBAA /* DismissSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissSegue.swift; sourceTree = "<group>"; };
+		5E9C157D19CF025800F6EBAA /* FontHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		5E9C157E19CF025800F6EBAA /* GoogleGeocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleGeocoder.swift; sourceTree = "<group>"; };
+		5E9C157F19CF025800F6EBAA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5E9C158119CF025800F6EBAA /* MFLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocation.swift; sourceTree = "<group>"; };
+		5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		5E9C158419CF025800F6EBAA /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		5E9C158519CF025800F6EBAA /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		5E9C159919CF034C00F6EBAA /* ManhattanForum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForum-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocationTests.swift; sourceTree = "<group>"; };
+		5E9C159D19CF057000F6EBAA /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		5E9C15A019CF058300F6EBAA /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
+		5E9C15A519D11D9B00F6EBAA /* ManhattanForumTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForumTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		6873452131B38A7F009164D1 /* Pods-ManhattanForum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.release.xcconfig"; sourceTree = "<group>"; };
+		8CF438EE1426B0D3C85569E4 /* Pods-ManhattanForumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.release.xcconfig"; sourceTree = "<group>"; };
+		973E0306DC995B4D9A5A9534 /* Pods-ManhattanForumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F18FB166EB1A4FCA81EF82A0 /* libPods-ManhattanForumTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForumTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ManhattanForum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E0C3D8819CEFE0C008E2726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E0C3D9D19CEFE0C008E2726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514533F792FA436AAA752DBE /* libPods-ManhattanForumTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5581BA35EC9B4208A6FB3AA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */,
+				F18FB166EB1A4FCA81EF82A0 /* libPods-ManhattanForumTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E0C3D8219CEFE0C008E2726 = {
+			isa = PBXGroup;
+			children = (
+				5E0C3D8D19CEFE0C008E2726 /* ManhattanForum */,
+				5E0C3DA319CEFE0C008E2726 /* ManhattanForumTests */,
+				5E0C3D8C19CEFE0C008E2726 /* Products */,
+				5581BA35EC9B4208A6FB3AA1 /* Frameworks */,
+				6F8C3848A7A8B2750C88F532 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		5E0C3D8C19CEFE0C008E2726 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */,
+				5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E0C3D8D19CEFE0C008E2726 /* ManhattanForum */ = {
+			isa = PBXGroup;
+			children = (
+				5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */,
+				5E9C159519CF028600F6EBAA /* Misc */,
+				5E9C159619CF028F00F6EBAA /* Models */,
+				5E9C159419CF026700F6EBAA /* Controllers */,
+				5E9C159719CF02CA00F6EBAA /* User Interface */,
+				5E0C3D8E19CEFE0C008E2726 /* Supporting Files */,
+			);
+			path = ManhattanForum;
+			sourceTree = "<group>";
+		};
+		5E0C3D8E19CEFE0C008E2726 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C159919CF034C00F6EBAA /* ManhattanForum-Bridging-Header.h */,
+				5E9C157919CF025800F6EBAA /* Credentials.debug.plist */,
+				5E9C157A19CF025800F6EBAA /* Credentials.example.plist */,
+				5E0C3D8F19CEFE0C008E2726 /* Info.debug.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E0C3DA319CEFE0C008E2726 /* ManhattanForumTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C15A219CF058C00F6EBAA /* Fixtures */,
+				5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */,
+				5E9C159D19CF057000F6EBAA /* TestHelper.swift */,
+				5E0C3DA419CEFE0C008E2726 /* Supporting Files */,
+				5E9C15A519D11D9B00F6EBAA /* ManhattanForumTests-Bridging-Header.h */,
+			);
+			path = ManhattanForumTests;
+			sourceTree = "<group>";
+		};
+		5E0C3DA419CEFE0C008E2726 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E0C3DA519CEFE0C008E2726 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E9C159419CF026700F6EBAA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */,
+				5E9C158519CF025800F6EBAA /* TopicsViewController.swift */,
+				5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5E9C159519CF028600F6EBAA /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C157B19CF025800F6EBAA /* Credentials.swift */,
+				5E9C157E19CF025800F6EBAA /* GoogleGeocoder.swift */,
+				5E9C158419CF025800F6EBAA /* ParseHelper.swift */,
+				5E9C157F19CF025800F6EBAA /* LocationManager.swift */,
+				5E9C157D19CF025800F6EBAA /* FontHelper.swift */,
+				5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */,
+				5E193D071A28EC450033EAAE /* PostRepository.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		5E9C159619CF028F00F6EBAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C158119CF025800F6EBAA /* MFLocation.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5E9C159719CF02CA00F6EBAA /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C157C19CF025800F6EBAA /* DismissSegue.swift */,
+				5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */,
+				5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */,
+				5E0C3D9419CEFE0C008E2726 /* Main.storyboard */,
+				5E0C3D9719CEFE0C008E2726 /* Images.xcassets */,
+				5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		5E9C15A219CF058C00F6EBAA /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */,
+				5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */,
+				5E9C15A019CF058300F6EBAA /* geocodeResponse.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		6F8C3848A7A8B2750C88F532 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27178CD24487A871C441C8D4 /* Pods-ManhattanForum.debug.xcconfig */,
+				6873452131B38A7F009164D1 /* Pods-ManhattanForum.release.xcconfig */,
+				973E0306DC995B4D9A5A9534 /* Pods-ManhattanForumTests.debug.xcconfig */,
+				8CF438EE1426B0D3C85569E4 /* Pods-ManhattanForumTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E0C3D8A19CEFE0C008E2726 /* ManhattanForum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E0C3DAA19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForum" */;
+			buildPhases = (
+				AFC620B82CCF4D50B65DC117 /* Check Pods Manifest.lock */,
+				5E0C3D8719CEFE0C008E2726 /* Sources */,
+				5E0C3D8819CEFE0C008E2726 /* Frameworks */,
+				5E0C3D8919CEFE0C008E2726 /* Resources */,
+				0B97B194F85443198C27B976 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ManhattanForum;
+			productName = ManhattanForum;
+			productReference = 5E0C3D8B19CEFE0C008E2726 /* ManhattanForum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E0C3D9F19CEFE0C008E2726 /* ManhattanForumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E0C3DAD19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */;
+			buildPhases = (
+				AE6089EFE9D34A52A1DA6B69 /* Check Pods Manifest.lock */,
+				5E0C3D9C19CEFE0C008E2726 /* Sources */,
+				5E0C3D9D19CEFE0C008E2726 /* Frameworks */,
+				5E0C3D9E19CEFE0C008E2726 /* Resources */,
+				294C8FD4F34C4391B55B293D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E0C3DA219CEFE0C008E2726 /* PBXTargetDependency */,
+			);
+			name = ManhattanForumTests;
+			productName = ManhattanForumTests;
+			productReference = 5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E0C3D8319CEFE0C008E2726 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = dimroc;
+				TargetAttributes = {
+					5E0C3D8A19CEFE0C008E2726 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					5E0C3D9F19CEFE0C008E2726 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 5E0C3D8A19CEFE0C008E2726;
+					};
+				};
+			};
+			buildConfigurationList = 5E0C3D8619CEFE0C008E2726 /* Build configuration list for PBXProject "ManhattanForum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E0C3D8219CEFE0C008E2726;
+			productRefGroup = 5E0C3D8C19CEFE0C008E2726 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E0C3D8A19CEFE0C008E2726 /* ManhattanForum */,
+				5E0C3D9F19CEFE0C008E2726 /* ManhattanForumTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E0C3D8919CEFE0C008E2726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */,
+				5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */,
+				5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */,
+				5E9C159119CF025800F6EBAA /* OpenSans-Regular.ttf in Resources */,
+				5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */,
+				5E9C158919CF025800F6EBAA /* Credentials.example.plist in Resources */,
+				5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E0C3D9E19CEFE0C008E2726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */,
+				5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */,
+				5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B97B194F85443198C27B976 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		294C8FD4F34C4391B55B293D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE6089EFE9D34A52A1DA6B69 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFC620B82CCF4D50B65DC117 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E0C3D8719CEFE0C008E2726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
+				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
+				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
+				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
+				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
+				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
+				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
+				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,
+				5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */,
+				5E9C158C19CF025800F6EBAA /* FontHelper.swift in Sources */,
+				5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */,
+				5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */,
+				5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E0C3D9C19CEFE0C008E2726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9C159E19CF057000F6EBAA /* MFLocationTests.swift in Sources */,
+				5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */,
+				5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E0C3DA219CEFE0C008E2726 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E0C3D8A19CEFE0C008E2726 /* ManhattanForum */;
+			targetProxy = 5E0C3DA119CEFE0C008E2726 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E0C3D9419CEFE0C008E2726 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E0C3D9519CEFE0C008E2726 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E0C3D9A19CEFE0C008E2726 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E0C3DA819CEFE0C008E2726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E0C3DA919CEFE0C008E2726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E0C3DAB19CEFE0C008E2726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27178CD24487A871C441C8D4 /* Pods-ManhattanForum.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = ManhattanForum;
+				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E0C3DAC19CEFE0C008E2726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6873452131B38A7F009164D1 /* Pods-ManhattanForum.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = ManhattanForum/Info.release.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = ManhattanForum;
+				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		5E0C3DAE19CEFE0C008E2726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973E0306DC995B4D9A5A9534 /* Pods-ManhattanForumTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ManhattanForumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForumTests/ManhattanForumTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum";
+			};
+			name = Debug;
+		};
+		5E0C3DAF19CEFE0C008E2726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF438EE1426B0D3C85569E4 /* Pods-ManhattanForumTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ManhattanForumTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForumTests/ManhattanForumTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManhattanForum.app/ManhattanForum";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E0C3D8619CEFE0C008E2726 /* Build configuration list for PBXProject "ManhattanForum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E0C3DA819CEFE0C008E2726 /* Debug */,
+				5E0C3DA919CEFE0C008E2726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E0C3DAA19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E0C3DAB19CEFE0C008E2726 /* Debug */,
+				5E0C3DAC19CEFE0C008E2726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E0C3DAD19CEFE0C008E2726 /* Build configuration list for PBXNativeTarget "ManhattanForumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E0C3DAE19CEFE0C008E2726 /* Debug */,
+				5E0C3DAF19CEFE0C008E2726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E0C3D8319CEFE0C008E2726 /* Project object */;
+}

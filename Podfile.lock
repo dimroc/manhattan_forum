@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (2.5.0):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
+    - AFNetworking/NSURLConnection (= 2.5.0)
+    - AFNetworking/NSURLSession (= 2.5.0)
+    - AFNetworking/Reachability (= 2.5.0)
+    - AFNetworking/Security (= 2.5.0)
+    - AFNetworking/Serialization (= 2.5.0)
+    - AFNetworking/UIKit (= 2.5.0)
   - AFNetworking/NSURLConnection (2.5.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -47,4 +47,4 @@ SPEC CHECKSUMS:
   ParseFacebookUtils: df2c8634a66883326629099af3690f1862fe126d
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0

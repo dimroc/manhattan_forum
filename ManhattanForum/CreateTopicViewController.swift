@@ -16,6 +16,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var postButton: UIBarButtonItem!
     
     var locationManager: LocationManager? = nil
+    var location: MFLocation? = nil
     
     override func viewDidLoad() {
         textView.becomeFirstResponder()
@@ -36,7 +37,8 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                 )
             case .Response(let location):
                 self.textPlaceHolder.text = "Share \(location.description)"
-                self.postButton.enabled = true;
+                self.postButton.enabled = true
+                self.location = location
             }
         })
     }
@@ -48,6 +50,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func postTopic(sender: AnyObject) {
         NSLog("Posting...")
+        PostRepository.create(self.textView.text, location: self.location!)
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
