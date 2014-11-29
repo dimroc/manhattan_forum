@@ -13,6 +13,7 @@
 		5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9719CEFE0C008E2726 /* Images.xcassets */; };
 		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
 		5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D071A28EC450033EAAE /* PostRepository.swift */; };
+		5E193D0A1A2975280033EAAE /* VideoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D091A2975280033EAAE /* VideoAsset.swift */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
@@ -58,6 +59,7 @@
 		5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0C3DA519CEFE0C008E2726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E193D071A28EC450033EAAE /* PostRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		5E193D091A2975280033EAAE /* VideoAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAsset.swift; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				5E9C157D19CF025800F6EBAA /* FontHelper.swift */,
 				5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */,
 				5E193D071A28EC450033EAAE /* PostRepository.swift */,
+				5E193D091A2975280033EAAE /* VideoAsset.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
 				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
 				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
+				5E193D0A1A2975280033EAAE /* VideoAsset.swift in Sources */,
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
 				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
