@@ -11,12 +11,20 @@
 
 #import <AVFoundation/AVFoundation.h>
 
+@interface MFVideoAssetResponse : NSObject
+@property (nonatomic, strong) NSURL* url;
+@property (nonatomic, strong) UIImage* thumbnail;
+@property (nonatomic, assign) BOOL success;
+@property (nonatomic, strong) NSError* error;
+@end
+
 @interface MFVideoAsset : NSObject
 
-typedef void (^MFExportCallback)(AVAssetExportSession *);
+typedef void (^MFExportCallback)(MFVideoAssetResponse *);
 
 - (id)init:(NSURL*) url;
 - (void)fixOrientation:(MFExportCallback) callback;
+
 @end
 
 #endif

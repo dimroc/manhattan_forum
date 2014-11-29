@@ -10,6 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "MFVideoAsset.h"
 
+@implementation MFVideoAssetResponse
+@end
+
 @interface MFVideoAsset ()
 @property (nonatomic, strong) NSURL *url;
 @end
@@ -25,7 +28,7 @@
     return self;
 }
 
-// From this StackOverflow Gobbly Gook:
+// Modified from this StackOverflow Gobbly Gook:
 // http://stackoverflow.com/questions/19966766/ios-uiimagepickercontroller-result-video-orientation-after-upload
 - (void)fixOrientation:(MFExportCallback) callback {
     AVAsset *firstAsset = [AVAsset assetWithURL:[self url]];
@@ -74,7 +77,8 @@
         {
             FirstAssetOrientation_ = UIImageOrientationDown;
         }
-        
+
+        NSLog(@"Original Assets Dimensions. width: %f height: %f", FirstAssetTrack.naturalSize.width, FirstAssetTrack.naturalSize.height);
         CGFloat FirstAssetScaleToFitRatio = 320.0/FirstAssetTrack.naturalSize.width;
         
         if(isFirstAssetPortrait_)
@@ -92,31 +96,61 @@
         
         MainInstruction.layerInstructions = [NSArray arrayWithObjects:FirstlayerInstruction,nil];;
         
-        AVMutableVideoComposition *MainCompositionInst = [AVMutableVideoComposition videoComposition];
-        MainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
-        MainCompositionInst.frameDuration = CMTimeMake(1, 30);
-        MainCompositionInst.renderSize = CGSizeMake(320.0, 480.0);
+        AVMutableVideoComposition *mainCompositionInst = [AVMutableVideoComposition videoComposition];
+        mainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
+        mainCompositionInst.frameDuration = CMTimeMake(1, 30);
+        mainCompositionInst.renderSize = CGSizeMake(320.0, 427.0);
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *myPathDocs = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"mergeVideo-%d.mov",arc4random() % 1000]];
+        NSString *myPathDocs = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"mergeVideo-%d.mov", arc4random() % 10000]];
         
         NSURL *url = [NSURL fileURLWithPath:myPathDocs];
         
-        AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPresetHighestQuality];
+        AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPreset1280x720];
         
         exporter.outputURL=url;
-        exporter.outputFileType = AVFileTypeQuickTimeMovie;
-        exporter.videoComposition = MainCompositionInst;
+        exporter.outputFileType = AVFileTypeMPEG4;
+        exporter.videoComposition = mainCompositionInst;
         exporter.shouldOptimizeForNetworkUse = YES;
-
         [exporter exportAsynchronouslyWithCompletionHandler:^
          {
-             callback(exporter);
+             [self exportDidFinish:exporter withCallback:callback];
          }];
     } else {
         NSLog(@"Error, video track not found");
     }
+}
+
+- (void)exportDidFinish:(AVAssetExportSession*)session withCallback:(MFExportCallback)callback
+{
+    MFVideoAssetResponse *response = [[MFVideoAssetResponse alloc] init];
+
+    if(session.status == AVAssetExportSessionStatusCompleted) {
+        response.thumbnail = [self generateThumbnail];
+        response.url = session.outputURL;
+        response.success = true;
+    } else {
+        NSLog(@"## error fixing orientation. Session.status: %ld", session.status);
+        response.error = session.error;
+        response.success = false;
+    }
+    
+    callback(response);
+}
+
+- (UIImage*) generateThumbnail {
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL: self.url options:nil];
+    AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    gen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+    NSError *error = nil;
+    CMTime actualTime;
+    
+    CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+    UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return thumb;
 }
 
 @end

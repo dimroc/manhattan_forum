@@ -59,22 +59,36 @@ class PostRepository {
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
         
+        // Textbook callback hell.
+        // TODO: Incorporate PromiseKit.
         let videoAsset = MFVideoAsset(withVideo)
-        videoAsset.fixOrientation({ (exporter: AVAssetExportSession!) -> Void in
-            println("## Video Orientation Fixed to \(exporter.outputURL)")
-            let videoData = NSData.dataWithContentsOfMappedFile(exporter.outputURL.path!) as NSData
-            let file = PFFile(data: videoData, contentType: "video/quicktime")
-            
-            file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-                if(succeeded) {
-                    post["type"] = "video"
-                    post["video"] = file
-                    post.saveEventually()
-                } else {
-                    println("## VIDEO POST ERROR")
-                    println("## \(error.description)")
-                }
-            })
+        videoAsset.fixOrientation({ (response: MFVideoAssetResponse!) -> Void in
+            if(response.success) {
+                let imageData = UIImageJPEGRepresentation(response.thumbnail, 1)
+                let imageFile = PFFile(data: imageData, contentType: "image/jpg")
+                
+                imageFile.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
+                    if(succeeded) {
+                        println("## Video Orientation Fixed to \(response.url)")
+                        let videoData = NSData.dataWithContentsOfMappedFile(response.url.path!) as NSData
+                        let videoFile = PFFile(data: videoData, contentType: "video/quicktime")
+                        
+                        videoFile.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
+                            if(succeeded) {
+                                post["type"] = "video"
+                                post["image"] = imageFile
+                                post["video"] = videoFile
+                                post.saveEventually()
+                            } else {
+                                println("## VIDEO POST ERROR")
+                                println("## \(error.description)")
+                            }
+                        })
+                    }
+                })
+            } else {
+                println("## Video Orientation Fixed FAILED \(response.error.description)")
+            }
         })
     }
 }
