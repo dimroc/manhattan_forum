@@ -67,15 +67,15 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         var takePhotoAction = UIAlertAction(title: "Take photo", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showPhotoCamera()
         }
-        
+
         var takeVideoAction = UIAlertAction(title: "Take video", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showVideoCamera()
         }
-        
+
         var chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showImagePicker(UIImagePickerControllerSourceType.SavedPhotosAlbum)
         }
-        
+
         alertController.addAction(takePhotoAction)
         alertController.addAction(takeVideoAction)
         alertController.addAction(chooseFromLibraryAction)

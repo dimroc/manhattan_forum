@@ -59,20 +59,22 @@ class PostRepository {
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
         
-        let videoAsset = VideoAsset(url: withVideo)
-        videoAsset.fixOrientation()
-        let videoData = videoAsset.getData()
-        let file = PFFile(data: videoData, contentType: "video/quicktime")
-        
-        file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-            if(succeeded) {
-                post["type"] = "video"
-                post["video"] = file
-                post.saveEventually()
-            } else {
-                println("## VIDEO POST ERROR")
-                println("## \(error.description)")
-            }
+        let videoAsset = MFVideoAsset(withVideo)
+        videoAsset.fixOrientation({ (exporter: AVAssetExportSession!) -> Void in
+            println("## Video Orientation Fixed to \(exporter.outputURL)")
+            let videoData = NSData.dataWithContentsOfMappedFile(exporter.outputURL.path!) as NSData
+            let file = PFFile(data: videoData, contentType: "video/quicktime")
+            
+            file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
+                if(succeeded) {
+                    post["type"] = "video"
+                    post["video"] = file
+                    post.saveEventually()
+                } else {
+                    println("## VIDEO POST ERROR")
+                    println("## \(error.description)")
+                }
+            })
         })
     }
 }
