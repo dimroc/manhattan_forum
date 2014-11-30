@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import AssetsLibrary
-import PromiseKit
 
 class PostRepository {
     // Items needed for post:
@@ -20,11 +18,12 @@ class PostRepository {
     // Image
     // Video
     // Timestamp (included with PFObject)
-    class func create(message: String, location: MFLocation) -> Promise<PFObject> {
+    class func create(message: String, location: MFLocation) -> BFTask {
         return create(message, location: location, withImage: nil)
     }
     
-    class func create(message: String, location: MFLocation, withImage: UIImage?) -> Promise<PFObject> {
+    // TODO: Switch to Bolts: https://github.com/BoltsFramework/Bolts-iOS
+    class func create(message: String, location: MFLocation, withImage: UIImage?) -> BFTask {
         var post = PFObject(className: "Post")
         post["message"] = message
         post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
@@ -32,39 +31,40 @@ class PostRepository {
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
         
-        return Promise<PFObject> { (fulfill, reject) -> Void in
-            if let image = withImage {
-                let imageData = UIImageJPEGRepresentation(image, 0.7)
-                let file = PFFile(data: imageData, contentType: "image/jpg")
-                
-                file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-                    if(succeeded) {
-                        post["type"] = "image"
-                        post["image"] = file
-                        post.saveEventually({ (success, error) -> Void in
-                            if(success) {
-                                fulfill(post)
-                            } else {
-                                reject(error)
-                            }
-                        })
-                    } else {
-                        println("## IMAGE POST ERROR")
-                        println("## \(error.description)")
-                        reject(error)
-                    }
-                })
-            } else {
-                post["type"] = "message"
-                post.saveEventually({ (success, error) -> Void in
-                    if(success) {
-                        fulfill(post)
-                    } else {
-                        reject(error)
-                    }
-                })
-            }
+        var deferred = BFTaskCompletionSource()
+        if let image = withImage {
+            let imageData = UIImageJPEGRepresentation(image, 0.7)
+            let file = PFFile(data: imageData, contentType: "image/jpg")
+            
+            file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
+                if(succeeded) {
+                    post["type"] = "image"
+                    post["image"] = file
+                    post.saveEventually({ (success, error) -> Void in
+                        if(success) {
+                            deferred.setResult(post)
+                        } else {
+                            deferred.setError(error)
+                        }
+                    })
+                } else {
+                    println("## IMAGE POST ERROR")
+                    println("## \(error.description)")
+                    deferred.setError(error)
+                }
+            })
+        } else {
+            post["type"] = "message"
+            post.saveEventually({ (success, error) -> Void in
+                if(success) {
+                    deferred.setResult(post)
+                } else {
+                    deferred.setError(error)
+                }
+            })
         }
+        
+        return deferred.task
     }
     
     class func create(message: String, location: MFLocation, withVideo: NSURL!) {

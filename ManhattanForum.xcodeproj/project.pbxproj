@@ -14,7 +14,6 @@
 		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
 		5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D071A28EC450033EAAE /* PostRepository.swift */; };
 		5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D0B1A2985750033EAAE /* MFVideoAsset.m */; };
-		5E193D0F1A2B3EBC0033EAAE /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
@@ -97,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E193D0F1A2B3EBC0033EAAE /* PromiseKit.framework in Frameworks */,
 				6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

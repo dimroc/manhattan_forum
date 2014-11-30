@@ -33,6 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - Bolts
   - MBProgressHUD (~> 0.8)
   - Parse
   - ParseFacebookUtils
