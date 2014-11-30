@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import AssetsLibrary
+import PromiseKit
 
 class PostRepository {
     // Items needed for post:
@@ -18,11 +20,11 @@ class PostRepository {
     // Image
     // Video
     // Timestamp (included with PFObject)
-    class func create(message: String, location: MFLocation) {
-        create(message, location: location, withImage: nil)
+    class func create(message: String, location: MFLocation) -> Promise<PFObject> {
+        return create(message, location: location, withImage: nil)
     }
     
-    class func create(message: String, location: MFLocation, withImage: UIImage?) {
+    class func create(message: String, location: MFLocation, withImage: UIImage?) -> Promise<PFObject> {
         var post = PFObject(className: "Post")
         post["message"] = message
         post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
@@ -30,24 +32,38 @@ class PostRepository {
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
         
-        if let image = withImage {
-            let imageData = UIImageJPEGRepresentation(image, 0.7)
-            let file = PFFile(data: imageData, contentType: "image/jpg")
-            // video/quicktime for video
-            
-            file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-                if(succeeded) {
-                    post["type"] = "image"
-                    post["image"] = file
-                    post.saveEventually()
-                } else {
-                    println("## IMAGE POST ERROR")
-                    println("## \(error.description)")
-                }
-            })
-        } else {
-            post["type"] = "message"
-            post.saveEventually()
+        return Promise<PFObject> { (fulfill, reject) -> Void in
+            if let image = withImage {
+                let imageData = UIImageJPEGRepresentation(image, 0.7)
+                let file = PFFile(data: imageData, contentType: "image/jpg")
+                
+                file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
+                    if(succeeded) {
+                        post["type"] = "image"
+                        post["image"] = file
+                        post.saveEventually({ (success, error) -> Void in
+                            if(success) {
+                                fulfill(post)
+                            } else {
+                                reject(error)
+                            }
+                        })
+                    } else {
+                        println("## IMAGE POST ERROR")
+                        println("## \(error.description)")
+                        reject(error)
+                    }
+                })
+            } else {
+                post["type"] = "message"
+                post.saveEventually({ (success, error) -> Void in
+                    if(success) {
+                        fulfill(post)
+                    } else {
+                        reject(error)
+                    }
+                })
+            }
         }
     }
     
@@ -59,8 +75,6 @@ class PostRepository {
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
         
-        // Textbook callback hell.
-        // TODO: Incorporate PromiseKit.
         let videoAsset = MFVideoAsset(withVideo)
         videoAsset.fixOrientation({ (response: MFVideoAssetResponse!) -> Void in
             if(response.success) {

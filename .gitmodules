@@ -1,0 +1,3 @@
+[submodule "PromiseKit"]
+	path = PromiseKit
+	url = git@github.com:mxcl/PromiseKit.git

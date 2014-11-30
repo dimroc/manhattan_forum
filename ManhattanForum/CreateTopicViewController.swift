@@ -54,7 +54,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         if (self.videoUrl != nil) {
             PostRepository.create(self.textView.text, location: self.location!, withVideo: self.videoUrl!)
         } else {
-            PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image)
+            PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image).then { (object: PFObject) in
+                println(object)
+            }
         }
         
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)

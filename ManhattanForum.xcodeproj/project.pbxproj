@@ -14,6 +14,7 @@
 		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
 		5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D071A28EC450033EAAE /* PostRepository.swift */; };
 		5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D0B1A2985750033EAAE /* MFVideoAsset.m */; };
+		5E193D0F1A2B3EBC0033EAAE /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
@@ -61,6 +62,7 @@
 		5E193D071A28EC450033EAAE /* PostRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		5E193D0B1A2985750033EAAE /* MFVideoAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFVideoAsset.m; sourceTree = "<group>"; };
 		5E193D0D1A2985900033EAAE /* MFVideoAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFVideoAsset.h; sourceTree = "<group>"; };
+		5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos/PromiseKit.framework"; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E193D0F1A2B3EBC0033EAAE /* PromiseKit.framework in Frameworks */,
 				6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +116,7 @@
 		5581BA35EC9B4208A6FB3AA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */,
 				FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */,
 				F18FB166EB1A4FCA81EF82A0 /* libPods-ManhattanForumTests.a */,
 			);
@@ -565,6 +569,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -580,6 +588,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ManhattanForum/Info.release.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
