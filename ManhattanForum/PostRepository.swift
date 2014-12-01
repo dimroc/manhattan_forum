@@ -23,14 +23,7 @@ class PostRepository {
     }
     
     class func create(message: String, location: MFLocation, withImage: UIImage?) -> BFTask {
-        var post = PFObject(className: "Post")
-        
-        post["message"] = message
-        post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
-        post["neighborhood"] = location.neighborhood
-        post["locality"] = location.locality
-        post["sublocality"] = location.sublocality
-        
+        var post = preparePost(message, location: location)
         if let image = withImage {
             let imageData = UIImageJPEGRepresentation(image, 1)
             let file = PFFile(data: imageData, contentType: "image/jpg")
@@ -46,42 +39,36 @@ class PostRepository {
         }
     }
     
-    class func create(message: String, location: MFLocation, withVideo: NSURL!) {
+    class func create(message: String, location: MFLocation, withVideo: NSURL!) -> BFTask! {
+        var post = preparePost(message, location: location)
+        let videoAsset = MFVideoAsset(withVideo)
+        return videoAsset.fixOrientation().continueWithSuccessBlock { (task) -> AnyObject! in
+            let response: MFVideoAssetResponse! = task.result as MFVideoAssetResponse;
+            println("## Video Orientation Fixed to \(response.url)")
+
+            let imageData = UIImageJPEGRepresentation(response.thumbnail, 1)
+            let imageFile = PFFile(data: imageData, contentType: "image/jpg")
+            
+            let videoData = NSData.dataWithContentsOfMappedFile(response.url.path!) as NSData
+            let videoFile = PFFile(data: videoData, contentType: "video/quicktime")
+            
+            let parallelTasks: NSMutableArray = [imageFile.saveInBackground(), videoFile.saveInBackground()]
+            return BFTask(forCompletionOfAllTasks: parallelTasks).continueWithSuccessBlock({ (task) -> AnyObject! in
+                post["type"] = "video"
+                post["image"] = imageFile
+                post["video"] = videoFile
+                return post.saveEventuallyAsTask()
+            })
+        }
+    }
+    
+    private class func preparePost(message: String, location: MFLocation) -> PFObject! {
         var post = PFObject(className: "Post")
         post["message"] = message
         post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
         post["neighborhood"] = location.neighborhood
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
-        
-        let videoAsset = MFVideoAsset(withVideo)
-        videoAsset.fixOrientation({ (response: MFVideoAssetResponse!) -> Void in
-            if(response.success) {
-                let imageData = UIImageJPEGRepresentation(response.thumbnail, 1)
-                let imageFile = PFFile(data: imageData, contentType: "image/jpg")
-                
-                imageFile.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-                    if(succeeded) {
-                        println("## Video Orientation Fixed to \(response.url)")
-                        let videoData = NSData.dataWithContentsOfMappedFile(response.url.path!) as NSData
-                        let videoFile = PFFile(data: videoData, contentType: "video/quicktime")
-                        
-                        videoFile.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-                            if(succeeded) {
-                                post["type"] = "video"
-                                post["image"] = imageFile
-                                post["video"] = videoFile
-                                post.saveEventually()
-                            } else {
-                                println("## VIDEO POST ERROR")
-                                println("## \(error.description)")
-                            }
-                        })
-                    }
-                })
-            } else {
-                println("## Video Orientation Fixed FAILED \(response.error.description)")
-            }
-        })
+        return post;
     }
 }

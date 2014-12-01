@@ -30,7 +30,8 @@
 
 // Modified from this StackOverflow Gobbly Gook:
 // http://stackoverflow.com/questions/19966766/ios-uiimagepickercontroller-result-video-orientation-after-upload
-- (void)fixOrientation:(MFExportCallback) callback {
+- (BFTask*)fixOrientation {
+    BFTaskCompletionSource *completionSource = [[BFTaskCompletionSource alloc] init];
     AVAsset *firstAsset = [AVAsset assetWithURL:[self url]];
     if(firstAsset !=nil && [[firstAsset tracksWithMediaType:AVMediaTypeVideo] count]>0){
         //Create AVMutableComposition Object.This object will hold our multiple AVMutableCompositionTrack.
@@ -99,7 +100,7 @@
         AVMutableVideoComposition *mainCompositionInst = [AVMutableVideoComposition videoComposition];
         mainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
         mainCompositionInst.frameDuration = CMTimeMake(1, 30);
-        mainCompositionInst.renderSize = CGSizeMake(320.0, 427.0);
+        mainCompositionInst.renderSize = CGSizeMake(320.0, 426.6);
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -115,28 +116,30 @@
         exporter.shouldOptimizeForNetworkUse = YES;
         [exporter exportAsynchronouslyWithCompletionHandler:^
          {
-             [self exportDidFinish:exporter withCallback:callback];
+             [self exportDidFinish:exporter withCompletionSource: completionSource];
          }];
     } else {
-        NSLog(@"Error, video track not found");
+        NSMutableDictionary* details = [NSMutableDictionary dictionary];
+        [details setValue:@"Error, video track not found" forKey:NSLocalizedDescriptionKey];
+        NSError *error = [NSError errorWithDomain:@"MFVideoAsset" code:500 userInfo:details];
+        [completionSource setError:error];
     }
+    
+    return [completionSource task];
 }
 
-- (void)exportDidFinish:(AVAssetExportSession*)session withCallback:(MFExportCallback)callback
+- (void)exportDidFinish:(AVAssetExportSession*)session withCompletionSource:(BFTaskCompletionSource*)completionSource
 {
     MFVideoAssetResponse *response = [[MFVideoAssetResponse alloc] init];
 
     if(session.status == AVAssetExportSessionStatusCompleted) {
         response.thumbnail = [self generateThumbnail];
         response.url = session.outputURL;
-        response.success = true;
+        [completionSource setResult:response];
     } else {
         NSLog(@"## error fixing orientation. Session.status: %ld", session.status);
-        response.error = session.error;
-        response.success = false;
+        [completionSource setError:session.error];
     }
-    
-    callback(response);
 }
 
 - (UIImage*) generateThumbnail {

@@ -10,12 +10,11 @@
 #define ManhattanForum_MFVideoAsset_h
 
 #import <AVFoundation/AVFoundation.h>
+#import <Bolts/Bolts.h>
 
 @interface MFVideoAssetResponse : NSObject
 @property (nonatomic, strong) NSURL* url;
 @property (nonatomic, strong) UIImage* thumbnail;
-@property (nonatomic, assign) BOOL success;
-@property (nonatomic, strong) NSError* error;
 @end
 
 @interface MFVideoAsset : NSObject
@@ -23,7 +22,7 @@
 typedef void (^MFExportCallback)(MFVideoAssetResponse *);
 
 - (id)init:(NSURL*) url;
-- (void)fixOrientation:(MFExportCallback) callback;
+- (BFTask*)fixOrientation;
 
 @end
 

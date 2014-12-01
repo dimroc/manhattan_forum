@@ -52,6 +52,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func postTopic(sender: AnyObject) {
         NSLog("Posting...")
         if (self.videoUrl != nil) {
+            // TODO: Make BFExecutor for both image and videoUrl creation.
             PostRepository.create(self.textView.text, location: self.location!, withVideo: self.videoUrl!)
         } else {
             PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image).continueWithBlock({ (task: BFTask!) -> AnyObject! in
