@@ -14,9 +14,11 @@
 		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
 		5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D071A28EC450033EAAE /* PostRepository.swift */; };
 		5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D0B1A2985750033EAAE /* MFVideoAsset.m */; };
+		5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D111A2CA3AB0033EAAE /* PFObject.swift */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
+		5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A29B21A2CA74500F6AC9A /* BFTask.swift */; };
 		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
 		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
 		5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157919CF025800F6EBAA /* Credentials.debug.plist */; };
@@ -62,9 +64,11 @@
 		5E193D0B1A2985750033EAAE /* MFVideoAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFVideoAsset.m; sourceTree = "<group>"; };
 		5E193D0D1A2985900033EAAE /* MFVideoAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFVideoAsset.h; sourceTree = "<group>"; };
 		5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos/PromiseKit.framework"; sourceTree = "<group>"; };
+		5E193D111A2CA3AB0033EAAE /* PFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFObject.swift; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
+		5E9A29B21A2CA74500F6AC9A /* BFTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFTask.swift; sourceTree = "<group>"; };
 		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
 		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
 		5E9C157919CF025800F6EBAA /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */,
+				5E193D101A2CA05A0033EAAE /* Extensions */,
 				5E9C159519CF028600F6EBAA /* Misc */,
 				5E9C159619CF028F00F6EBAA /* Models */,
 				5E9C159419CF026700F6EBAA /* Controllers */,
@@ -183,6 +188,15 @@
 				5E0C3DA519CEFE0C008E2726 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E193D101A2CA05A0033EAAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E193D111A2CA3AB0033EAAE /* PFObject.swift */,
+				5E9A29B21A2CA74500F6AC9A /* BFTask.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		5E9C159419CF026700F6EBAA /* Controllers */ = {
@@ -429,11 +443,13 @@
 			files = (
 				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
 				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
+				5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */,
 				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
 				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
 				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
+				5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */,
 				5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */,
 				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,
 				5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */,

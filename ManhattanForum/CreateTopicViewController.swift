@@ -54,9 +54,17 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         if (self.videoUrl != nil) {
             PostRepository.create(self.textView.text, location: self.location!, withVideo: self.videoUrl!)
         } else {
-            PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image).continueWithSuccessBlock({ (task) -> AnyObject! in
-                var post = task.result as PFObject
-                println(post)
+            PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image).continueWithBlock({ (task: BFTask!) -> AnyObject! in
+                if(task.success) {
+                    var post = task.result as PFObject
+                    println(post)
+                } else {
+                    self.presentViewController(
+                        UIAlertControllerFactory.ok("Error Saving Post", message: task.error.description),
+                        animated: true,
+                        completion: nil)
+                }
+                
                 return nil
             })
         }
