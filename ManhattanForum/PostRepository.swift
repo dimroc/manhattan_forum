@@ -18,13 +18,15 @@ class PostRepository {
     // Image
     // Video
     // Timestamp (included with PFObject)
-    class func create(message: String, location: MFLocation) -> BFTask {
-        return create(message, location: location, withImage: nil)
+    class func createAsync(message: String, location: MFLocation) -> BFTask {
+        var post = preparePost(message, location: location)
+        post["type"] = "message"
+        return post.saveEventuallyAsTask()
     }
     
-    class func create(message: String, location: MFLocation, withImage: UIImage?) -> BFTask {
-        var post = preparePost(message, location: location)
+    class func createAsync(message: String, location: MFLocation, withImage: UIImage?) -> BFTask {
         if let image = withImage {
+            var post = preparePost(message, location: location)
             let imageData = UIImageJPEGRepresentation(image, 1)
             let file = PFFile(data: imageData, contentType: "image/jpg")
         
@@ -34,32 +36,26 @@ class PostRepository {
                 return post.saveEventuallyAsTask()
             })
         } else {
-            post["type"] = "message"
-            return post.saveEventuallyAsTask()
+            return createAsync(message, location: location)
         }
     }
     
-    class func create(message: String, location: MFLocation, withVideo: NSURL!) -> BFTask! {
+    class func createAsync(message: String, location: MFLocation, withImage: UIImage!, withVideo: NSURL!) -> BFTask! {
         var post = preparePost(message, location: location)
-        let videoAsset = MFVideoAsset(withVideo)
-        return videoAsset.fixOrientation().continueWithSuccessBlock { (task) -> AnyObject! in
-            let response: MFVideoAssetResponse! = task.result as MFVideoAssetResponse;
-            println("## Video Orientation Fixed to \(response.url)")
-
-            let imageData = UIImageJPEGRepresentation(response.thumbnail, 1)
-            let imageFile = PFFile(data: imageData, contentType: "image/jpg")
-            
-            let videoData = NSData.dataWithContentsOfMappedFile(response.url.path!) as NSData
-            let videoFile = PFFile(data: videoData, contentType: "video/quicktime")
-            
-            let parallelTasks: NSMutableArray = [imageFile.saveInBackground(), videoFile.saveInBackground()]
-            return BFTask(forCompletionOfAllTasks: parallelTasks).continueWithSuccessBlock({ (task) -> AnyObject! in
-                post["type"] = "video"
-                post["image"] = imageFile
-                post["video"] = videoFile
-                return post.saveEventuallyAsTask()
-            })
-        }
+        
+        let imageData = UIImageJPEGRepresentation(withImage, 1)
+        let imageFile = PFFile(data: imageData, contentType: "image/jpg")
+        
+        let videoData = NSData.dataWithContentsOfMappedFile(withVideo.path!) as NSData
+        let videoFile = PFFile(data: videoData, contentType: "video/quicktime")
+        
+        let parallelTasks: NSMutableArray = [imageFile.saveInBackground(), videoFile.saveInBackground()]
+        return BFTask(forCompletionOfAllTasks: parallelTasks).continueWithSuccessBlock({ (task) -> AnyObject! in
+            post["type"] = "video"
+            post["image"] = imageFile
+            post["video"] = videoFile
+            return post.saveEventuallyAsTask()
+        })
     }
     
     private class func preparePost(message: String, location: MFLocation) -> PFObject! {
