@@ -41,30 +41,6 @@
         return [asset generateThumbnail];
     }];
 }
-//    videoAsset.trim(videoStart, until: videoEnd).continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
-//        let trimmedAsset = task.result as MFVideoAsset!
-//        return trimmedAsset.fixOrientation()
-//    }).continueWithExecutor(mainExecutor, withSuccessBlock: { (task: BFTask!) -> AnyObject! in
-//        let orientedAsset: MFVideoAsset! = task.result as MFVideoAsset!
-//        println("## Video Orientation Fixed to \(orientedAsset.url)")
-//        return orientedAsset.generateThumbnail()
-//    }).continueWithExecutor(mainExecutor, withBlock: { (task:BFTask!) -> AnyObject! in
-//        if task.success {
-//            let finalAsset: MFVideoAsset! = task.result as MFVideoAsset
-//            self.videoUrl = finalAsset.url
-//            self.imageView.image = finalAsset.thumbnail
-//        } else { // Final all encapsulating error handler
-//            println("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
-//            self.presentViewController(
-//                                       UIAlertControllerFactory.ok("Error recording video", message: task.error.description),
-//                                       animated: true,
-//                                       completion: nil
-//                                       )
-//        }
-//        
-//        return nil
-//    })
-//}
 
 // Jacked and tweaked from a StackOverflow post:
 // http://stackoverflow.com/questions/4439707/how-to-trim-the-video-using-avfoundation/7141620#7141620
