@@ -44,7 +44,7 @@
     return self;
 }
 
-// Jacked from a StackOverflow post:
+// Jacked and tweaked from a StackOverflow post:
 // http://stackoverflow.com/questions/4439707/how-to-trim-the-video-using-avfoundation/7141620#7141620
 - (BFTask*)trim {
     // if start and end are nil then clipping was not used.
@@ -133,6 +133,7 @@
         BOOL  isFirstAssetPortrait_  = NO;
         
         CGAffineTransform firstTransform = firstAssetTrack.preferredTransform;
+        NSLog(@"Preferred Transform: %@", NSStringFromCGAffineTransform(firstTransform));
         
         if(firstTransform.a == 0 && firstTransform.b == 1.0 && firstTransform.c == -1.0 && firstTransform.d == 0)
         {
@@ -151,6 +152,8 @@
             firstAssetOrientation_ = UIImageOrientationDown;
         }
 
+        NSLog(@"Asset Portrait: %d", isFirstAssetPortrait_);
+        NSLog(@"Asset Orientation: %ld", firstAssetOrientation_);
         NSLog(@"Original Assets Dimensions. width: %f height: %f", firstAssetTrack.naturalSize.width, firstAssetTrack.naturalSize.height);
 
         CGFloat originalHeight = firstAssetTrack.naturalSize.height;
@@ -160,14 +163,21 @@
         if(isFirstAssetPortrait_)
         {
             firstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.height;
-            CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
-            [firstlayerInstruction setTransform:CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor) atTime:kCMTimeZero];
+            CGAffineTransform firstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
+            [firstlayerInstruction setTransform:CGAffineTransformConcat(firstAssetTrack.preferredTransform, firstAssetScaleFactor) atTime:kCMTimeZero];
         }
-        else
+        else    // Video is already fine in landscape, return original.
         {
-            CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
-            [firstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
+//            CGAffineTransform firstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
+//            [firstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(firstAssetTrack.preferredTransform, firstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
+            
+            MFVideoAssetResponse *response = [[MFVideoAssetResponse alloc] init];
+            response.thumbnail = [self generateThumbnail];
+            response.url = self.url;
+            [completionSource setResult:response];
+            return completionSource.task;
         }
+        
         [firstlayerInstruction setOpacity:0.0 atTime:firstAsset.duration];
         
         mainInstruction.layerInstructions = [NSArray arrayWithObjects:firstlayerInstruction,nil];;
