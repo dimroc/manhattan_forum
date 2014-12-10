@@ -41,8 +41,8 @@
         //VIDEO TRACK
         AVMutableCompositionTrack *firstTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
         [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, firstAsset.duration) ofTrack:[[firstAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:nil];
-        AVMutableVideoCompositionInstruction * MainInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
-        MainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, firstAsset.duration);
+        AVMutableVideoCompositionInstruction * mainInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
+        mainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, firstAsset.duration);
         
         if ([[firstAsset tracksWithMediaType:AVMediaTypeAudio] count]>0) {
             //AUDIO TRACK
@@ -53,10 +53,10 @@
         }
         
         //FIXING ORIENTATION//
-        AVMutableVideoCompositionLayerInstruction *FirstlayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:firstTrack];
+        AVMutableVideoCompositionLayerInstruction *firstlayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:firstTrack];
         
         AVAssetTrack *firstAssetTrack = [[firstAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
-        UIImageOrientation FirstAssetOrientation_  = UIImageOrientationUp;
+        UIImageOrientation firstAssetOrientation_  = UIImageOrientationUp;
         
         BOOL  isFirstAssetPortrait_  = NO;
         
@@ -64,43 +64,44 @@
         
         if(firstTransform.a == 0 && firstTransform.b == 1.0 && firstTransform.c == -1.0 && firstTransform.d == 0)
         {
-            FirstAssetOrientation_= UIImageOrientationRight; isFirstAssetPortrait_ = YES;
+            firstAssetOrientation_= UIImageOrientationRight; isFirstAssetPortrait_ = YES;
         }
         if(firstTransform.a == 0 && firstTransform.b == -1.0 && firstTransform.c == 1.0 && firstTransform.d == 0)
         {
-            FirstAssetOrientation_ =  UIImageOrientationLeft; isFirstAssetPortrait_ = YES;
+            firstAssetOrientation_ =  UIImageOrientationLeft; isFirstAssetPortrait_ = YES;
         }
         if(firstTransform.a == 1.0 && firstTransform.b == 0 && firstTransform.c == 0 && firstTransform.d == 1.0)
         {
-            FirstAssetOrientation_ =  UIImageOrientationUp;
+            firstAssetOrientation_ =  UIImageOrientationUp;
         }
         if(firstTransform.a == -1.0 && firstTransform.b == 0 && firstTransform.c == 0 && firstTransform.d == -1.0)
         {
-            FirstAssetOrientation_ = UIImageOrientationDown;
+            firstAssetOrientation_ = UIImageOrientationDown;
         }
 
-        CGFloat originalHeight = 360.0;
-        CGFloat originalWidth = 480.0;
         NSLog(@"Original Assets Dimensions. width: %f height: %f", firstAssetTrack.naturalSize.width, firstAssetTrack.naturalSize.height);
-        CGFloat FirstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.width;
+
+        CGFloat originalHeight = firstAssetTrack.naturalSize.height;
+        CGFloat originalWidth = firstAssetTrack.naturalSize.width;
+        CGFloat firstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.width;
         
         if(isFirstAssetPortrait_)
         {
-            FirstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.height;
-            CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(FirstAssetScaleToFitRatio,FirstAssetScaleToFitRatio);
-            [FirstlayerInstruction setTransform:CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor) atTime:kCMTimeZero];
+            firstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.height;
+            CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
+            [firstlayerInstruction setTransform:CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor) atTime:kCMTimeZero];
         }
         else
         {
-            CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(FirstAssetScaleToFitRatio,FirstAssetScaleToFitRatio);
-            [FirstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
+            CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
+            [firstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
         }
-        [FirstlayerInstruction setOpacity:0.0 atTime:firstAsset.duration];
+        [firstlayerInstruction setOpacity:0.0 atTime:firstAsset.duration];
         
-        MainInstruction.layerInstructions = [NSArray arrayWithObjects:FirstlayerInstruction,nil];;
+        mainInstruction.layerInstructions = [NSArray arrayWithObjects:firstlayerInstruction,nil];;
         
         AVMutableVideoComposition *mainCompositionInst = [AVMutableVideoComposition videoComposition];
-        mainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
+        mainCompositionInst.instructions = [NSArray arrayWithObject:mainInstruction];
         mainCompositionInst.frameDuration = CMTimeMake(1, 30);
         mainCompositionInst.renderSize = CGSizeMake(originalHeight, originalWidth);
         
