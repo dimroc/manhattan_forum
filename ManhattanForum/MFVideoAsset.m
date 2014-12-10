@@ -106,7 +106,7 @@
 - (BFTask*)fixOrientation {
     BFTaskCompletionSource *completionSource = [[BFTaskCompletionSource alloc] init];
     AVAsset *firstAsset = [AVAsset assetWithURL:[self url]];
-    if(firstAsset !=nil && [[firstAsset tracksWithMediaType:AVMediaTypeVideo] count]>0){
+    if(firstAsset != nil && [[firstAsset tracksWithMediaType:AVMediaTypeVideo] count] > 0) {
         //Create AVMutableComposition Object.This object will hold our multiple AVMutableCompositionTrack.
         AVMutableComposition* mixComposition = [[AVMutableComposition alloc] init];
         
@@ -195,7 +195,7 @@
          }];
     } else {
         NSMutableDictionary* details = [NSMutableDictionary dictionary];
-        [details setValue:@"Error, video track not found" forKey:NSLocalizedDescriptionKey];
+        [details setValue:@"Error, video track not found when fixing orientation" forKey:NSLocalizedDescriptionKey];
         NSError *error = [NSError errorWithDomain:@"MFVideoAsset" code:500 userInfo:details];
         [completionSource setError:error];
     }
