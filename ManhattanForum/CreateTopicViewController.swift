@@ -17,7 +17,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     var locationManager: LocationManager? = nil
     var location: MFLocation? = nil
-    var videoPath: String? = nil
+    var videoUrl: NSURL? = nil
     
     override func viewDidLoad() {
         textView.becomeFirstResponder()
@@ -51,10 +51,25 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func postTopic(sender: AnyObject) {
         NSLog("Posting...")
-        if (self.videoPath != nil) {
-            PostRepository.create(self.textView.text, location: self.location!, withVideo: self.videoPath)
+        
+        func completeCreation(task: BFTask!) -> AnyObject! {
+            if(task.success) {
+                var post = task.result as PFObject
+                println(post)
+            } else {
+                self.presentViewController(
+                    UIAlertControllerFactory.ok("Error Saving Post", message: task.error.description),
+                    animated: true,
+                    completion: nil)
+            }
+            
+            return nil
+        }
+        
+        if (self.videoUrl != nil) {
+            PostRepository.createAsync(self.textView.text, location: self.location!, withImage: self.imageView.image, withVideo: self.videoUrl!).continueWithBlock(completeCreation)
         } else {
-            PostRepository.create(self.textView.text, location: self.location!, withImage: self.imageView.image)
+            PostRepository.createAsync(self.textView.text, location: self.location!, withImage: self.imageView.image).continueWithBlock(completeCreation)
         }
         
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
@@ -67,15 +82,15 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         var takePhotoAction = UIAlertAction(title: "Take photo", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showPhotoCamera()
         }
-        
+
         var takeVideoAction = UIAlertAction(title: "Take video", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showVideoCamera()
         }
-        
+
         var chooseFromLibraryAction = UIAlertAction(title: "Choose from Library", style: UIAlertActionStyle.Default) { (action) -> Void in
             self.showImagePicker(UIImagePickerControllerSourceType.SavedPhotosAlbum)
         }
-        
+
         alertController.addAction(takePhotoAction)
         alertController.addAction(takeVideoAction)
         alertController.addAction(chooseFromLibraryAction)
@@ -119,8 +134,40 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         
         switch mediaType {
         case kUTTypeVideo, kUTTypeMovie:
-            let url = info[UIImagePickerControllerMediaURL] as? NSURL
-            self.videoPath = url?.path
+            // TODO: fix orientation here so that we can grab thumbnail and splice out ommitted entries.
+            self.postButton.enabled = false;
+            
+            // Create a BFExecutor that uses the main thread.
+            let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
+            let videoUrl = info[UIImagePickerControllerMediaURL] as? NSURL
+            let videoStart = info["_UIImagePickerControllerVideoEditingStart"] as? NSNumber
+            let videoEnd = info["_UIImagePickerControllerVideoEditingEnd"] as? NSNumber
+            
+            let videoAsset = MFVideoAsset(videoUrl, videoStart: videoStart, videoEnd: videoEnd)
+            videoAsset.trim().continueWithSuccessBlock({ (task) -> AnyObject! in
+                let trimmedAsset = task.result as MFVideoAsset!
+                return trimmedAsset.fixOrientation()
+            }).continueWithExecutor(mainExecutor, withSuccessBlock: { (task) -> AnyObject! in
+                let response: MFVideoAssetResponse! = task.result as MFVideoAssetResponse;
+                println("## Video Orientation Fixed to \(response.url)")
+                self.imageView.image = response.thumbnail
+                self.videoUrl = response.url
+                self.postButton.enabled = true;
+                return nil
+            }).continueWithExecutor(mainExecutor, withBlock: { (task:BFTask!) -> AnyObject! in
+                // Final all encapsulating error handler
+                if !task.success {
+                    println("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
+                    self.presentViewController(
+                        UIAlertControllerFactory.ok("Error recording video", message: task.error.description),
+                        animated: true,
+                        completion: nil
+                    )
+                }
+                
+                return nil
+            })
+
         case kUTTypeImage:
             var chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage
             if(chosenImage == nil) {
@@ -128,6 +175,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             }
 
             self.imageView.image = chosenImage
+            self.videoUrl = nil
         default:
             println("## ERROR: Unsupported Media Type: \(mediaType)")
         }

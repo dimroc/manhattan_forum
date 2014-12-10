@@ -13,9 +13,12 @@
 		5E0C3D9819CEFE0C008E2726 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9719CEFE0C008E2726 /* Images.xcassets */; };
 		5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */; };
 		5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D071A28EC450033EAAE /* PostRepository.swift */; };
+		5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D0B1A2985750033EAAE /* MFVideoAsset.m */; };
+		5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D111A2CA3AB0033EAAE /* PFObject.swift */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
+		5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A29B21A2CA74500F6AC9A /* BFTask.swift */; };
 		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
 		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
 		5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157919CF025800F6EBAA /* Credentials.debug.plist */; };
@@ -34,6 +37,7 @@
 		5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159D19CF057000F6EBAA /* TestHelper.swift */; };
 		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
 		5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */; };
 		6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */; };
 /* End PBXBuildFile section */
 
@@ -58,9 +62,14 @@
 		5E0C3DA019CEFE0C008E2726 /* ManhattanForumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManhattanForumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0C3DA519CEFE0C008E2726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E193D071A28EC450033EAAE /* PostRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		5E193D0B1A2985750033EAAE /* MFVideoAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFVideoAsset.m; sourceTree = "<group>"; };
+		5E193D0D1A2985900033EAAE /* MFVideoAsset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFVideoAsset.h; sourceTree = "<group>"; };
+		5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos/PromiseKit.framework"; sourceTree = "<group>"; };
+		5E193D111A2CA3AB0033EAAE /* PFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFObject.swift; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
+		5E9A29B21A2CA74500F6AC9A /* BFTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFTask.swift; sourceTree = "<group>"; };
 		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
 		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
 		5E9C157919CF025800F6EBAA /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
@@ -80,6 +89,8 @@
 		5E9C159D19CF057000F6EBAA /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		5E9C15A019CF058300F6EBAA /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
 		5E9C15A519D11D9B00F6EBAA /* ManhattanForumTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForumTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
 		6873452131B38A7F009164D1 /* Pods-ManhattanForum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.release.xcconfig"; sourceTree = "<group>"; };
 		8CF438EE1426B0D3C85569E4 /* Pods-ManhattanForumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.release.xcconfig"; sourceTree = "<group>"; };
 		973E0306DC995B4D9A5A9534 /* Pods-ManhattanForumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +121,7 @@
 		5581BA35EC9B4208A6FB3AA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */,
 				FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */,
 				F18FB166EB1A4FCA81EF82A0 /* libPods-ManhattanForumTests.a */,
 			);
@@ -140,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */,
+				5E193D101A2CA05A0033EAAE /* Extensions */,
 				5E9C159519CF028600F6EBAA /* Misc */,
 				5E9C159619CF028F00F6EBAA /* Models */,
 				5E9C159419CF026700F6EBAA /* Controllers */,
@@ -180,6 +193,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5E193D101A2CA05A0033EAAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E193D111A2CA3AB0033EAAE /* PFObject.swift */,
+				5E9A29B21A2CA74500F6AC9A /* BFTask.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		5E9C159419CF026700F6EBAA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +222,10 @@
 				5E9C157D19CF025800F6EBAA /* FontHelper.swift */,
 				5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */,
 				5E193D071A28EC450033EAAE /* PostRepository.swift */,
+				5E193D0B1A2985750033EAAE /* MFVideoAsset.m */,
+				5E193D0D1A2985900033EAAE /* MFVideoAsset.h */,
+				5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */,
+				5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -422,14 +448,18 @@
 			files = (
 				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
 				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
+				5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */,
 				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
 				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
 				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
+				5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */,
+				5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */,
 				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,
 				5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */,
 				5E9C158C19CF025800F6EBAA /* FontHelper.swift in Sources */,
+				5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */,
 				5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */,
 				5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */,
 				5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */,
@@ -559,6 +589,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -574,6 +608,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = ManhattanForum/Info.release.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

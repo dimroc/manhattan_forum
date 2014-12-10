@@ -10,67 +10,61 @@ import Foundation
 
 class PostRepository {
     // Items needed for post:
-    // Author
+    // Author (TODO)
     // Message
     // Location
     // Locality
     // State
-    // Image (Optional)
-    // Video or PFFile (Optional)
+    // Image
+    // Video
     // Timestamp (included with PFObject)
-    class func create(message: String, location: MFLocation) {
-        create(message, location: location, withImage: nil)
+    class func createAsync(message: String, location: MFLocation) -> BFTask {
+        var post = preparePost(message, location: location)
+        post["type"] = "message"
+        return post.saveEventuallyAsTask()
     }
     
-    class func create(message: String, location: MFLocation, withImage: UIImage?) {
-        var post = PFObject(className: "Post")
-        post["message"] = message
-        post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
-        post["neighborhood"] = location.neighborhood
-        post["locality"] = location.locality
-        post["sublocality"] = location.sublocality
-        
+    class func createAsync(message: String, location: MFLocation, withImage: UIImage?) -> BFTask {
         if let image = withImage {
-            let imageData = UIImageJPEGRepresentation(image, 0.7)
+            var post = preparePost(message, location: location)
+            let imageData = UIImageJPEGRepresentation(image, 1)
             let file = PFFile(data: imageData, contentType: "image/jpg")
-            // video/quicktime for video
-            
-            file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-                if(succeeded) {
-                    post["type"] = "image"
-                    post["image"] = file
-                    post.saveEventually()
-                } else {
-                    println("## IMAGE POST ERROR")
-                    println("## \(error.description)")
-                }
+        
+            return file.saveInBackground().continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
+                post["type"] = "image"
+                post["image"] = file
+                return post.saveEventuallyAsTask()
             })
         } else {
-            post["type"] = "message"
-            post.saveEventually()
+            return createAsync(message, location: location)
         }
     }
     
-    class func create(message: String, location: MFLocation, withVideo: String!) {
+    class func createAsync(message: String, location: MFLocation, withImage: UIImage!, withVideo: NSURL!) -> BFTask! {
+        var post = preparePost(message, location: location)
+        
+        let imageData = UIImageJPEGRepresentation(withImage, 1)
+        let imageFile = PFFile(data: imageData, contentType: "image/jpg")
+        
+        let videoData = NSData.dataWithContentsOfMappedFile(withVideo.path!) as NSData
+        let videoFile = PFFile(data: videoData, contentType: "video/quicktime")
+        
+        let parallelTasks: NSMutableArray = [imageFile.saveInBackground(), videoFile.saveInBackground()]
+        return BFTask(forCompletionOfAllTasks: parallelTasks).continueWithSuccessBlock({ (task) -> AnyObject! in
+            post["type"] = "video"
+            post["image"] = imageFile
+            post["video"] = videoFile
+            return post.saveEventuallyAsTask()
+        })
+    }
+    
+    private class func preparePost(message: String, location: MFLocation) -> PFObject! {
         var post = PFObject(className: "Post")
         post["message"] = message
         post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
         post["neighborhood"] = location.neighborhood
         post["locality"] = location.locality
         post["sublocality"] = location.sublocality
-        
-        let videoData = NSData.dataWithContentsOfMappedFile(withVideo) as NSData
-        let file = PFFile(data: videoData, contentType: "video/quicktime")
-        
-        file.saveInBackgroundWithBlock({ (succeeded: Bool, error: NSError!) -> Void in
-            if(succeeded) {
-                post["type"] = "video"
-                post["video"] = file
-                post.saveEventually()
-            } else {
-                println("## VIDEO POST ERROR")
-                println("## \(error.description)")
-            }
-        })
+        return post;
     }
 }
