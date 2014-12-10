@@ -140,15 +140,23 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             // Create a BFExecutor that uses the main thread.
             let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
             let videoUrl = info[UIImagePickerControllerMediaURL] as? NSURL
-            let videoAsset = MFVideoAsset(videoUrl)
-            videoAsset.fixOrientation().continueWithExecutor(mainExecutor, withSuccessBlock: { (task) -> AnyObject! in
-                let response: MFVideoAssetResponse! = task.result as MFVideoAssetResponse;
-                println("## Video Orientation Fixed to \(response.url)")
-                self.imageView.image = response.thumbnail
-                self.videoUrl = response.url
-                self.postButton.enabled = true;
-                return nil
-            })
+            let videoStart = info["_UIImagePickerControllerVideoEditingStart"] as? NSNumber
+            let videoEnd = info["_UIImagePickerControllerVideoEditingEnd"] as? NSNumber
+            
+            let videoAsset = MFVideoAsset(videoUrl, videoStart: videoStart, videoEnd: videoEnd)
+            videoAsset.trim().continueWithSuccessBlock({ (task) -> AnyObject! in
+                let trimmedAsset = task.result as MFVideoAsset!;
+                return trimmedAsset.fixOrientation().continueWithExecutor(mainExecutor, withSuccessBlock: { (task) -> AnyObject! in
+                    let response: MFVideoAssetResponse! = task.result as MFVideoAssetResponse;
+                    println("## Video Orientation Fixed to \(response.url)")
+                    self.imageView.image = response.thumbnail
+                    self.videoUrl = response.url
+                    self.postButton.enabled = true;
+                    return nil
+                });
+                
+                // TODO: Handle errors yo.
+            });
 
         case kUTTypeImage:
             var chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage

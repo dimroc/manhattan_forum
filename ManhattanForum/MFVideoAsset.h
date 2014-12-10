@@ -22,6 +22,8 @@
 typedef void (^MFExportCallback)(MFVideoAssetResponse *);
 
 - (id)init:(NSURL*) url;
+- (id)init:(NSURL*) url videoStart: (NSNumber*) videoStart videoEnd: (NSNumber*) videoEnd;
+- (BFTask*)trim;
 - (BFTask*)fixOrientation;
 
 @end
