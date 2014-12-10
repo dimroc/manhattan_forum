@@ -37,6 +37,7 @@
 		5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159D19CF057000F6EBAA /* TestHelper.swift */; };
 		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
 		5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */; };
 		6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,8 @@
 		5E9C159D19CF057000F6EBAA /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		5E9C15A019CF058300F6EBAA /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
 		5E9C15A519D11D9B00F6EBAA /* ManhattanForumTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForumTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
 		6873452131B38A7F009164D1 /* Pods-ManhattanForum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.release.xcconfig"; sourceTree = "<group>"; };
 		8CF438EE1426B0D3C85569E4 /* Pods-ManhattanForumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.release.xcconfig"; sourceTree = "<group>"; };
 		973E0306DC995B4D9A5A9534 /* Pods-ManhattanForumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				5E193D071A28EC450033EAAE /* PostRepository.swift */,
 				5E193D0B1A2985750033EAAE /* MFVideoAsset.m */,
 				5E193D0D1A2985900033EAAE /* MFVideoAsset.h */,
+				5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */,
+				5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,
 				5E9C158B19CF025800F6EBAA /* DismissSegue.swift in Sources */,
 				5E9C158C19CF025800F6EBAA /* FontHelper.swift in Sources */,
+				5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */,
 				5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */,
 				5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */,
 				5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */,

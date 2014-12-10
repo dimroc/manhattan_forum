@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "MFVideoAsset.h"
+#import "UIImage+Crop.h"
 
 @implementation MFVideoAssetResponse
 @end
@@ -54,13 +55,12 @@
         //FIXING ORIENTATION//
         AVMutableVideoCompositionLayerInstruction *FirstlayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:firstTrack];
         
-        AVAssetTrack *FirstAssetTrack = [[firstAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
-        
+        AVAssetTrack *firstAssetTrack = [[firstAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
         UIImageOrientation FirstAssetOrientation_  = UIImageOrientationUp;
         
         BOOL  isFirstAssetPortrait_  = NO;
         
-        CGAffineTransform firstTransform = FirstAssetTrack.preferredTransform;
+        CGAffineTransform firstTransform = firstAssetTrack.preferredTransform;
         
         if(firstTransform.a == 0 && firstTransform.b == 1.0 && firstTransform.c == -1.0 && firstTransform.d == 0)
         {
@@ -79,19 +79,21 @@
             FirstAssetOrientation_ = UIImageOrientationDown;
         }
 
-        NSLog(@"Original Assets Dimensions. width: %f height: %f", FirstAssetTrack.naturalSize.width, FirstAssetTrack.naturalSize.height);
-        CGFloat FirstAssetScaleToFitRatio = 320.0/FirstAssetTrack.naturalSize.width;
+        CGFloat originalHeight = 360.0;
+        CGFloat originalWidth = 480.0;
+        NSLog(@"Original Assets Dimensions. width: %f height: %f", firstAssetTrack.naturalSize.width, firstAssetTrack.naturalSize.height);
+        CGFloat FirstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.width;
         
         if(isFirstAssetPortrait_)
         {
-            FirstAssetScaleToFitRatio = 320.0/FirstAssetTrack.naturalSize.height;
+            FirstAssetScaleToFitRatio = originalHeight/firstAssetTrack.naturalSize.height;
             CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(FirstAssetScaleToFitRatio,FirstAssetScaleToFitRatio);
-            [FirstlayerInstruction setTransform:CGAffineTransformConcat(FirstAssetTrack.preferredTransform, FirstAssetScaleFactor) atTime:kCMTimeZero];
+            [FirstlayerInstruction setTransform:CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor) atTime:kCMTimeZero];
         }
         else
         {
             CGAffineTransform FirstAssetScaleFactor = CGAffineTransformMakeScale(FirstAssetScaleToFitRatio,FirstAssetScaleToFitRatio);
-            [FirstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(FirstAssetTrack.preferredTransform, FirstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
+            [FirstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(firstAssetTrack.preferredTransform, FirstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
         }
         [FirstlayerInstruction setOpacity:0.0 atTime:firstAsset.duration];
         
@@ -100,7 +102,7 @@
         AVMutableVideoComposition *mainCompositionInst = [AVMutableVideoComposition videoComposition];
         mainCompositionInst.instructions = [NSArray arrayWithObject:MainInstruction];
         mainCompositionInst.frameDuration = CMTimeMake(1, 30);
-        mainCompositionInst.renderSize = CGSizeMake(320.0, 426.6);
+        mainCompositionInst.renderSize = CGSizeMake(originalHeight, originalWidth);
         
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -153,7 +155,9 @@
     CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
     UIImage *thumb = [[UIImage alloc] initWithCGImage:image];
     CGImageRelease(image);
-    return thumb;
+    
+    CGRect rect = CGRectMake(0, 0, 320.0, 320.0);
+    return [thumb croppedImageInRect:rect];
 }
 
 @end
