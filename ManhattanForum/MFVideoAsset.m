@@ -11,13 +11,9 @@
 #import "MFVideoAsset.h"
 #import "UIImage+Crop.h"
 
-@implementation MFVideoAssetResponse
-@end
-
 @interface MFVideoAsset ()
 @property (nonatomic, strong) NSURL *url;
-@property (nonatomic, strong) NSNumber *videoStart;
-@property (nonatomic, strong) NSNumber *videoEnd;
+@property (nonatomic, strong) UIImage *thumbnail;
 @end
 
 @implementation MFVideoAsset
@@ -26,36 +22,62 @@
     self = [super init];
     if (self) {
         self.url = url;
-        self.videoStart = nil;
-        self.videoEnd = nil;
+        self.thumbnail = nil;
     }
     
     return self;
 }
 
-- (id)init:(NSURL*) url videoStart: (NSNumber*) videoStart videoEnd: (NSNumber*) videoEnd {
-    self = [super init];
-    if (self) {
-        self.url = url;
-        self.videoStart = videoStart;
-        self.videoEnd = videoEnd;
-    }
-    
-    return self;
+- (BFTask*)prepare:(NSNumber*) videoStart until:(NSNumber*) videoEnd {
+    return [[self trim:videoStart until:videoEnd] continueWithSuccessBlock:^id(BFTask *task) {
+        MFVideoAsset *asset = task.result;
+        return [asset prepare];
+    }];
 }
+
+- (BFTask*)prepare {
+    return [[self fixOrientation] continueWithSuccessBlock:^id(BFTask *task) {
+        MFVideoAsset *asset = task.result;
+        return [asset generateThumbnail];
+    }];
+}
+//    videoAsset.trim(videoStart, until: videoEnd).continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
+//        let trimmedAsset = task.result as MFVideoAsset!
+//        return trimmedAsset.fixOrientation()
+//    }).continueWithExecutor(mainExecutor, withSuccessBlock: { (task: BFTask!) -> AnyObject! in
+//        let orientedAsset: MFVideoAsset! = task.result as MFVideoAsset!
+//        println("## Video Orientation Fixed to \(orientedAsset.url)")
+//        return orientedAsset.generateThumbnail()
+//    }).continueWithExecutor(mainExecutor, withBlock: { (task:BFTask!) -> AnyObject! in
+//        if task.success {
+//            let finalAsset: MFVideoAsset! = task.result as MFVideoAsset
+//            self.videoUrl = finalAsset.url
+//            self.imageView.image = finalAsset.thumbnail
+//        } else { // Final all encapsulating error handler
+//            println("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
+//            self.presentViewController(
+//                                       UIAlertControllerFactory.ok("Error recording video", message: task.error.description),
+//                                       animated: true,
+//                                       completion: nil
+//                                       )
+//        }
+//        
+//        return nil
+//    })
+//}
 
 // Jacked and tweaked from a StackOverflow post:
 // http://stackoverflow.com/questions/4439707/how-to-trim-the-video-using-avfoundation/7141620#7141620
-- (BFTask*)trim {
+- (BFTask*)trim:(NSNumber*) videoStart until:(NSNumber*) videoEnd {
     // if start and end are nil then clipping was not used.
     // You should use the entire video.
     
-    if (self.videoStart == nil) {
+    if (videoStart == nil) {
         return [BFTask taskWithResult: self];
     }
     
-    int startMilliseconds = ([self.videoStart doubleValue] * 1000);
-    int endMilliseconds = ([self.videoEnd doubleValue] * 1000);
+    int startMilliseconds = ([videoStart doubleValue] * 1000);
+    int endMilliseconds = ([videoEnd doubleValue] * 1000);
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -93,6 +115,7 @@
                 NSLog(@"Failed:%@",exportSession.error);
                 break;
             default:
+                NSLog(@"This should be impossible! Unknown AVAssetExportSession Status: %ld", exportSession.status);
                 [completionSource setError:exportSession.error];
                 break;
         }
@@ -171,10 +194,7 @@
 //            CGAffineTransform firstAssetScaleFactor = CGAffineTransformMakeScale(firstAssetScaleToFitRatio,firstAssetScaleToFitRatio);
 //            [firstlayerInstruction setTransform:CGAffineTransformConcat(CGAffineTransformConcat(firstAssetTrack.preferredTransform, firstAssetScaleFactor),CGAffineTransformMakeTranslation(0, 160)) atTime:kCMTimeZero];
             
-            MFVideoAssetResponse *response = [[MFVideoAssetResponse alloc] init];
-            response.thumbnail = [self generateThumbnail];
-            response.url = self.url;
-            [completionSource setResult:response];
+            [completionSource setResult:self];
             return completionSource.task;
         }
         
@@ -201,7 +221,13 @@
         exporter.shouldOptimizeForNetworkUse = YES;
         [exporter exportAsynchronouslyWithCompletionHandler:^
          {
-             [self exportDidFinish:exporter withCompletionSource: completionSource];
+             if(exporter.status == AVAssetExportSessionStatusCompleted) {
+                 MFVideoAsset *asset = [[MFVideoAsset alloc] init:exporter.outputURL];
+                 [completionSource setResult:asset];
+             } else {
+                 NSLog(@"## error fixing orientation. Session.status: %ld", exporter.status);
+                 [completionSource setError:exporter.error];
+             }
          }];
     } else {
         NSMutableDictionary* details = [NSMutableDictionary dictionary];
@@ -213,21 +239,7 @@
     return [completionSource task];
 }
 
-- (void)exportDidFinish:(AVAssetExportSession*)session withCompletionSource:(BFTaskCompletionSource*)completionSource
-{
-    MFVideoAssetResponse *response = [[MFVideoAssetResponse alloc] init];
-
-    if(session.status == AVAssetExportSessionStatusCompleted) {
-        response.thumbnail = [self generateThumbnail];
-        response.url = session.outputURL;
-        [completionSource setResult:response];
-    } else {
-        NSLog(@"## error fixing orientation. Session.status: %ld", session.status);
-        [completionSource setError:session.error];
-    }
-}
-
-- (UIImage*) generateThumbnail {
+- (BFTask*) generateThumbnail {
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL: self.url options:nil];
     AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
     gen.appliesPreferredTrackTransform = YES;
@@ -240,7 +252,11 @@
     CGImageRelease(image);
     
     CGRect rect = CGRectMake(0, 0, 320.0, 320.0);
-    return [thumb croppedImageInRect:rect];
+    
+    MFVideoAsset *newAsset = [[MFVideoAsset alloc] init:self.url];
+    newAsset.thumbnail = [thumb croppedImageInRect:rect];
+    
+    return [BFTask taskWithResult:newAsset];
 }
 
 @end

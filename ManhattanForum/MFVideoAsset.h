@@ -12,19 +12,17 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Bolts/Bolts.h>
 
-@interface MFVideoAssetResponse : NSObject
-@property (nonatomic, strong) NSURL* url;
-@property (nonatomic, strong) UIImage* thumbnail;
-@end
-
 @interface MFVideoAsset : NSObject
 
-typedef void (^MFExportCallback)(MFVideoAssetResponse *);
+@property (readonly, nonatomic, strong) NSURL *url;
+@property (readonly, nonatomic, strong) UIImage *thumbnail;
 
 - (id)init:(NSURL*) url;
-- (id)init:(NSURL*) url videoStart: (NSNumber*) videoStart videoEnd: (NSNumber*) videoEnd;
-- (BFTask*)trim;
+- (BFTask*)trim:(NSNumber*) videoStart until:(NSNumber*) videoEnd;
 - (BFTask*)fixOrientation;
+- (BFTask*)generateThumbnail;
+- (BFTask*)prepare:(NSNumber*) videoStart until:(NSNumber*) videoEnd;
+- (BFTask*)prepare;
 
 @end
 

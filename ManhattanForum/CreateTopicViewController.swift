@@ -143,20 +143,14 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             let videoStart = info["_UIImagePickerControllerVideoEditingStart"] as? NSNumber
             let videoEnd = info["_UIImagePickerControllerVideoEditingEnd"] as? NSNumber
             
-            let videoAsset = MFVideoAsset(videoUrl, videoStart: videoStart, videoEnd: videoEnd)
-            videoAsset.trim().continueWithSuccessBlock({ (task) -> AnyObject! in
-                let trimmedAsset = task.result as MFVideoAsset!
-                return trimmedAsset.fixOrientation()
-            }).continueWithExecutor(mainExecutor, withSuccessBlock: { (task) -> AnyObject! in
-                let response: MFVideoAssetResponse! = task.result as MFVideoAssetResponse;
-                println("## Video Orientation Fixed to \(response.url)")
-                self.imageView.image = response.thumbnail
-                self.videoUrl = response.url
-                self.postButton.enabled = true;
-                return nil
-            }).continueWithExecutor(mainExecutor, withBlock: { (task:BFTask!) -> AnyObject! in
-                // Final all encapsulating error handler
-                if !task.success {
+            let videoAsset = MFVideoAsset(videoUrl)
+            
+            videoAsset.prepare(videoStart, until: videoEnd).continueWithExecutor(mainExecutor, withBlock: { (task:BFTask!) -> AnyObject! in
+                if task.success {
+                    let finalAsset: MFVideoAsset! = task.result as MFVideoAsset
+                    self.videoUrl = finalAsset.url
+                    self.imageView.image = finalAsset.thumbnail
+                } else { // Final all encapsulating error handler
                     println("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
                     self.presentViewController(
                         UIAlertControllerFactory.ok("Error recording video", message: task.error.description),
@@ -167,7 +161,6 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                 
                 return nil
             })
-
         case kUTTypeImage:
             var chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage
             if(chosenImage == nil) {
