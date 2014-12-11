@@ -24,23 +24,25 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.postButton.enabled = false;
-        
-        // Must hold on to ivar in memory otherwise ARC GC will clean up instance prematurely and stop prompting for user location
-        self.locationManager = LocationManager.start({ (response) -> Void in
-            switch response {
-            case .Error(let error):
-                NSLog(error.description)
-                self.presentViewController(
-                    UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\nPlease close post and try again later."),
-                    animated: true,
-                    completion: nil
-                )
-            case .Response(let location):
+        postButton.enabled = false;
+        locationManager = LocationManager()
+        let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
+
+        locationManager!.startAsync().continueWithExecutor(mainExecutor, withBlock: { (task: BFTask!) -> AnyObject! in
+            if(task.success) {
+                let location = task.result as MFLocation!
                 self.textPlaceHolder.text = "Share \(location.description)"
                 self.postButton.enabled = true
                 self.location = location
+            } else {
+                NSLog(task.error.description)
+                self.presentViewController(
+                    UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\nPlease close post and try again later."),
+                    animated: true,
+                    completion: nil)
             }
+            
+            return nil
         })
     }
     

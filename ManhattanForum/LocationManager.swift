@@ -10,21 +10,12 @@ import Foundation
 import CoreLocation
 
 class LocationManager: NSObject, CLLocationManagerDelegate {
-    typealias Callback = (GoogleGeocoderResponse) -> Void
-
     var locationManager: CLLocationManager? = nil
-    var callback: Callback
+    var completionSource: BFTaskCompletionSource = BFTaskCompletionSource()
     
-    init(callback: Callback) {
-        self.callback = callback
-    }
-    
-    class func start(callback: Callback) -> LocationManager {
-        var locationManager = LocationManager(callback)
-        locationManager.locationManager = generateCLLocationManager(locationManager)
-        locationManager.locationManager!.requestWhenInUseAuthorization()
-        locationManager.locationManager!.startUpdatingLocation()
-        return locationManager
+    func startAsync() -> BFTask {
+        self.locationManager = LocationManager.generateCLLocationManager(self)
+        return completionSource.task
     }
     
     private class func generateCLLocationManager(locationManagerInstance: LocationManager) -> CLLocationManager! {
@@ -32,21 +23,28 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         cllocationManager.delegate = locationManagerInstance
         cllocationManager.distanceFilter = kCLDistanceFilterNone
         cllocationManager.desiredAccuracy = kCLLocationAccuracyBest
+        cllocationManager.requestWhenInUseAuthorization()
+        cllocationManager.startUpdatingLocation()
         return cllocationManager
+    }
+    
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        println("didChangeAuthorizationStatus: \(status.rawValue)")
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         println("## INFO: Updating location!")
         let location: CLLocation = locations.last! as CLLocation
         NSLog(location.description)
-        google_geocode(location)
         locationManager!.stopUpdatingLocation()
+
+        google_geocode(location)
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         NSLog("Encountered an error retrieving location: \(error.code) - \(error.description)")
         locationManager!.stopUpdatingLocation()
-        self.callback(GoogleGeocoderResponse.Error(error))
+        self.completionSource.setError(error)
     }
     
     private func google_geocode(location: CLLocation!) {
@@ -55,23 +53,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             switch response {
             case .Error(let error):
                 NSLog(error.description)
+                self.completionSource.setError(error)
             case .Response(let location):
                 NSLog(location.description)
-            }
-            
-            self.callback(response)
-        })
-    }
-    
-    private func geocode(location: CLLocation!) {
-        let geocoder = CLGeocoder()
-        geocoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
-            if((error) != nil) {
-                NSLog(error.description)
-            } else {
-                for placemark in placemarks {
-                    NSLog("## INFO: Location \(placemark.description) is in the neighborhood \(placemark.subLocality), \(placemark.locality)")
-                }
+                self.completionSource.setResult(location)
             }
         })
     }

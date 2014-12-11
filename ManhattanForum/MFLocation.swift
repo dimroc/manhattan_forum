@@ -9,9 +9,16 @@
 import Foundation
 import CoreLocation
 
-struct MFLocation: Printable, DebugPrintable, Equatable {
+class MFLocation: Printable, DebugPrintable, Equatable {
     let neighborhood, sublocality, locality: String?
     let coordinate: CLLocationCoordinate2D?
+    
+    init(neighborhood: String?, sublocality: String?, locality: String?, coordinate: CLLocationCoordinate2D?) {
+        self.neighborhood = neighborhood
+        self.sublocality = sublocality
+        self.locality = locality
+        self.coordinate = coordinate
+    }
     
     var description: String {
         switch (neighborhood, sublocality) {
@@ -28,12 +35,12 @@ struct MFLocation: Printable, DebugPrintable, Equatable {
         return "\(neighborhood), \(sublocality), \(locality) at \(coordinate?.latitude), \(coordinate?.longitude)"
     }
     
-    static func empty() -> MFLocation {
+    class func empty() -> MFLocation {
         return MFLocation(neighborhood: nil, sublocality: nil, locality: nil, coordinate: nil)
     }
     
     // JSON Parsing in Swift: http://robots.thoughtbot.com/efficient-json-in-swift-with-functional-concepts-and-generics
-    static func fromGoogleJson(json: Dictionary<String, AnyObject>) -> MFLocation {
+    class func fromGoogleJson(json: Dictionary<String, AnyObject>) -> MFLocation {
         if let results: AnyObject? = json["results"] as? NSArray {
             if let result: AnyObject? = results?[0] {
 //                println("## DEBUG: Parsing through:\n\(result)")
@@ -51,7 +58,7 @@ struct MFLocation: Printable, DebugPrintable, Equatable {
         return MFLocation.empty()
     }
     
-    private static func coordinateFromResult(result: AnyObject) -> CLLocationCoordinate2D? {
+    private class func coordinateFromResult(result: AnyObject) -> CLLocationCoordinate2D? {
         if let geometry: AnyObject? = result["geometry"] {
             if let location: AnyObject? = geometry?["location"] {
                 if let lat: AnyObject? = location?["lat"] {
@@ -65,7 +72,7 @@ struct MFLocation: Printable, DebugPrintable, Equatable {
         return nil
     }
     
-    private static func fromAddressComponents(addressComponents: AnyObject, type: String) -> String? {
+    private class func fromAddressComponents(addressComponents: AnyObject, type: String) -> String? {
         let array = addressComponents as Array<Dictionary<String, AnyObject>>
         for addressComponent in array {
             let types: AnyObject? = addressComponent["types"]
