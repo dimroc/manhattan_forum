@@ -14,7 +14,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
     @IBOutlet weak var postButton: UIBarButtonItem!
+    @IBOutlet weak var colorButton: UIButton!
     
+    var colorPalette: ColorPalette! = ColorPalette.random()
     var locationManager: LocationManager? = nil
     var location: MFLocation? = nil
     var videoUrl: NSURL? = nil
@@ -23,14 +25,12 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     override func viewDidLoad() {
-        textView.becomeFirstResponder()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        postButton.enabled = false;
+        postButton.enabled = isPostable;
+        assignColorPalette(self.colorPalette)
+        
         locationManager = LocationManager()
         let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
-
+        
         locationManager!.startAsync().continueWithExecutor(mainExecutor, withBlock: { (task: BFTask!) -> AnyObject! in
             if(task.success) {
                 let location = task.result as MFLocation!
@@ -49,9 +49,11 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         })
     }
     
+    override func viewDidAppear(animated: Bool) {
+        textView.becomeFirstResponder()
+    }
+    
     override func viewDidDisappear(animated: Bool) {
-        println("Removing location manager")
-        locationManager = nil
     }
     
     @IBAction func postTopic(sender: AnyObject) {
@@ -78,6 +80,16 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         }
         
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func toggleColor(AnyObject) {
+        assignColorPalette(self.colorPalette.next())
+    }
+    
+    private func assignColorPalette(colorPalette: ColorPalette!) {
+        self.colorButton.tintColor = colorPalette.color
+        self.textView.textColor = colorPalette.color
+        self.textPlaceHolder.textColor = colorPalette.color
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
