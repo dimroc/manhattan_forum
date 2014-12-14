@@ -16,7 +16,6 @@
 		5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D0B1A2985750033EAAE /* MFVideoAsset.m */; };
 		5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D111A2CA3AB0033EAAE /* PFObject.swift */; };
 		5E1CB0351A3DEB120039C1BE /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */; };
-		5E1CB0371A3DEFDC0039C1BE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CB0361A3DEFDC0039C1BE /* UIColor.swift */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
@@ -69,7 +68,6 @@
 		5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos/PromiseKit.framework"; sourceTree = "<group>"; };
 		5E193D111A2CA3AB0033EAAE /* PFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFObject.swift; sourceTree = "<group>"; };
 		5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
-		5E1CB0361A3DEFDC0039C1BE /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
@@ -202,7 +200,6 @@
 			children = (
 				5E193D111A2CA3AB0033EAAE /* PFObject.swift */,
 				5E9A29B21A2CA74500F6AC9A /* BFTask.swift */,
-				5E1CB0361A3DEFDC0039C1BE /* UIColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -460,7 +457,6 @@
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
 				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
-				5E1CB0371A3DEFDC0039C1BE /* UIColor.swift in Sources */,
 				5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */,
 				5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */,
 				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,

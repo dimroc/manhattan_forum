@@ -12,13 +12,13 @@ import Foundation
 // http://iosdesign.ivomynttinen.com/
 private let colorTable = [
     UIColor.whiteColor(),
-    UIColor(hex: "#54C7FC"),
-    UIColor(hex: "#FF9600"),
-    UIColor(hex: "#FF2851"),
-    UIColor(hex: "#0076FF"),
-    UIColor(hex: "#44DB5E"),
-    UIColor(hex: "#FF3824"),
-    UIColor(hex: "#8E8E93")
+    UIColor(hex: 0x54C7FC),
+    UIColor(hex: 0xFF9600),
+    UIColor(hex: 0xFF2851),
+    UIColor(hex: 0x0076FF),
+    UIColor(hex: 0x44DB5E),
+    UIColor(hex: 0xFF3824),
+    UIColor(hex: 0x8E8E93)
 ]
 
 class ColorPalette {

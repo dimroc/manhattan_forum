@@ -74,9 +74,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         }
         
         if (self.videoUrl != nil) {
-            PostRepository.createAsync(self.textView.text, location: self.location!, withImage: self.imageView.image, withVideo: self.videoUrl!).continueWithBlock(completeCreation)
+            PostRepository.createAsync(self.textView.text, color: self.colorPalette.color, location: self.location!, withImage: self.imageView.image, withVideo: self.videoUrl!).continueWithBlock(completeCreation)
         } else {
-            PostRepository.createAsync(self.textView.text, location: self.location!, withImage: self.imageView.image).continueWithBlock(completeCreation)
+            PostRepository.createAsync(self.textView.text, color: self.colorPalette.color, location: self.location!, withImage: self.imageView.image).continueWithBlock(completeCreation)
         }
         
         self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)

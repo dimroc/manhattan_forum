@@ -9,6 +9,7 @@ target "ManhattanForum" do
   pod "ParseFacebookUtils"
   pod "AFNetworking", "~> 2.0"
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'UIColor+Hex'
 end
 
 target "ManhattanForumTests" do
@@ -18,5 +19,6 @@ target "ManhattanForumTests" do
   pod "ParseFacebookUtils"
   pod "AFNetworking", "~> 2.0"
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'UIColor+Hex'
 end
 

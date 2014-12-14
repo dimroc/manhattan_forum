@@ -30,6 +30,10 @@ PODS:
     - Facebook-iOS-SDK (~> 3.20)
     - Parse (~> 1.5.0)
   - RNCryptor (2.2)
+  - UIColor+Hex (1.0.1):
+    - UIColor+Hex/NSColor (= 1.0.1)
+    - UIColor+Hex/UIColor (= 1.0.1)
+  - UIColor+Hex/UIColor (1.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
@@ -38,6 +42,7 @@ DEPENDENCIES:
   - Parse
   - ParseFacebookUtils
   - RNCryptor
+  - UIColor+Hex
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
@@ -47,5 +52,6 @@ SPEC CHECKSUMS:
   Parse: 7de25b6f70f0b233e5d25835f62eabfa91e4f9d7
   ParseFacebookUtils: df2c8634a66883326629099af3690f1862fe126d
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
+  UIColor+Hex: ac7e1ae4eeea4f522fe3f6eda35de4af69244432
 
 COCOAPODS: 0.35.0

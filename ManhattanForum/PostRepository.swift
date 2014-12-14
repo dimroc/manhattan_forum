@@ -12,21 +12,22 @@ class PostRepository {
     // Items needed for post:
     // Author (TODO)
     // Message
+    // Color
     // Location
     // Locality
     // State
     // Image
     // Video
     // Timestamp (included with PFObject)
-    class func createAsync(message: String, location: MFLocation) -> BFTask {
-        var post = preparePost(message, location: location)
+    class func createAsync(message: String, color: UIColor, location: MFLocation) -> BFTask {
+        var post = preparePost(message, color: color, location: location)
         post["type"] = "message"
         return post.saveEventuallyAsTask()
     }
     
-    class func createAsync(message: String, location: MFLocation, withImage: UIImage?) -> BFTask {
+    class func createAsync(message: String, color: UIColor, location: MFLocation, withImage: UIImage?) -> BFTask {
         if let image = withImage {
-            var post = preparePost(message, location: location)
+            var post = preparePost(message, color: color, location: location)
             let imageData = UIImageJPEGRepresentation(image, 1)
             let file = PFFile(data: imageData, contentType: "image/jpg")
         
@@ -36,12 +37,12 @@ class PostRepository {
                 return post.saveEventuallyAsTask()
             })
         } else {
-            return createAsync(message, location: location)
+            return createAsync(message, color: color, location: location)
         }
     }
     
-    class func createAsync(message: String, location: MFLocation, withImage: UIImage!, withVideo: NSURL!) -> BFTask! {
-        var post = preparePost(message, location: location)
+    class func createAsync(message: String, color: UIColor, location: MFLocation, withImage: UIImage!, withVideo: NSURL!) -> BFTask! {
+        var post = preparePost(message, color: color, location: location)
         
         let imageData = UIImageJPEGRepresentation(withImage, 1)
         let imageFile = PFFile(data: imageData, contentType: "image/jpg")
@@ -58,9 +59,10 @@ class PostRepository {
         })
     }
     
-    private class func preparePost(message: String, location: MFLocation) -> PFObject! {
+    private class func preparePost(message: String, color: UIColor, location: MFLocation) -> PFObject! {
         var post = PFObject(className: "Post")
         post["message"] = message
+        post["color"] = color.hexString()
         post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
         post["neighborhood"] = location.neighborhood
         post["locality"] = location.locality
