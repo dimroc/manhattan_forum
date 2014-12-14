@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class CreateTopicViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateTopicViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
@@ -18,6 +18,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     var locationManager: LocationManager? = nil
     var location: MFLocation? = nil
     var videoUrl: NSURL? = nil
+    var isPostable: Bool {
+        get { return self.location != nil && countElements(self.textView.text) > 0 }
+    }
     
     override func viewDidLoad() {
         textView.becomeFirstResponder()
@@ -32,7 +35,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             if(task.success) {
                 let location = task.result as MFLocation!
                 self.textPlaceHolder.text = "Share \(location.description)"
-                self.postButton.enabled = true
+                self.postButton.enabled = self.isPostable
                 self.location = location
             } else {
                 NSLog(task.error.description)
@@ -176,5 +179,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         }
         
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        postButton.enabled = self.isPostable
     }
 }
