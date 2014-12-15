@@ -38,13 +38,16 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         NSLog(location.description)
         locationManager!.stopUpdatingLocation()
 
+        // The location manager can invoke this delegate method multiple times
+        // before stopUpdatingLocation() takes effect.
+        // This is why we invoke completionsource.trySet... at the end of each delegate.
         google_geocode(location)
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         NSLog("Encountered an error retrieving location: \(error.code) - \(error.description)")
         locationManager!.stopUpdatingLocation()
-        self.completionSource.setError(error)
+        self.completionSource.trySetError(error)
     }
     
     private func google_geocode(location: CLLocation!) {
@@ -53,10 +56,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             switch response {
             case .Error(let error):
                 NSLog(error.description)
-                self.completionSource.setError(error)
+                self.completionSource.trySetError(error)
             case .Response(let location):
                 NSLog(location.description)
-                self.completionSource.setResult(location)
+                self.completionSource.trySetResult(location)
             }
         })
     }
