@@ -131,6 +131,12 @@
                                     <outlet property="delegate" destination="CS7-7F-IgI" id="YCh-zl-oK6"/>
                                 </connections>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-CH-zic">
+                                <rect key="frame" x="0.0" y="79" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-pz-xgb" userLabel="Camera">
                                 <rect key="frame" x="16" y="77" width="25" height="22"/>
                                 <state key="normal" image="whiteCamera">
@@ -140,27 +146,15 @@
                                     <action selector="showCameraActionSheet:" destination="CS7-7F-IgI" eventType="touchUpInside" id="TM7-bS-1ln"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz9-Ap-e3n" userLabel="BackgroundArrow">
-                                <rect key="frame" x="282" y="213" width="11" height="22"/>
-                                <state key="normal" image="forwardSmall">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-CH-zic">
-                                <rect key="frame" x="60" y="79" width="200" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-ls-4N3" userLabel="Color">
-                                <rect key="frame" x="282" y="77" width="22" height="22"/>
+                                <rect key="frame" x="148" y="108" width="25" height="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" image="BlackCircle">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="toggleColor:" destination="CS7-7F-IgI" eventType="touchUpInside" id="aJU-L7-FhW"/>
+                                    <action selector="toggleColor:" destination="CS7-7F-IgI" eventType="touchDown" id="J6P-lS-9Fu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -345,7 +339,6 @@
     <resources>
         <image name="BlackCircle" width="47" height="47"/>
         <image name="back" width="11" height="21"/>
-        <image name="forwardSmall" width="9" height="16"/>
         <image name="lines" width="30" height="30"/>
         <image name="location" width="19" height="16"/>
         <image name="whiteCamera" width="25" height="19"/>
@@ -356,7 +349,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Hxw-aq-Et3"/>
+        <segue reference="dTa-cU-nR6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

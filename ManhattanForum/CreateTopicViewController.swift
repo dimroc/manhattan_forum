@@ -84,6 +84,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func toggleColor(AnyObject) {
         assignColorPalette(self.colorPalette.next())
+        println("Changed Post Color to: \(self.colorPalette.color.description)")
     }
     
     private func assignColorPalette(colorPalette: ColorPalette!) {
