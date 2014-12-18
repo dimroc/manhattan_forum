@@ -287,6 +287,7 @@
 				5E0C3D8819CEFE0C008E2726 /* Frameworks */,
 				5E0C3D8919CEFE0C008E2726 /* Resources */,
 				0B97B194F85443198C27B976 /* Copy Pods Resources */,
+				5E4512541A4261BF00100E95 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -411,6 +412,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5E4512541A4261BF00100E95 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=/usr/local/bin:$PATH\ncd ../parse\n\nparse symbols \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"";
 		};
 		AE6089EFE9D34A52A1DA6B69 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

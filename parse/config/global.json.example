@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "CityForum-dev": {
+            "applicationId": "MyApplicationId",
+            "masterKey": "MyMasterKey"
+        }, 
+        "_default": {
+            "link": "CityForum-dev"
+        }
+    }
+}
