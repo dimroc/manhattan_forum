@@ -7,6 +7,7 @@ target "ManhattanForum" do
   pod "Bolts"
   pod "Parse"
   pod "ParseFacebookUtils"
+  pod "ParseCrashReporting"
   pod "AFNetworking", "~> 2.0"
   pod 'MBProgressHUD', '~> 0.8'
   pod 'UIColor+Hex'

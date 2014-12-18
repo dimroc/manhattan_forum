@@ -21,14 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Bolts (1.1.3)
-  - Facebook-iOS-SDK (3.20.0):
+  - Facebook-iOS-SDK (3.21.1):
     - Bolts (~> 1.0)
   - MBProgressHUD (0.9)
-  - Parse (1.5.0):
+  - Parse (1.6.0):
     - Bolts (~> 1.1.3)
-  - ParseFacebookUtils (1.5.0.1):
+  - ParseCrashReporting (1.6.0):
+    - Parse (~> 1.6.0)
+  - ParseFacebookUtils (1.6.0):
     - Facebook-iOS-SDK (~> 3.20)
-    - Parse (~> 1.5.0)
+    - Parse (~> 1.6.0)
   - RNCryptor (2.2)
   - UIColor+Hex (1.0.1):
     - UIColor+Hex/NSColor (= 1.0.1)
@@ -40,6 +42,7 @@ DEPENDENCIES:
   - Bolts
   - MBProgressHUD (~> 0.8)
   - Parse
+  - ParseCrashReporting
   - ParseFacebookUtils
   - RNCryptor
   - UIColor+Hex
@@ -47,10 +50,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
-  Facebook-iOS-SDK: 5854404b4b651f612a8ef79ca06d766858f4cb8e
+  Facebook-iOS-SDK: 18c26e86ab25c17854a2ee2a8f60562099c6600f
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
-  Parse: 7de25b6f70f0b233e5d25835f62eabfa91e4f9d7
-  ParseFacebookUtils: df2c8634a66883326629099af3690f1862fe126d
+  Parse: f15dfacd941ee8084a5decbef486da8b223c2810
+  ParseCrashReporting: b74cdad4d32e3d8dc78f7e862b89eec9a12f4648
+  ParseFacebookUtils: 8d33da72678c4c03a3b94332179dc04548bbd268
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
   UIColor+Hex: ac7e1ae4eeea4f522fe3f6eda35de4af69244432
 

@@ -10,10 +10,13 @@ import Foundation
 
 class ParseHelper {
     class func launch(launchOptions: NSDictionary?) {
+        ParseCrashReporting.enable()
+        
         Parse.setApplicationId(
             Credentials.objectForKey("ParseApplicationId"),
             clientKey: Credentials.objectForKey("ParseClientKey"))
         
+        Parse.enableLocalDatastore()
         PFFacebookUtils.initializeFacebook()
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
     }

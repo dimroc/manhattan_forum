@@ -9,6 +9,7 @@
 #import <Bolts/Bolts.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <ParseCrashReporting/ParseCrashReporting.h>
 #import <AFNetworking/AFNetworking.h>
 #import "MBProgressHUD.h"
 #import "UIColor+Hex.h"
