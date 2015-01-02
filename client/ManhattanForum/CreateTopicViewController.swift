@@ -29,9 +29,8 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         assignColorPalette(self.colorPalette)
         
         locationManager = LocationManager()
-        let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
         
-        locationManager!.startAsync().continueWithExecutor(mainExecutor, withBlock: { (task: BFTask!) -> AnyObject! in
+        locationManager!.startAsync().continueWithBlockOnMain({ (task: BFTask!) -> AnyObject! in
             if(task.success) {
                 let location = task.result as MFLocation!
                 self.textPlaceHolder.text = "Share \(location.description)"
@@ -156,15 +155,13 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             // TODO: fix orientation here so that we can grab thumbnail and splice out ommitted entries.
             self.postButton.enabled = false;
             
-            // Create a BFExecutor that uses the main thread.
-            let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
             let videoUrl = info[UIImagePickerControllerMediaURL] as? NSURL
             let videoStart = info["_UIImagePickerControllerVideoEditingStart"] as? NSNumber
             let videoEnd = info["_UIImagePickerControllerVideoEditingEnd"] as? NSNumber
             
             let videoAsset = MFVideoAsset(videoUrl)
             
-            videoAsset.prepare(videoStart, until: videoEnd).continueWithExecutor(mainExecutor, withBlock: { (task:BFTask!) -> AnyObject! in
+            videoAsset.prepare(videoStart, until: videoEnd).continueWithBlockOnMain({ (task:BFTask!) -> AnyObject! in
                 if task.success {
                     let finalAsset: MFVideoAsset! = task.result as MFVideoAsset
                     self.videoUrl = finalAsset.url

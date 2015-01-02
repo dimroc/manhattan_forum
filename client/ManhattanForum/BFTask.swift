@@ -12,4 +12,9 @@ extension BFTask {
     var success: Bool {
         get { return self.error == nil }
     }
+    
+    func continueWithBlockOnMain(block: BFContinuationBlock!) -> BFTask! {
+        let mainExecutor = BFExecutor(dispatchQueue: dispatch_get_main_queue())
+        return continueWithExecutor(mainExecutor, withBlock: block)
+    }
 }
