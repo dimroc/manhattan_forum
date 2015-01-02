@@ -59,7 +59,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                 self.completionSource.trySetError(error)
             case .Response(let location):
                 NSLog(location.description)
-                self.completionSource.trySetResult(location)
+                if (location.valid) {
+                    self.completionSource.trySetResult(location)
+                } else {
+                    let details = [NSLocalizedDescriptionKey: "Unable to find a valid location with neighborhood, sublocality, and locality."]
+                    let error = NSError(domain: "locationmanager.geocode.google.manhattanforum.com", code: 0, userInfo: details)
+                    self.completionSource.trySetError(error)
+                }
             }
         })
     }

@@ -35,6 +35,15 @@ class MFLocation: Printable, DebugPrintable, Equatable {
         return "\(neighborhood), \(sublocality), \(locality) at \(coordinate?.latitude), \(coordinate?.longitude)"
     }
     
+    var valid: Bool {
+        switch (neighborhood, sublocality, locality) {
+        case (.Some,.Some,.Some):
+            return true
+        default:
+            return false
+        }
+    }
+    
     class func empty() -> MFLocation {
         return MFLocation(neighborhood: nil, sublocality: nil, locality: nil, coordinate: nil)
     }

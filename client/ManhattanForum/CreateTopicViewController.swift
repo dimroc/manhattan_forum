@@ -39,8 +39,9 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                 self.location = location
             } else {
                 NSLog(task.error.description)
+                
                 self.presentViewController(
-                    UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\nPlease close post and try again later."),
+                    UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\n\(task.error.localizedDescription)\nPlease close post and try again later."),
                     animated: true,
                     completion: nil)
             }

@@ -30,6 +30,7 @@ class MFLocationTests: XCTestCase {
         XCTAssertEqual(location.locality!, "New York")
         XCTAssertEqual(location.coordinate!.latitude, 40.7292449)
         XCTAssertEqual(location.coordinate!.longitude, -73.9873784)
+        XCTAssert(location.valid == true, "Should be valid")
     }
     
     func testParsingNoHoodGoogleResponse() {
@@ -39,6 +40,7 @@ class MFLocationTests: XCTestCase {
         XCTAssert(location.neighborhood == nil, "Should be nil")
         XCTAssertEqual(location.sublocality!, "Manhattan")
         XCTAssertEqual(location.description, "Manhattan")
+        XCTAssert(location.valid == false, "Should not be valid")
     }
     
     func testParsingWrongKeysGoogleResponse() {
