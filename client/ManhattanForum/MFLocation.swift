@@ -43,25 +43,37 @@ class MFLocation: Printable, DebugPrintable, Equatable {
             return false
         }
     }
-    
+
     class func empty() -> MFLocation {
         return MFLocation(neighborhood: nil, sublocality: nil, locality: nil, coordinate: nil)
     }
     
     // JSON Parsing in Swift: http://robots.thoughtbot.com/efficient-json-in-swift-with-functional-concepts-and-generics
     class func fromGoogleJson(json: Dictionary<String, AnyObject>) -> MFLocation {
-        if let results: AnyObject? = json["results"] as? NSArray {
-            if let result: AnyObject? = results?[0] {
-//                println("## DEBUG: Parsing through:\n\(result)")
-                if let addressComponents: AnyObject? = result?["address_components"] {
-                    return MFLocation(
-                        neighborhood: fromAddressComponents(addressComponents!, type: "neighborhood"),
-                        sublocality: fromAddressComponents(addressComponents!, type: "sublocality"),
-                        locality: fromAddressComponents(addressComponents!, type: "locality"),
-                        coordinate: coordinateFromResult(result!)
-                    )
+        var lastLocation: MFLocation = MFLocation.empty()
+        if let results: [AnyObject] = json["results"] as [AnyObject]? {
+            // Couldn't use standard iterator on results because of some esoteric swift issue.
+            for index in 0...results.endIndex-1 {
+                let result: AnyObject = results[index]
+                lastLocation = fetchLocationFromResult(result)
+                if (lastLocation.valid) {
+                    return lastLocation
                 }
             }
+        }
+        
+        return lastLocation
+    }
+    
+    private class func fetchLocationFromResult(result: AnyObject?) -> MFLocation {
+        // println("## DEBUG: Parsing through:\n\(result)")
+        if let addressComponents: AnyObject? = result?["address_components"] {
+            return MFLocation(
+                neighborhood: fromAddressComponents(addressComponents!, type: "neighborhood"),
+                sublocality: fromAddressComponents(addressComponents!, type: "sublocality"),
+                locality: fromAddressComponents(addressComponents!, type: "locality"),
+                coordinate: coordinateFromResult(result!)
+            )
         }
         
         return MFLocation.empty()
