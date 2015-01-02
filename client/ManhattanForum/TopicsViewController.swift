@@ -43,7 +43,10 @@ class TopicsViewController: UITableViewController {
     }
     
     @IBAction func refresh(sender: AnyObject) {
-        println("refreshed!!")
-        refreshControl?.endRefreshing()
+        PostRepository.retrieveAsync().continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
+            println("refreshed!!")
+            self.refreshControl?.endRefreshing()
+            return nil
+        }
     }
 }
