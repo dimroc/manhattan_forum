@@ -9,27 +9,25 @@
 import Foundation
 import CoreLocation
 
-enum GoogleGeocoderResponse {
-    case Response(MFLocation)
-    case Error(NSError)
-}
-
 class GoogleGeocoder {
-    class func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse) -> Void) {
-        GoogleGeocoder().reverse(coordinate, callback: callback)
+    class func reverse(coordinate: CLLocationCoordinate2D!) -> BFTask! {
+        return GoogleGeocoder().reverse(coordinate)
     }
 
-    func reverse(coordinate: CLLocationCoordinate2D!, callback: (GoogleGeocoderResponse) -> Void) {
+    func reverse(coordinate: CLLocationCoordinate2D!) -> BFTask! {
         let manager = AFHTTPRequestOperationManager()
         let parameters = generateParameters(coordinate)
+        let completionSource = BFTaskCompletionSource()
 
         manager.GET(baseUrl(), parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response) in
             let location = GoogleGeocoder.fromResponse(response!)
             println("Retrieved location:\n\(location.debugDescription)")
-            callback(GoogleGeocoderResponse.Response(location))
+            completionSource.setResult(location)
         }) { (operation, error) in
-            callback(GoogleGeocoderResponse.Error(error))
+            completionSource.setError(error)
         }
+        
+        return completionSource.task
     }
 
     class func fromResponse(response: AnyObject?) -> MFLocation {

@@ -50,14 +50,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         self.completionSource.trySetError(error)
     }
     
-    private func google_geocode(location: CLLocation!) {
-        NSLog("Retrieving reverse geocode for \(location.description)")
-        GoogleGeocoder.reverse(location.coordinate, callback: { (response: GoogleGeocoderResponse) in
-            switch response {
-            case .Error(let error):
-                NSLog(error.description)
-                self.completionSource.trySetError(error)
-            case .Response(let location):
+    private func google_geocode(cllocation: CLLocation!) {
+        NSLog("Retrieving reverse geocode for \(cllocation.description)")
+        GoogleGeocoder.reverse(cllocation.coordinate).continueWithBlock { (task: BFTask!) -> AnyObject! in
+            if(task.success) {
+                let location = task.result as MFLocation!
                 NSLog(location.description)
                 if (location.valid) {
                     self.completionSource.trySetResult(location)
@@ -66,7 +63,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                     let error = NSError(domain: "locationmanager.geocode.google.manhattanforum.com", code: 0, userInfo: details)
                     self.completionSource.trySetError(error)
                 }
+                
+            } else {
+                NSLog(task.error.description)
+                self.completionSource.trySetError(task.error)
             }
-        })
+            
+            return nil
+        }
     }
 }

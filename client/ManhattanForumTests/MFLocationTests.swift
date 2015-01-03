@@ -49,4 +49,11 @@ class MFLocationTests: XCTestCase {
         
         XCTAssertEqual(location, MFLocation.empty())
     }
+    
+    func testDebugDescriptionOnIncompleteLocation() {
+        let fixture = TestHelper.loadJsonFixture("noHoodGeocodeResponse")
+        let location = MFLocation.fromGoogleJson(fixture)
+
+        XCTAssertEqual(location.debugDescription, "nil, Optional(\"Manhattan\"), Optional(\"New York\") at nil, nil")
+    }
 }
