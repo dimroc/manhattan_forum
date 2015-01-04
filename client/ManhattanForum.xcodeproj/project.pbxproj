@@ -21,6 +21,7 @@
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
 		5E9687211A58BB40008BE878 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9687201A58BB40008BE878 /* PostCell.xib */; };
 		5E9687241A58BC86008BE878 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687231A58BC86008BE878 /* PostCell.swift */; };
+		5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687251A5994C6008BE878 /* PostDataSource.swift */; };
 		5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A29B21A2CA74500F6AC9A /* BFTask.swift */; };
 		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
 		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
@@ -75,6 +76,7 @@
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
 		5E9687201A58BB40008BE878 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		5E9687231A58BC86008BE878 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		5E9687251A5994C6008BE878 /* PostDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		5E9A29B21A2CA74500F6AC9A /* BFTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFTask.swift; sourceTree = "<group>"; };
 		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
 		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9C158119CF025800F6EBAA /* MFLocation.swift */,
+				5E9687251A5994C6008BE878 /* PostDataSource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */,
 				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
 				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
 				5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */,

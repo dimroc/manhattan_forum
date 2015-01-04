@@ -204,7 +204,7 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="PUh-eJ-EnZ" id="iOT-Yk-ABf"/>
+                            <outlet property="dataSource" destination="mKU-j7-6j7" id="pxQ-KJ-1Sz"/>
                             <outlet property="delegate" destination="PUh-eJ-EnZ" id="nSW-fL-5Cw"/>
                         </connections>
                     </tableView>
@@ -230,6 +230,7 @@
                     </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSP-uX-LD5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="mKU-j7-6j7" customClass="PostDataSource" customModule="ManhattanForum"/>
             </objects>
             <point key="canvasLocation" x="362" y="-127"/>
         </scene>
