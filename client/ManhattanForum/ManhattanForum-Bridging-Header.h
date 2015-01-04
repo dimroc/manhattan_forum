@@ -14,5 +14,8 @@
 #import "MBProgressHUD.h"
 #import "UIColor+Hex.h"
 
+#import "CocoaLumberjack.h"
+#import "RMPaperTrailLogger.h"
+
 // Project
 #import "MFVideoAsset.h"

@@ -59,7 +59,7 @@ class PostDataSource: NSObject, UITableViewDataSource {
             if(success) {
                 self.posts = self.buildPostsFromLocalStore()
             } else {
-                NSLog("FAILED TO PIN OBJECTS")
+                DDLogHelper.debug("FAILED TO PIN OBJECTS")
             }
             return nil
         })
@@ -70,7 +70,7 @@ class PostDataSource: NSObject, UITableViewDataSource {
         query.fromPinWithName("Posts")
         
         let objects = query.findObjects()
-        NSLog("Built \(objects.count) posts from local data store")
+        DDLogHelper.debug("Built \(objects.count) posts from local data store")
         return objects as Array<Post>
     }
     

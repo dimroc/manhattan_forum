@@ -21,9 +21,21 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Bolts (1.1.3)
+  - CocoaAsyncSocket (7.4.1)
+  - CocoaLumberjack (2.0.0-rc):
+    - CocoaLumberjack/Default (= 2.0.0-rc)
+    - CocoaLumberjack/Extensions (= 2.0.0-rc)
+  - CocoaLumberjack/Core (2.0.0-rc)
+  - CocoaLumberjack/Default (2.0.0-rc):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0-rc):
+    - CocoaLumberjack/Default
   - Facebook-iOS-SDK (3.21.1):
     - Bolts (~> 1.0)
   - MBProgressHUD (0.9)
+  - PaperTrailLumberjack (0.1.0):
+    - CocoaAsyncSocket
+    - CocoaLumberjack
   - Parse (1.6.1):
     - Bolts (~> 1.1.3)
   - ParseCrashReporting (1.6.1):
@@ -40,22 +52,41 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Bolts
+  - CocoaLumberjack (from `git@github.com:dimroc/CocoaLumberjack.git`)
   - MBProgressHUD (~> 0.8)
+  - PaperTrailLumberjack (from `https://bitbucket.org/luisrecuenco/papertraillumberjack.git`)
   - Parse
   - ParseCrashReporting
   - ParseFacebookUtils
   - RNCryptor
   - UIColor+Hex
 
+EXTERNAL SOURCES:
+  CocoaLumberjack:
+    :git: git@github.com:dimroc/CocoaLumberjack.git
+  PaperTrailLumberjack:
+    :git: https://bitbucket.org/luisrecuenco/papertraillumberjack.git
+
+CHECKOUT OPTIONS:
+  CocoaLumberjack:
+    :commit: b8d802935eff7e29a6ec735a2785753bee00b9ef
+    :git: git@github.com:dimroc/CocoaLumberjack.git
+  PaperTrailLumberjack:
+    :commit: e42a6d200191b24e2e02f551bf674aff8c4c9101
+    :git: https://bitbucket.org/luisrecuenco/papertraillumberjack.git
+
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  CocoaAsyncSocket: b0a1a89e7ea4c1c0ea4ec83f57d55117d3cdae06
+  CocoaLumberjack: 04c5b9b7479dd4276a09700fcd6644423ea1751c
   Facebook-iOS-SDK: 18c26e86ab25c17854a2ee2a8f60562099c6600f
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  PaperTrailLumberjack: 4e28ca9ae876c592be43e9ae3167f449cc9060bd
   Parse: b0ec7666167e212edb6fc94f60ba170248bd1869
   ParseCrashReporting: 28fc412d554828f3e892e9e99817e3a9a348e751
   ParseFacebookUtils: 7659dcda0fa59f67234ab7ba5a82a9b05073c59a
   RNCryptor: 4f562062c39f288b99601674f2c50dd44b68d58a
   UIColor+Hex: ac7e1ae4eeea4f522fe3f6eda35de4af69244432
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.0.beta.1

@@ -29,13 +29,13 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        NSLog("didChangeAuthorizationStatus: \(status.rawValue)")
+        DDLogHelper.debug("didChangeAuthorizationStatus: \(status.rawValue)")
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        NSLog("## INFO: Updating location!")
+        DDLogHelper.debug("## INFO: Updating location!")
         let location: CLLocation = locations.last! as CLLocation
-        NSLog(location.description)
+        DDLogHelper.debug(location.description)
         locationManager!.stopUpdatingLocation()
 
         // The location manager can invoke this delegate method multiple times
@@ -45,17 +45,17 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        NSLog("Encountered an error retrieving location: \(error.code) - \(error.description)")
+        DDLogHelper.debug("Encountered an error retrieving location: \(error.code) - \(error.description)")
         locationManager!.stopUpdatingLocation()
         self.completionSource.trySetError(error)
     }
     
     private func google_geocode(cllocation: CLLocation!) {
-        NSLog("Retrieving reverse geocode for \(cllocation.description)")
+        DDLogHelper.debug("Retrieving reverse geocode for \(cllocation.description)")
         GoogleGeocoder.reverse(cllocation.coordinate).continueWithBlock { (task: BFTask!) -> AnyObject! in
             if(task.success) {
                 let location = task.result as MFLocation!
-                NSLog(location.description)
+                DDLogHelper.debug(location.description)
                 if (location.valid) {
                     self.completionSource.trySetResult(location)
                 } else {
@@ -65,7 +65,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
                 }
                 
             } else {
-                NSLog(task.error.description)
+                DDLogHelper.debug(task.error.description)
                 self.completionSource.trySetError(task.error)
             }
             

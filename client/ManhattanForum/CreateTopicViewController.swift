@@ -37,7 +37,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                 self.postButton.enabled = self.isPostable
                 self.location = location
             } else {
-                NSLog(task.error.description)
+                DDLogHelper.debug(task.error.description)
                 
                 self.presentViewController(
                     UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\n\(task.error.localizedDescription)\nPlease close post and try again later."),
@@ -57,12 +57,12 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func postTopic(sender: AnyObject) {
-        NSLog("Posting...")
+        DDLogHelper.debug("Posting...")
         
         func completeCreation(task: BFTask!) -> AnyObject! {
             if(task.success) {
                 var post = task.result as Post
-                NSLog(post.description)
+                DDLogHelper.debug(post.description)
             } else {
                 self.presentViewController(
                     UIAlertControllerFactory.ok("Error Saving Post", message: task.error.description),
@@ -84,7 +84,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func toggleColor(AnyObject) {
         assignColorPalette(self.colorPalette.next())
-        NSLog("Changed Post Color to: \(self.colorPalette.color.description)")
+        DDLogHelper.debug("Changed Post Color to: \(self.colorPalette.color.description)")
     }
     
     private func assignColorPalette(colorPalette: ColorPalette!) {
@@ -167,7 +167,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                     self.videoUrl = finalAsset.url
                     self.imageView.image = finalAsset.thumbnail
                 } else { // Final all encapsulating error handler
-                    NSLog("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
+                    DDLogHelper.debug("## ERROR: Failed Video Recording: \(task.error.debugDescription)")
                     self.presentViewController(
                         UIAlertControllerFactory.ok("Error recording video", message: task.error.description),
                         animated: true,
@@ -186,7 +186,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             self.imageView.image = chosenImage
             self.videoUrl = nil
         default:
-            NSLog("## ERROR: Unsupported Media Type: \(mediaType)")
+            DDLogHelper.debug("## ERROR: Unsupported Media Type: \(mediaType)")
         }
         
         picker.dismissViewControllerAnimated(true, completion: nil)

@@ -21,7 +21,7 @@ class GoogleGeocoder {
 
         manager.GET(baseUrl(), parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response) in
             let location = GoogleGeocoder.fromResponse(response!)
-            NSLog("Retrieved location:\n\(location.debugDescription)")
+            DDLogHelper.debug("Retrieved location:\n\(location.debugDescription)")
             completionSource.setResult(location)
         }) { (operation, error) in
             completionSource.setError(error)

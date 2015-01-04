@@ -31,7 +31,7 @@ class TopicsViewController: UITableViewController {
             if (task.success) {
                 self.tableView.reloadData()
             } else {
-                NSLog(task.error.debugDescription)
+                DDLogHelper.debug(task.error.debugDescription)
                 
                 self.presentViewController(
                     UIAlertControllerFactory.ok("Error refreshing", message: task.error.localizedDescription),

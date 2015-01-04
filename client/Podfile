@@ -5,6 +5,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target "ManhattanForum" do
   pod "RNCryptor"
   pod "Bolts"
+  pod 'CocoaLumberjack', git: 'git@github.com:dimroc/CocoaLumberjack.git'
+  pod 'PaperTrailLumberjack', git: 'https://bitbucket.org/luisrecuenco/papertraillumberjack.git'
   pod "Parse"
   pod "ParseFacebookUtils"
   pod "ParseCrashReporting"

@@ -19,10 +19,10 @@ class Credentials {
     init() {
         var pathForResource = ""
         #if DEBUG
-            NSLog("Initializing credentials for DEBUG")
+            DDLogHelper.debug("Initializing credentials for DEBUG")
             pathForResource = "Credentials.debug"
         #elseif RELEASE
-            NSLog("Initializing credentials for RELEASE")
+            DDLogHelper.debug("Initializing credentials for RELEASE")
             pathForResource = "Credentials.release"
         #endif
         
