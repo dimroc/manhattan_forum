@@ -238,7 +238,6 @@
 				5E9C157F19CF025800F6EBAA /* LocationManager.swift */,
 				5E9C157D19CF025800F6EBAA /* FontHelper.swift */,
 				5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */,
-				5E193D071A28EC450033EAAE /* PostRepository.swift */,
 				5E193D0B1A2985750033EAAE /* MFVideoAsset.m */,
 				5E193D0D1A2985900033EAAE /* MFVideoAsset.h */,
 				5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */,
@@ -253,6 +252,7 @@
 			children = (
 				5E9C158119CF025800F6EBAA /* MFLocation.swift */,
 				5E9687251A5994C6008BE878 /* PostDataSource.swift */,
+				5E193D071A28EC450033EAAE /* PostRepository.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";

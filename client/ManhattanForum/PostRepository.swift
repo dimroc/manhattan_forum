@@ -69,11 +69,4 @@ class PostRepository {
         post["sublocality"] = location.sublocality
         return post;
     }
-    
-    class func retrieveAsync() -> BFTask! {
-        let query = PFQuery(className: "Post")
-        query.orderByDescending("createdAt")
-        query.limit = 100
-        return query.findObjectsInBackground()
-    }
 }

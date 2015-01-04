@@ -15,13 +15,16 @@ class TopicsViewController: UITableViewController {
         
         let nib = UINib(nibName: "PostCell", bundle: nil)
         self.tableView.registerNib(nib, forCellReuseIdentifier: "PostCell")
+
+        let postDataSource = self.tableView.dataSource as PostDataSource
+        postDataSource.refreshFromLocal()
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     @IBAction func refresh(sender: AnyObject) {
         let postDataSource = self.tableView.dataSource as PostDataSource
         postDataSource.refresh().continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
@@ -35,7 +38,7 @@ class TopicsViewController: UITableViewController {
                     animated: true,
                     completion: nil)
             }
-            
+
             self.refreshControl?.endRefreshing()
             return nil
         }

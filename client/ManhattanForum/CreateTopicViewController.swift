@@ -62,7 +62,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         func completeCreation(task: BFTask!) -> AnyObject! {
             if(task.success) {
                 var post = task.result as PFObject
-                println(post)
+                NSLog(post.description)
             } else {
                 self.presentViewController(
                     UIAlertControllerFactory.ok("Error Saving Post", message: task.error.description),
@@ -84,7 +84,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func toggleColor(AnyObject) {
         assignColorPalette(self.colorPalette.next())
-        println("Changed Post Color to: \(self.colorPalette.color.description)")
+        NSLog("Changed Post Color to: \(self.colorPalette.color.description)")
     }
     
     private func assignColorPalette(colorPalette: ColorPalette!) {
@@ -167,7 +167,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
                     self.videoUrl = finalAsset.url
                     self.imageView.image = finalAsset.thumbnail
                 } else { // Final all encapsulating error handler
-                    println("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
+                    NSLog("## ERROR: Failed Video Recording: %@", task.error.debugDescription)
                     self.presentViewController(
                         UIAlertControllerFactory.ok("Error recording video", message: task.error.description),
                         animated: true,
@@ -186,7 +186,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             self.imageView.image = chosenImage
             self.videoUrl = nil
         default:
-            println("## ERROR: Unsupported Media Type: \(mediaType)")
+            NSLog("## ERROR: Unsupported Media Type: \(mediaType)")
         }
         
         picker.dismissViewControllerAnimated(true, completion: nil)

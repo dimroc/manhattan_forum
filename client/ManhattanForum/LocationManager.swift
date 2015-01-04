@@ -29,11 +29,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        println("didChangeAuthorizationStatus: \(status.rawValue)")
+        NSLog("didChangeAuthorizationStatus: \(status.rawValue)")
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        println("## INFO: Updating location!")
+        NSLog("## INFO: Updating location!")
         let location: CLLocation = locations.last! as CLLocation
         NSLog(location.description)
         locationManager!.stopUpdatingLocation()
