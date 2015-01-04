@@ -11,7 +11,7 @@ import Foundation
 class PostCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     
-    func populateFromPost(post: PFObject) {
-        self.messageLabel.text = post["message"] as? String
+    func populateFromPost(post: Post) {
+        self.messageLabel.text = post.message
     }
 }

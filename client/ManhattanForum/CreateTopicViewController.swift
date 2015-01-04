@@ -61,7 +61,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         
         func completeCreation(task: BFTask!) -> AnyObject! {
             if(task.success) {
-                var post = task.result as PFObject
+                var post = task.result as Post
                 NSLog(post.description)
             } else {
                 self.presentViewController(

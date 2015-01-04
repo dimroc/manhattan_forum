@@ -15,13 +15,12 @@ class PostRepository {
     // Color
     // Location
     // Locality
-    // State
     // Image
     // Video
     // Timestamp (included with PFObject)
     class func createAsync(message: String, color: UIColor, location: MFLocation) -> BFTask {
         var post = preparePost(message, color: color, location: location)
-        post["type"] = "message"
+        post.type = "message"
         return post.saveEventuallyAsTask()
     }
     
@@ -32,8 +31,8 @@ class PostRepository {
             let file = PFFile(data: imageData, contentType: "image/jpg")
         
             return file.saveInBackground().continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
-                post["type"] = "image"
-                post["image"] = file
+                post.type = "image"
+                post.image = file
                 return post.saveEventuallyAsTask()
             })
         } else {
@@ -52,21 +51,21 @@ class PostRepository {
         
         let parallelTasks: NSMutableArray = [imageFile.saveInBackground(), videoFile.saveInBackground()]
         return BFTask(forCompletionOfAllTasks: parallelTasks).continueWithSuccessBlock({ (task) -> AnyObject! in
-            post["type"] = "video"
-            post["image"] = imageFile
-            post["video"] = videoFile
+            post.type = "video"
+            post.image = imageFile
+            post.video = videoFile
             return post.saveEventuallyAsTask()
         })
     }
     
-    private class func preparePost(message: String, color: UIColor, location: MFLocation) -> PFObject! {
-        var post = PFObject(className: "Post")
-        post["message"] = message
-        post["color"] = color.hexString()
-        post["location"] = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
-        post["neighborhood"] = location.neighborhood
-        post["locality"] = location.locality
-        post["sublocality"] = location.sublocality
+    private class func preparePost(message: String, color: UIColor, location: MFLocation) -> Post! {
+        var post = Post()
+        post.message = message
+        post.color = color.hexString()
+        post.location = PFGeoPoint(latitude: location.coordinate!.latitude, longitude: location.coordinate!.longitude)
+        post.neighborhood = location.neighborhood!
+        post.locality = location.locality!
+        post.sublocality = location.sublocality!
         return post;
     }
 }

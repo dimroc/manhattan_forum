@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class PostDataSource: NSObject, UITableViewDataSource {
-    var posts: Array<PFObject> = []
+    var posts: Array<Post> = []
 
     func refreshFromLocal() {
         self.posts = self.buildPostsFromLocalStore()
@@ -54,8 +54,8 @@ class PostDataSource: NSObject, UITableViewDataSource {
     
     func refresh() -> BFTask! {
         return retrieveAsync().continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
-            let newPosts = task.result as Array<PFObject>
-            let success: Bool = PFObject.pinAll(newPosts, withName: "Posts")
+            let newPosts = task.result as Array<Post>
+            let success: Bool = Post.pinAll(newPosts, withName: "Posts")
             if(success) {
                 self.posts = self.buildPostsFromLocalStore()
             } else {
@@ -65,13 +65,13 @@ class PostDataSource: NSObject, UITableViewDataSource {
         })
     }
     
-    private func buildPostsFromLocalStore() -> Array<PFObject> {
+    private func buildPostsFromLocalStore() -> Array<Post> {
         let query = defaultQuery()
         query.fromPinWithName("Posts")
         
         let objects = query.findObjects()
         NSLog("Built \(objects.count) posts from local data store")
-        return objects as Array<PFObject>
+        return objects as Array<Post>
     }
     
     private func retrieveAsync() -> BFTask! {
@@ -81,7 +81,7 @@ class PostDataSource: NSObject, UITableViewDataSource {
     }
     
     private func defaultQuery() -> PFQuery {
-        let query = PFQuery(className: "Post")
+        let query = Post.query()
         query.orderByDescending("createdAt")
         return query
     }
