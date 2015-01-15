@@ -9,6 +9,8 @@
 import UIKit
 
 class TopicsViewController: UITableViewController {
+    var cellHeights = [String: CGFloat]()
+    
     class var TopicsViewRefreshNotificationKey: String! {
         get { return "TopicsViewRefreshNotificationKey" }
     }
@@ -30,29 +32,29 @@ class TopicsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let postDataSource = self.tableView.dataSource as PostDataSource
+        if(indexPath.row >= postDataSource.posts.count) {
+            return cellHeights["RefreshPreviousCell"]!
+        } else {
+            return cellHeights["PostCell"]!
+        }
+    }
 
     @IBAction func refresh(sender: AnyObject) {
         let postDataSource = self.tableView.dataSource as PostDataSource
-        postDataSource.refresh().continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
-            if (task.success) {
-                self.tableView.reloadData()
-            } else {
-                DDLogHelper.debug(task.error.debugDescription)
-                
-                self.presentViewController(
-                    UIAlertControllerFactory.ok("Error refreshing", message: task.error.localizedDescription),
-                    animated: true,
-                    completion: nil)
-            }
+        handleRefresh(postDataSource.refresh())
 
-            self.refreshControl?.endRefreshing()
-            return nil
-        }
     }
     
     func refreshPrevious() {
         let postDataSource = self.tableView.dataSource as PostDataSource
-        postDataSource.refreshPrevious().continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
+        handleRefresh(postDataSource.refreshPrevious())
+    }
+    
+    private func handleRefresh(task: BFTask!) {
+        task.continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
             if (task.success) {
                 self.tableView.reloadData()
             } else {
@@ -70,6 +72,10 @@ class TopicsViewController: UITableViewController {
     }
     
     private func registerNibCell(cellName: String!) {
-        self.tableView.registerNib(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+        let nib = UINib(nibName: cellName, bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: cellName)
+        
+        let uiview = NSBundle.mainBundle().loadNibNamed(cellName, owner: self, options: nil)[0] as? UIView
+        cellHeights[cellName] = uiview?.bounds.size.height
     }
 }
