@@ -45,6 +45,8 @@
 		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
 		5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
 		5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */; };
+		5EF68AE31A6849770000E13D /* RefreshPreviousCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF68AE21A6849770000E13D /* RefreshPreviousCell.xib */; };
+		5EF68AE51A684B770000E13D /* RefreshPreviousCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF68AE41A684B770000E13D /* RefreshPreviousCell.swift */; };
 		6CD48305893B4F379B1E09F0 /* libPods-ManhattanForum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB9DA149EA74D3AA3B26882 /* libPods-ManhattanForum.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,8 @@
 		5E9C15A519D11D9B00F6EBAA /* ManhattanForumTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForumTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
 		5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
+		5EF68AE21A6849770000E13D /* RefreshPreviousCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshPreviousCell.xib; sourceTree = "<group>"; };
+		5EF68AE41A684B770000E13D /* RefreshPreviousCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshPreviousCell.swift; sourceTree = "<group>"; };
 		6873452131B38A7F009164D1 /* Pods-ManhattanForum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForum.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForum/Pods-ManhattanForum.release.xcconfig"; sourceTree = "<group>"; };
 		8CF438EE1426B0D3C85569E4 /* Pods-ManhattanForumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.release.xcconfig"; sourceTree = "<group>"; };
 		973E0306DC995B4D9A5A9534 /* Pods-ManhattanForumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManhattanForumTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManhattanForumTests/Pods-ManhattanForumTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9687231A58BC86008BE878 /* PostCell.swift */,
+				5EF68AE41A684B770000E13D /* RefreshPreviousCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				5E0C3D9719CEFE0C008E2726 /* Images.xcassets */,
 				5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */,
 				5E9687201A58BB40008BE878 /* PostCell.xib */,
+				5EF68AE21A6849770000E13D /* RefreshPreviousCell.xib */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF68AE31A6849770000E13D /* RefreshPreviousCell.xib in Resources */,
 				5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */,
 				5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */,
 				5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */,
@@ -490,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF68AE51A684B770000E13D /* RefreshPreviousCell.swift in Sources */,
 				5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */,
 				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
 				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,

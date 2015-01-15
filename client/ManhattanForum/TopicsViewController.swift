@@ -9,15 +9,21 @@
 import UIKit
 
 class TopicsViewController: UITableViewController {
+    class var TopicsViewRefreshNotificationKey: String! {
+        get { return "TopicsViewRefreshNotificationKey" }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
-        let nib = UINib(nibName: "PostCell", bundle: nil)
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "PostCell")
+        registerNibCell("PostCell")
+        registerNibCell("RefreshPreviousCell")
 
         let postDataSource = self.tableView.dataSource as PostDataSource
         postDataSource.refreshFromLocal()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshPrevious", name: TopicsViewController.TopicsViewRefreshNotificationKey, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,5 +48,28 @@ class TopicsViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
             return nil
         }
+    }
+    
+    func refreshPrevious() {
+        let postDataSource = self.tableView.dataSource as PostDataSource
+        postDataSource.refreshPrevious().continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
+            if (task.success) {
+                self.tableView.reloadData()
+            } else {
+                DDLogHelper.debug(task.error.debugDescription)
+                
+                self.presentViewController(
+                    UIAlertControllerFactory.ok("Error refreshing previous posts", message: task.error.localizedDescription),
+                    animated: true,
+                    completion: nil)
+            }
+            
+            self.refreshControl?.endRefreshing()
+            return nil
+        }
+    }
+    
+    private func registerNibCell(cellName: String!) {
+        self.tableView.registerNib(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
     }
 }

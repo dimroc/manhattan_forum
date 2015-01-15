@@ -11,6 +11,9 @@ import UIKit
 
 class PostDataSource: NSObject, UITableViewDataSource {
     var posts: Array<Post> = []
+    var limit: Int {
+        get { return 20 }
+    }
 
     func refreshFromLocal() {
         self.posts = self.buildPostsFromLocalStore()
@@ -42,25 +45,44 @@ class PostDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.posts.count
+        return self.posts.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "PostCell"
-        let cell: PostCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as PostCell
-        cell.populateFromPost(self.posts[indexPath.row])
-        return cell
+        if(indexPath.row >= self.posts.count) {
+            let cellIdentifier = "RefreshPreviousCell"
+            let cell: RefreshPreviousCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as RefreshPreviousCell
+            return cell
+        } else {
+            let cellIdentifier = "PostCell"
+            let cell: PostCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as PostCell
+            cell.populateFromPost(self.posts[indexPath.row])
+            return cell
+        }
     }
     
     func refresh() -> BFTask! {
-        return retrieveAsync().continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
+        return handleRetrieval(retrieveAsync())
+    }
+    
+    func refreshPrevious() -> BFTask! {
+        return handleRetrieval(retrievePreviousAsync())
+    }
+    
+    private func handleRetrieval(task: BFTask!) -> BFTask! {
+        return task.continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
             let newPosts = task.result as Array<Post>
-            let success: Bool = Post.pinAll(newPosts, withName: "Posts")
-            if(success) {
-                self.posts = self.buildPostsFromLocalStore()
-            } else {
-                DDLogHelper.debug("FAILED TO PIN OBJECTS")
+            DDLogHelper.debug("Retrieved remotely \(newPosts.count) posts")
+            
+            if(newPosts.count > 0 ) {
+                let success: Bool = Post.pinAll(newPosts, withName: "Posts")
+                if(success) {
+                    self.posts = self.buildPostsFromLocalStore()
+                } else {
+                    DDLogHelper.debug("FAILED TO PIN OBJECTS")
+                }
             }
+            
             return nil
         })
     }
@@ -75,8 +97,32 @@ class PostDataSource: NSObject, UITableViewDataSource {
     }
     
     private func retrieveAsync() -> BFTask! {
+        let lastBuild = self.posts.first
+        DDLogHelper.debug("Retrieving remotely everything after \(lastBuild?.createdAt) with last build: \(lastBuild)")
         let query = defaultQuery()
-        query.limit = 100
+        query.limit = limit
+
+        if (lastBuild != nil) {
+            query.whereKey("createdAt", greaterThan: lastBuild!.createdAt)
+        }
+        
+        return query.findObjectsInBackground()
+    }
+    
+    private func retrievePreviousAsync() -> BFTask! {
+        let query = Post.query()
+        let firstBuild = self.posts.last
+        
+        if (firstBuild != nil) {
+            DDLogHelper.debug("Retrieving remotely everything before \(firstBuild?.createdAt) with first build: \(firstBuild)")
+            query.orderByDescending("createdAt")
+            query.whereKey("createdAt", lessThan: firstBuild!.createdAt)
+        } else {    // Empty
+            DDLogHelper.debug("Retrieving remotely from the beginning")
+            query.orderByAscending("createdAt")
+        }
+
+        query.limit = limit
         return query.findObjectsInBackground()
     }
     
