@@ -19,7 +19,7 @@ class PostCell: UITableViewCell {
         self.messageLabel.textColor = safeColor(post)
         self.dateLabel.text = post.createdAt.description
         self.locationLabel.text = post.neighborhoodDescription
-        self.imageViewLink.image = nil
+        self.imageViewLink.image = UIImage(named: "imageLoadingPlaceholder")
         
         // self.performSelector("populate\(post.type)") // Doesn't work in Swift!
         switch(post.type) {
