@@ -26,6 +26,7 @@ class TopicsViewController: UITableViewController {
         postDataSource.refreshFromLocal()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshPrevious", name: TopicsViewController.TopicsViewRefreshNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh:", name: PostRepository.PostCreatedNotificationKey, object: nil)
     }
 
     override func didReceiveMemoryWarning() {

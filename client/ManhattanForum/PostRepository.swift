@@ -9,6 +9,10 @@
 import Foundation
 
 class PostRepository {
+    class var PostCreatedNotificationKey: String! {
+        get { return "PostCreatedNotificationKey" }
+    }
+
     // Items needed for post:
     // Author (TODO)
     // Message
@@ -21,7 +25,7 @@ class PostRepository {
     class func createAsync(message: String, color: UIColor, location: MFLocation) -> BFTask {
         var post = preparePost(message, color: color, location: location)
         post.type = "message"
-        return post.saveEventuallyAsTask()
+        return notifyWhenPostCreation(post.saveEventuallyAsTask())
     }
     
     class func createAsync(message: String, color: UIColor, location: MFLocation, withImage: UIImage?) -> BFTask {
@@ -33,7 +37,7 @@ class PostRepository {
             return file.saveInBackground().continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
                 post.type = "image"
                 post.image = file
-                return post.saveEventuallyAsTask()
+                return self.notifyWhenPostCreation(post.saveEventuallyAsTask())
             })
         } else {
             return createAsync(message, color: color, location: location)
@@ -54,7 +58,14 @@ class PostRepository {
             post.type = "video"
             post.image = imageFile
             post.video = videoFile
-            return post.saveEventuallyAsTask()
+            return self.notifyWhenPostCreation(post.saveEventuallyAsTask())
+        })
+    }
+    
+    private class func notifyWhenPostCreation(task: BFTask!) -> BFTask! {
+        return task.continueWithSuccessBlock({ (task: BFTask!) -> AnyObject! in
+            NSNotificationCenter.defaultCenter().postNotificationName(PostRepository.PostCreatedNotificationKey, object: self)
+            return task.result
         })
     }
     
