@@ -41,7 +41,11 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         // The location manager can invoke this delegate method multiple times
         // before stopUpdatingLocation() takes effect.
         // This is why we invoke completionsource.trySet... at the end of each delegate.
-        google_geocode(location)
+        if (CLLocationCoordinate2DIsValid(location.coordinate)) {
+            googleGeocode(location)
+        } else {
+            locationCoordinate2DIsInValid()
+        }
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
@@ -50,26 +54,39 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         self.completionSource.trySetError(error)
     }
     
-    private func google_geocode(cllocation: CLLocation!) {
+    private func locationCoordinate2DIsInValid() {
+        let details = [NSLocalizedDescriptionKey: "Unable to retrieve a valid coordinate."]
+        let error = NSError(domain: "locationmanager.locationCoordinate2DIsValid.google.manhattanforum.com", code: 0, userInfo: details)
+        self.completionSource.trySetError(error)
+    }
+    
+    private func googleGeocode(cllocation: CLLocation!) {
         DDLogHelper.debug("Retrieving reverse geocode for \(cllocation.description)")
         GoogleGeocoder.reverse(cllocation.coordinate).continueWithBlock { (task: BFTask!) -> AnyObject! in
             if(task.success) {
                 let location = task.result as MFLocation!
-                DDLogHelper.debug(location.description)
-                if (location.valid) {
-                    self.completionSource.trySetResult(location)
-                } else {
-                    let details = [NSLocalizedDescriptionKey: "Unable to find a valid location with neighborhood, sublocality, and locality."]
-                    let error = NSError(domain: "locationmanager.geocode.google.manhattanforum.com", code: 0, userInfo: details)
-                    self.completionSource.trySetError(error)
-                }
-                
+                self.googleGeocodeSuccess(location)
             } else {
-                DDLogHelper.debug(task.error.description)
-                self.completionSource.trySetError(task.error)
+                self.googleGeocodeError(task.error)
             }
             
             return nil
         }
+    }
+
+    private func googleGeocodeSuccess(location: MFLocation!) {
+        DDLogHelper.debug(location.description)
+        if (location.valid) {
+            self.completionSource.trySetResult(location)
+        } else {
+            let details = [NSLocalizedDescriptionKey: "Unable to find a valid location with neighborhood, sublocality, and locality."]
+            let error = NSError(domain: "locationmanager.geocode.google.manhattanforum.com", code: 0, userInfo: details)
+            self.completionSource.trySetError(error)
+        }
+    }
+
+    private func googleGeocodeError(error: NSError) {
+        DDLogHelper.debug(error.description)
+        self.completionSource.trySetError(error)
     }
 }
