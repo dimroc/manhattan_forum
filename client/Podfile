@@ -20,6 +20,7 @@ target 'ManhattanForumTests' do
   pod 'AFNetworking', '~> 2.0'
   pod 'Bolts'
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'NSDate+TimeAgo'
   pod 'Parse'
   pod 'ParseFacebookUtils'
   pod 'RNCryptor'
