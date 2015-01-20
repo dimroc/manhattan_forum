@@ -15,12 +15,18 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     func populateFromPost(post: Post!) {
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        timeFormatter.timeZone = NSTimeZone(name: "EST")
+        
         self.messageLabel.text = post.message
-        self.messageLabel.textColor = safeColor(post)
-        self.dateLabel.text = post.createdAt.description
+        //self.messageLabel.textColor = safeColor(post)
+        self.dateLabel.text = "\(post.createdAt.timeAgo()) \(timeFormatter.stringFromDate(post.createdAt))"
         self.locationLabel.text = post.neighborhoodDescription
         self.imageViewLink.image = UIImage(named: "imageLoadingPlaceholder")
-        
+
+        self.selectionStyle = UITableViewCellSelectionStyle.None;
+
         // self.performSelector("populate\(post.type)") // Doesn't work in Swift!
         switch(post.type) {
         case "video":

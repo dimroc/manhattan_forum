@@ -1,27 +1,28 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, "8.0"
+platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
-target "ManhattanForum" do
-  pod "RNCryptor"
-  pod "Bolts"
+target 'ManhattanForum' do
+  pod 'AFNetworking', '~> 2.0'
+  pod 'Bolts'
   pod 'CocoaLumberjack', git: 'git@github.com:dimroc/CocoaLumberjack.git'
-  pod 'PaperTrailLumberjack', git: 'https://bitbucket.org/luisrecuenco/papertraillumberjack.git'
-  pod "Parse"
-  pod "ParseFacebookUtils"
-  pod "ParseCrashReporting"
-  pod "AFNetworking", "~> 2.0"
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'NSDate+TimeAgo'
+  pod 'PaperTrailLumberjack', git: 'https://bitbucket.org/luisrecuenco/papertraillumberjack.git'
+  pod 'Parse'
+  pod 'ParseCrashReporting'
+  pod 'ParseFacebookUtils'
+  pod 'RNCryptor'
   pod 'UIColor+Hex'
 end
 
-target "ManhattanForumTests" do
-  pod "RNCryptor"
-  pod "Bolts"
-  pod "Parse"
-  pod "ParseFacebookUtils"
-  pod "AFNetworking", "~> 2.0"
+target 'ManhattanForumTests' do
+  pod 'AFNetworking', '~> 2.0'
+  pod 'Bolts'
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'Parse'
+  pod 'ParseFacebookUtils'
+  pod 'RNCryptor'
   pod 'UIColor+Hex'
 end
 

@@ -33,6 +33,7 @@ PODS:
   - Facebook-iOS-SDK (3.21.1):
     - Bolts (~> 1.0)
   - MBProgressHUD (0.9)
+  - NSDate+TimeAgo (1.0.3)
   - PaperTrailLumberjack (0.1.0):
     - CocoaAsyncSocket
     - CocoaLumberjack
@@ -54,6 +55,7 @@ DEPENDENCIES:
   - Bolts
   - CocoaLumberjack (from `git@github.com:dimroc/CocoaLumberjack.git`)
   - MBProgressHUD (~> 0.8)
+  - NSDate+TimeAgo
   - PaperTrailLumberjack (from `https://bitbucket.org/luisrecuenco/papertraillumberjack.git`)
   - Parse
   - ParseCrashReporting
@@ -82,6 +84,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 04c5b9b7479dd4276a09700fcd6644423ea1751c
   Facebook-iOS-SDK: 18c26e86ab25c17854a2ee2a8f60562099c6600f
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  NSDate+TimeAgo: f3533e0198fab05b716368b19f8c2185d53d6f3b
   PaperTrailLumberjack: 4e28ca9ae876c592be43e9ae3167f449cc9060bd
   Parse: b0ec7666167e212edb6fc94f60ba170248bd1869
   ParseCrashReporting: 28fc412d554828f3e892e9e99817e3a9a348e751

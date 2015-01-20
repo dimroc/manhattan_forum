@@ -29,6 +29,6 @@ class Post: PFObject, PFSubclassing {
     }
 
     var neighborhoodDescription: String! {
-        get { return "\(neighborhood), \(sublocality), \(locality)" }
+        get { return "\(neighborhood), \(sublocality)" }
     }
 }

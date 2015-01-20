@@ -13,6 +13,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "MBProgressHUD.h"
 #import "UIColor+Hex.h"
+#import "NSDate+TimeAgo.h"
 
 #import "CocoaLumberjack.h"
 #import "RMPaperTrailLogger.h"
