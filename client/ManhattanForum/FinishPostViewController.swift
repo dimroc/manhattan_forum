@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 
-class FinishPostViewController: UIViewController, UITextFieldDelegate {
+class FinishPostViewController: UIViewController {
     var startedPost: StartedPostDelegate?
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var postButton: UIBarButtonItem!
@@ -22,7 +22,7 @@ class FinishPostViewController: UIViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
         checkPostability()
     }
-    
+
     func checkPostability() {
         postButton.enabled = countElements(textField.text) > 0
     }
