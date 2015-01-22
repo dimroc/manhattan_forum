@@ -9,24 +9,30 @@
 import UIKit
 import MobileCoreServices
 
-class CreateTopicViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+protocol StartedPostDelegate {
+    var videoUrl: NSURL? { get }
+    var image: UIImage? { get }
+    var location: MFLocation? { get }
+}
+
+class StartPostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, StartedPostDelegate {
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textPlaceHolder: UILabel!
-    @IBOutlet weak var postButton: UIBarButtonItem!
-    @IBOutlet weak var colorButton: UIButton!
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     
-    var colorPalette: ColorPalette! = ColorPalette.random()
     var locationManager: LocationManager? = nil
     var location: MFLocation? = nil
     var videoUrl: NSURL? = nil
-    var isPostable: Bool {
-        get { return self.location != nil && countElements(self.textView.text) > 0 }
+    var image: UIImage? {
+        get { return self.imageView.image }
+    }
+    
+    var isNextable: Bool {
+        get { return self.location != nil && imageView.image != nil }
     }
     
     override func viewDidLoad() {
-        postButton.enabled = isPostable;
-        assignColorPalette(self.colorPalette)
+        nextButton.enabled = isNextable;
         
         locationManager = LocationManager()
         
@@ -34,7 +40,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             if(task.success) {
                 let location = task.result as MFLocation!
                 self.textPlaceHolder.text = "Share \(location.description)"
-                self.postButton.enabled = self.isPostable
+                self.nextButton.enabled = self.isNextable
                 self.location = location
             } else {
                 DDLogHelper.debug(task.error.description)
@@ -47,50 +53,15 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             
             return nil
         })
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        textView.becomeFirstResponder()
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-    }
-    
-    @IBAction func postTopic(sender: AnyObject) {
-        DDLogHelper.debug("Posting...")
         
-        func completeCreation(task: BFTask!) -> AnyObject! {
-            if(task.success) {
-                var post = task.result as Post
-                DDLogHelper.debug(post.description)
-            } else {
-                self.presentViewController(
-                    UIAlertControllerFactory.ok("Error Saving Post", message: task.error.description),
-                    animated: true,
-                    completion: nil)
-            }
-            
-            return nil
+        showCameraActionSheet(self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier! == "FinishPostSegue") {
+            let viewController: FinishPostViewController = segue.destinationViewController as FinishPostViewController
+            viewController.startedPost = self
         }
-        
-        if (self.videoUrl != nil) {
-            PostRepository.createAsync(self.textView.text, color: self.colorPalette.color, location: self.location!, withImage: self.imageView.image, withVideo: self.videoUrl!).continueWithBlock(completeCreation)
-        } else {
-            PostRepository.createAsync(self.textView.text, color: self.colorPalette.color, location: self.location!, withImage: self.imageView.image).continueWithBlock(completeCreation)
-        }
-        
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func toggleColor(AnyObject) {
-        assignColorPalette(self.colorPalette.next())
-        DDLogHelper.debug("Changed Post Color to: \(self.colorPalette.color.description)")
-    }
-    
-    private func assignColorPalette(colorPalette: ColorPalette!) {
-        self.colorButton.tintColor = colorPalette.color
-        self.textView.textColor = colorPalette.color
-        self.textPlaceHolder.textColor = colorPalette.color
     }
     
     @IBAction func showCameraActionSheet(AnyObject) {
@@ -153,7 +124,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
         switch mediaType {
         case kUTTypeVideo, kUTTypeMovie:
             // TODO: fix orientation here so that we can grab thumbnail and splice out ommitted entries.
-            self.postButton.enabled = false;
+            self.nextButton.enabled = false;
             
             let videoUrl = info[UIImagePickerControllerMediaURL] as? NSURL
             let videoStart = info["_UIImagePickerControllerVideoEditingStart"] as? NSNumber
@@ -189,10 +160,7 @@ class CreateTopicViewController: UIViewController, UIImagePickerControllerDelega
             DDLogHelper.debug("## ERROR: Unsupported Media Type: \(mediaType)")
         }
         
+        nextButton.enabled = self.isNextable
         picker.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func textViewDidChange(textView: UITextView) {
-        postButton.enabled = self.isPostable
     }
 }

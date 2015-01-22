@@ -40,6 +40,10 @@ class ColorPalette {
         return ColorPalette(index: diceRoll)
     }
     
+    class func white() -> ColorPalette! {
+        return ColorPalette()
+    }
+    
     func next() -> ColorPalette {
         self.index++
         if self.index >= colorTable.count {

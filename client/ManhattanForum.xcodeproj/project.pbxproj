@@ -27,7 +27,7 @@
 		5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687251A5994C6008BE878 /* PostDataSource.swift */; };
 		5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9A29B21A2CA74500F6AC9A /* BFTask.swift */; };
 		5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */; };
-		5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */; };
+		5E9C158719CF025800F6EBAA /* StartPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157819CF025800F6EBAA /* StartPostViewController.swift */; };
 		5E9C158819CF025800F6EBAA /* Credentials.debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157919CF025800F6EBAA /* Credentials.debug.plist */; };
 		5E9C158919CF025800F6EBAA /* Credentials.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C157A19CF025800F6EBAA /* Credentials.example.plist */; };
 		5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C157B19CF025800F6EBAA /* Credentials.swift */; };
@@ -44,6 +44,7 @@
 		5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159D19CF057000F6EBAA /* TestHelper.swift */; };
 		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
 		5E9C15A319CF059D00F6EBAA /* MFLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158119CF025800F6EBAA /* MFLocation.swift */; };
+		5EB507861A7144A600F97441 /* FinishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB507851A7144A600F97441 /* FinishPostViewController.swift */; };
 		5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */; };
 		5EF68AE31A6849770000E13D /* RefreshPreviousCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF68AE21A6849770000E13D /* RefreshPreviousCell.xib */; };
 		5EF68AE51A684B770000E13D /* RefreshPreviousCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF68AE41A684B770000E13D /* RefreshPreviousCell.swift */; };
@@ -87,7 +88,7 @@
 		5E9687251A5994C6008BE878 /* PostDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
 		5E9A29B21A2CA74500F6AC9A /* BFTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BFTask.swift; sourceTree = "<group>"; };
 		5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoroughsViewController.swift; sourceTree = "<group>"; };
-		5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
+		5E9C157819CF025800F6EBAA /* StartPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPostViewController.swift; sourceTree = "<group>"; };
 		5E9C157919CF025800F6EBAA /* Credentials.debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.debug.plist; sourceTree = "<group>"; };
 		5E9C157A19CF025800F6EBAA /* Credentials.example.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.example.plist; sourceTree = "<group>"; };
 		5E9C157B19CF025800F6EBAA /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		5E9C159D19CF057000F6EBAA /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		5E9C15A019CF058300F6EBAA /* geocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = geocodeResponse.json; sourceTree = "<group>"; };
 		5E9C15A519D11D9B00F6EBAA /* ManhattanForumTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForumTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5EB507851A7144A600F97441 /* FinishPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishPostViewController.swift; sourceTree = "<group>"; };
 		5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
 		5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
 		5EF68AE21A6849770000E13D /* RefreshPreviousCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshPreviousCell.xib; sourceTree = "<group>"; };
@@ -235,7 +237,8 @@
 			children = (
 				5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */,
 				5E9C158519CF025800F6EBAA /* TopicsViewController.swift */,
-				5E9C157819CF025800F6EBAA /* CreateTopicViewController.swift */,
+				5E9C157819CF025800F6EBAA /* StartPostViewController.swift */,
+				5EB507851A7144A600F97441 /* FinishPostViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -499,11 +502,12 @@
 			files = (
 				5EF68AE51A684B770000E13D /* RefreshPreviousCell.swift in Sources */,
 				5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */,
-				5E9C158719CF025800F6EBAA /* CreateTopicViewController.swift in Sources */,
+				5E9C158719CF025800F6EBAA /* StartPostViewController.swift in Sources */,
 				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
 				5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */,
 				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
 				5E6C92EA1A59E7DF003E1921 /* Papertrail.swift in Sources */,
+				5EB507861A7144A600F97441 /* FinishPostViewController.swift in Sources */,
 				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,

@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-57" y="1179"/>
         </scene>
-        <!--Create Topic View Controller-->
+        <!--Start Post View Controller-->
         <scene sceneID="8ct-1E-TZy">
             <objects>
-                <viewController id="CS7-7F-IgI" customClass="CreateTopicViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CS7-7F-IgI" userLabel="Start Post View Controller" customClass="StartPostViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B0Y-X7-JBw"/>
                         <viewControllerLayoutGuide type="bottom" id="ymP-li-xLp"/>
@@ -117,23 +117,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yj-bZ-fwT">
-                                <rect key="frame" x="0.0" y="64" width="320" height="320"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ko0-yb-vSJ">
-                                <rect key="frame" x="40" y="140" width="240" height="200"/>
-                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
-                                <connections>
-                                    <outlet property="delegate" destination="CS7-7F-IgI" id="YCh-zl-oK6"/>
-                                </connections>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share New York" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-CH-zic">
-                                <rect key="frame" x="0.0" y="79" width="320" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share New York" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-CH-zic">
+                                <rect key="frame" x="8" y="77" width="304" height="21"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -146,17 +132,10 @@
                                     <action selector="showCameraActionSheet:" destination="CS7-7F-IgI" eventType="touchUpInside" id="TM7-bS-1ln"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csg-ls-4N3" userLabel="Color">
-                                <rect key="frame" x="148" y="108" width="25" height="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BlackCircle">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="toggleColor:" destination="CS7-7F-IgI" eventType="touchDown" id="J6P-lS-9Fu"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yj-bZ-fwT">
+                                <rect key="frame" x="0.0" y="124" width="320" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -166,23 +145,57 @@
                                 <segue destination="PUh-eJ-EnZ" kind="custom" customClass="DismissSegue" id="dTa-cU-nR6"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Post" id="8Lz-om-t1h">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="8Lz-om-t1h" userLabel="Next">
                             <connections>
-                                <action selector="postTopic:" destination="CS7-7F-IgI" id="Li7-h9-bgB"/>
+                                <segue destination="qRW-aS-Iuk" kind="push" identifier="FinishPostSegue" id="uzs-bI-2UV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="colorButton" destination="Csg-ls-4N3" id="zD8-28-IgR"/>
                         <outlet property="imageView" destination="9yj-bZ-fwT" id="oNk-ga-2b2"/>
-                        <outlet property="postButton" destination="8Lz-om-t1h" id="bXG-D0-xfG"/>
+                        <outlet property="nextButton" destination="8Lz-om-t1h" id="FfV-gv-aUr"/>
                         <outlet property="textPlaceHolder" destination="McZ-CH-zic" id="BgV-Sc-n7u"/>
-                        <outlet property="textView" destination="Ko0-yb-vSJ" id="Vct-J8-PBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeg-pd-2Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="780" y="-897"/>
+        </scene>
+        <!--Finish Post View Controller-->
+        <scene sceneID="0Q5-54-psy">
+            <objects>
+                <viewController id="qRW-aS-Iuk" userLabel="Finish Post View Controller" customClass="FinishPostViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HlN-FO-SZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="D2A-Hi-rfM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7zC-6I-DcB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoo-5z-SSe" userLabel="Text Field">
+                                <rect key="frame" x="16" y="166" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Message" id="UUz-sG-VUE">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="P0B-zm-gTS">
+                            <connections>
+                                <action selector="postTopic:" destination="qRW-aS-Iuk" id="gQs-zP-dz2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="postButton" destination="P0B-zm-gTS" id="e0k-ju-jiG"/>
+                        <outlet property="textField" destination="yoo-5z-SSe" id="bar-MY-iHr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qk8-UW-HvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="-898"/>
         </scene>
         <!--Topics-->
         <scene sceneID="dTL-qB-AUX">
@@ -346,7 +359,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BlackCircle" width="47" height="47"/>
         <image name="back" width="11" height="21"/>
         <image name="lines" width="30" height="30"/>
         <image name="location" width="19" height="16"/>
