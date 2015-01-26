@@ -30,9 +30,8 @@ class PostsViewController: UITableViewController {
         registerNibCell("PostCell")
         registerNibCell("RefreshPreviousCell")
         
-        self.navigationItem.title = "NYC"
-
         let postDataSource = self.tableView.dataSource as PostDataSource
+        self.navigationItem.title = "NYC"
         postDataSource.postFilter = PostFilter.mappedFilters("NYC")
         postDataSource.refreshFromLocal()
 
@@ -74,6 +73,8 @@ class PostsViewController: UITableViewController {
         let postFilter = notification.object as PostFilter
         let postDataSource = self.tableView.dataSource as PostDataSource
         postDataSource.postFilter = postFilter
+        NSLog("Post filter name: \(postFilter.name)")
+        self.navigationItem.title = postFilter.name
         refresh(self)
     }
 
