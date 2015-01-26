@@ -17,7 +17,7 @@ class FinishPostViewController: UIViewController {
     override func viewDidLoad() {
         textField.addTarget(self, action: "checkPostability", forControlEvents: UIControlEvents.EditingChanged)
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         textField.becomeFirstResponder()
         checkPostability()
@@ -26,7 +26,7 @@ class FinishPostViewController: UIViewController {
     func checkPostability() {
         postButton.enabled = countElements(textField.text) > 0
     }
-    
+
     @IBAction func postTopic(sender: AnyObject) {
         DDLogHelper.debug("Posting...")
 

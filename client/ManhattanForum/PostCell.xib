@@ -21,9 +21,6 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="puE-yb-Nbu" id="n8Y-sF-NGs">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageLoadingPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-jW-TzA">
-                        <rect key="frame" x="0.0" y="32" width="320" height="320"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0t-gD-Oxg" userLabel="Date">
                         <rect key="frame" x="182" y="8" width="130" height="21"/>
                         <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="10"/>
@@ -38,8 +35,17 @@
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRD-61-3lE" userLabel="Image Button">
+                        <rect key="frame" x="0.0" y="32" width="320" height="320"/>
+                        <state key="normal" image="imageLoadingPlaceholder">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="segueToPostViewController:" destination="puE-yb-Nbu" eventType="touchUpInside" id="sqg-Rd-x2L"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-sp-sIt" userLabel="Message">
-                        <rect key="frame" x="8" y="360" width="320" height="22"/>
+                        <rect key="frame" x="8" y="361" width="304" height="22"/>
                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -49,11 +55,11 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="dateLabel" destination="h0t-gD-Oxg" id="UJz-Eb-SvZ"/>
-                <outlet property="imageViewLink" destination="ab0-jW-TzA" id="0kR-Qm-dTu"/>
+                <outlet property="imageButton" destination="QRD-61-3lE" id="dOl-yH-i23"/>
                 <outlet property="locationLabel" destination="odI-XW-Rl4" id="y2Y-9s-5e3"/>
                 <outlet property="messageLabel" destination="4qh-sp-sIt" id="o4W-lA-a7w"/>
             </connections>
-            <point key="canvasLocation" x="490" y="554"/>
+            <point key="canvasLocation" x="490" y="551"/>
         </tableViewCell>
     </objects>
     <resources>

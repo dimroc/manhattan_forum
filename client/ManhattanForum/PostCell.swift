@@ -10,20 +10,24 @@ import Foundation
 
 class PostCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var imageViewLink: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var imageButton: UIButton!
+    
+    @IBAction func segueToPostViewController(sender: UIButton) {
+        DDLogHelper.debug("Showing Post Screen")
+    }
     
     func populateFromPost(post: Post!) {
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateFormat = "h:mm a"
         timeFormatter.timeZone = NSTimeZone(name: "EST")
-        
+
         self.messageLabel.text = post.message
         //self.messageLabel.textColor = safeColor(post)
         self.dateLabel.text = "\(post.createdAt.timeAgo()) \(timeFormatter.stringFromDate(post.createdAt))"
         self.locationLabel.text = post.neighborhoodDescription
-        self.imageViewLink.image = UIImage(named: "imageLoadingPlaceholder")
+        self.imageButton.setImage(UIImage(named: "imageLoadingPlaceholder"), forState: UIControlState.Normal)
 
         self.selectionStyle = UITableViewCellSelectionStyle.None;
 
@@ -33,6 +37,7 @@ class PostCell: UITableViewCell {
             populateImage(post)
         case "image":
             populateImage(post)
+            prepareVideo(post)
         default:
             break;
         }
@@ -41,13 +46,17 @@ class PostCell: UITableViewCell {
     func populateImage(post: Post!) {
         post.image.getDataInBackground().continueWithBlockOnMain { (task: BFTask!) -> AnyObject! in
             if(task.success) {
-                self.imageViewLink.image = UIImage(data: task.result as NSData!)
+                self.imageButton.setImage(UIImage(data: task.result as NSData!), forState: UIControlState.Normal)
             } else {
                 DDLogHelper.debug("Failed to retrieve image for post: \(post.description)")
             }
             
             return nil
         }
+    }
+    
+    func prepareVideo(post: Post!) {
+        
     }
     
     func safeColor(post: Post!) -> UIColor {
