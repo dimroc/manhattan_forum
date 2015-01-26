@@ -35,6 +35,12 @@
                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-sp-sIt" userLabel="Message">
+                        <rect key="frame" x="8" y="361" width="304" height="22"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRD-61-3lE" userLabel="Image Button">
                         <rect key="frame" x="0.0" y="32" width="320" height="320"/>
                         <state key="normal" image="imageLoadingPlaceholder">
@@ -44,12 +50,9 @@
                             <action selector="segueToPostViewController:" destination="puE-yb-Nbu" eventType="touchUpInside" id="sqg-Rd-x2L"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-sp-sIt" userLabel="Message">
-                        <rect key="frame" x="8" y="361" width="304" height="22"/>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PlayVideo" translatesAutoresizingMaskIntoConstraints="NO" id="aei-Eu-vei" userLabel="Play Image">
+                        <rect key="frame" x="125" y="157" width="70" height="70"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
@@ -58,11 +61,13 @@
                 <outlet property="imageButton" destination="QRD-61-3lE" id="dOl-yH-i23"/>
                 <outlet property="locationLabel" destination="odI-XW-Rl4" id="y2Y-9s-5e3"/>
                 <outlet property="messageLabel" destination="4qh-sp-sIt" id="o4W-lA-a7w"/>
+                <outlet property="playImage" destination="aei-Eu-vei" id="U7R-3Z-FAk"/>
             </connections>
             <point key="canvasLocation" x="490" y="551"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="PlayVideo" width="66" height="66"/>
         <image name="imageLoadingPlaceholder" width="320" height="320"/>
     </resources>
 </document>

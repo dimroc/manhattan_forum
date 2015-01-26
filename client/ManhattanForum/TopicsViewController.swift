@@ -14,6 +14,10 @@ class TopicsViewController: UITableViewController {
     class var TopicsViewRefreshNotificationKey: String! {
         get { return "TopicsViewRefreshNotificationKey" }
     }
+    
+    class var PostMoviePlaybackNotificationKey: String! {
+        get { return "PostMoviePlaybackNotificationKey" }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,7 @@ class TopicsViewController: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshPrevious", name: TopicsViewController.TopicsViewRefreshNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh:", name: PostRepository.PostCreatedNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "presentMovie:", name: TopicsViewController.PostMoviePlaybackNotificationKey, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +51,15 @@ class TopicsViewController: UITableViewController {
     @IBAction func refresh(sender: AnyObject) {
         let postDataSource = self.tableView.dataSource as PostDataSource
         handleRefresh(postDataSource.refresh())
+    }
+    
+    func presentMovie(notification: NSNotification) {
+        let post = notification.object as Post
+        let moviePlayer = MPMoviePlayerViewController(contentURL: NSURL(string: post.video.url))
+        self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+        
+        let overlayView:UIView! = UIView()
+        moviePlayer.moviePlayer.overlayView_xcd = overlayView;
     }
 
     func refreshPrevious() {

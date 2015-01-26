@@ -13,9 +13,15 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageButton: UIButton!
-    
+    @IBOutlet weak var playImage: UIImageView!
+
+    var post:Post? = nil
+
     @IBAction func segueToPostViewController(sender: UIButton) {
-        DDLogHelper.debug("Showing Post Screen")
+        if(post?.type == "video") {
+            DDLogHelper.debug("Playing Video for post \(post!)")
+            NSNotificationCenter.defaultCenter().postNotificationName(TopicsViewController.PostMoviePlaybackNotificationKey, object: post!)
+        }
     }
     
     func populateFromPost(post: Post!) {
@@ -23,10 +29,12 @@ class PostCell: UITableViewCell {
         timeFormatter.dateFormat = "h:mm a"
         timeFormatter.timeZone = NSTimeZone(name: "EST")
 
+        self.post = post
         self.messageLabel.text = post.message
         //self.messageLabel.textColor = safeColor(post)
         self.dateLabel.text = "\(post.createdAt.timeAgo()) \(timeFormatter.stringFromDate(post.createdAt))"
         self.locationLabel.text = post.neighborhoodDescription
+        self.playImage.hidden = true
         self.imageButton.setImage(UIImage(named: "imageLoadingPlaceholder"), forState: UIControlState.Normal)
 
         self.selectionStyle = UITableViewCellSelectionStyle.None;
@@ -35,9 +43,9 @@ class PostCell: UITableViewCell {
         switch(post.type) {
         case "video":
             populateImage(post)
+            prepareVideo(post)
         case "image":
             populateImage(post)
-            prepareVideo(post)
         default:
             break;
         }
@@ -56,7 +64,7 @@ class PostCell: UITableViewCell {
     }
     
     func prepareVideo(post: Post!) {
-        
+        self.playImage.hidden = false
     }
     
     func safeColor(post: Post!) -> UIColor {

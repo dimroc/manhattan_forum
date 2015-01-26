@@ -14,6 +14,7 @@
 #import "MBProgressHUD.h"
 #import "UIColor+Hex.h"
 #import "NSDate+TimeAgo.h"
+#import "MPMoviePlayerController+XCDOverlayView/MPMoviePlayerController+XCDOverlayView.h"
 
 #import "CocoaLumberjack.h"
 #import "RMPaperTrailLogger.h"

@@ -138,6 +138,7 @@ class StartPostViewController: UIViewController, UIImagePickerControllerDelegate
                     let finalAsset: MFVideoAsset! = task.result as MFVideoAsset
                     self.videoUrl = finalAsset.url
                     self.imageView.image = finalAsset.thumbnail
+                    self.nextButton.enabled = self.isNextable
                 } else { // Final all encapsulating error handler
                     DDLogHelper.debug("## ERROR: Failed Video Recording: \(task.error.debugDescription)")
                     self.presentViewController(
@@ -157,11 +158,11 @@ class StartPostViewController: UIViewController, UIImagePickerControllerDelegate
 
             self.imageView.image = chosenImage
             self.videoUrl = nil
+            self.nextButton.enabled = self.isNextable
         default:
             DDLogHelper.debug("## ERROR: Unsupported Media Type: \(mediaType)")
         }
         
-        nextButton.enabled = self.isNextable
         picker.dismissViewControllerAnimated(true, completion: nil)
     }
 }

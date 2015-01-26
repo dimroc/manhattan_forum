@@ -7,6 +7,7 @@ target 'ManhattanForum' do
   pod 'Bolts'
   pod 'CocoaLumberjack', git: 'git@github.com:dimroc/CocoaLumberjack.git'
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'MPMoviePlayerController+XCDOverlayView', '~> 1.0.0'
   pod 'NSDate+TimeAgo'
   pod 'PaperTrailLumberjack', git: 'https://bitbucket.org/luisrecuenco/papertraillumberjack.git'
   pod 'Parse'
@@ -20,10 +21,10 @@ target 'ManhattanForumTests' do
   pod 'AFNetworking', '~> 2.0'
   pod 'Bolts'
   pod 'MBProgressHUD', '~> 0.8'
+  pod 'MPMoviePlayerController+XCDOverlayView', '~> 1.0.0'
   pod 'NSDate+TimeAgo'
   pod 'Parse'
   pod 'ParseFacebookUtils'
   pod 'RNCryptor'
   pod 'UIColor+Hex'
 end
-

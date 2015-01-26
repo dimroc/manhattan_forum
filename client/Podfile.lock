@@ -33,6 +33,7 @@ PODS:
   - Facebook-iOS-SDK (3.21.1):
     - Bolts (~> 1.0)
   - MBProgressHUD (0.9)
+  - MPMoviePlayerController+XCDOverlayView (1.0.0)
   - NSDate+TimeAgo (1.0.3)
   - PaperTrailLumberjack (0.1.0):
     - CocoaAsyncSocket
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - Bolts
   - CocoaLumberjack (from `git@github.com:dimroc/CocoaLumberjack.git`)
   - MBProgressHUD (~> 0.8)
+  - MPMoviePlayerController+XCDOverlayView (~> 1.0.0)
   - NSDate+TimeAgo
   - PaperTrailLumberjack (from `https://bitbucket.org/luisrecuenco/papertraillumberjack.git`)
   - Parse
@@ -84,6 +86,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 04c5b9b7479dd4276a09700fcd6644423ea1751c
   Facebook-iOS-SDK: 18c26e86ab25c17854a2ee2a8f60562099c6600f
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  MPMoviePlayerController+XCDOverlayView: dd3ed8d7747a4dd1615a8f3e2656ae148b702f7b
   NSDate+TimeAgo: f3533e0198fab05b716368b19f8c2185d53d6f3b
   PaperTrailLumberjack: 4e28ca9ae876c592be43e9ae3167f449cc9060bd
   Parse: b0ec7666167e212edb6fc94f60ba170248bd1869
