@@ -658,6 +658,7 @@
 				INFOPLIST_FILE = ManhattanForum/Info.debug.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = ManhattanForum;
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -677,6 +678,7 @@
 				INFOPLIST_FILE = ManhattanForum/Info.release.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				PRODUCT_NAME = ManhattanForum;
 				SWIFT_OBJC_BRIDGING_HEADER = "ManhattanForum/ManhattanForum-Bridging-Header.h";
 			};

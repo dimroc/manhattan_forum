@@ -26,6 +26,9 @@ class Credentials {
             pathForResource = "Credentials.release"
         #endif
         
+        assert(pathForResource != "", "Path for Resource cannot be empty.")
+        NSLog("Initializing credentials with \(pathForResource)")
+
         let resource = NSBundle.mainBundle().pathForResource(pathForResource, ofType: "plist")
         assert(resource != nil, "Resource cannot be empty. Did you create your credentials file?")
         credentials = NSDictionary(contentsOfFile: resource!)!
