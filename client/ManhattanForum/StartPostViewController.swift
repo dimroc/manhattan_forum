@@ -42,9 +42,10 @@ class StartPostViewController: UIViewController, UIImagePickerControllerDelegate
                 self.textPlaceHolder.text = "Share \(location.description)"
                 self.nextButton.enabled = self.isNextable
                 self.location = location
+                self.showCameraActionSheet(self)
             } else {
                 DDLogHelper.debug(task.error.description)
-                
+
                 self.presentViewController(
                     UIAlertControllerFactory.ok("Error with Location", message: "Unable to get neighborhood!\n\(task.error.localizedDescription)\nPlease close post and try again later."),
                     animated: true,
@@ -53,12 +54,10 @@ class StartPostViewController: UIViewController, UIImagePickerControllerDelegate
             
             return nil
         })
-        
-        showCameraActionSheet(self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier! == "FinishPostSegue") {
+        if (segue.identifier? == "FinishPostSegue") {
             let viewController: FinishPostViewController = segue.destinationViewController as FinishPostViewController
             viewController.startedPost = self
         }
@@ -82,7 +81,9 @@ class StartPostViewController: UIViewController, UIImagePickerControllerDelegate
 
         alertController.addAction(takePhotoAction)
         alertController.addAction(takeVideoAction)
-        alertController.addAction(chooseFromLibraryAction)
+        #if DEBUG
+            alertController.addAction(chooseFromLibraryAction)
+        #endif
         alertController.addAction(cancelAction)
         
         self.presentViewController(alertController, animated: true, completion: nil)
