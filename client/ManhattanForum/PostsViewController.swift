@@ -1,5 +1,5 @@
 //
-//  TopicsViewController.swift
+//  PostsViewController.swift
 //  ManhattanForum
 //
 //  Created by Dimitri Roche on 8/19/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopicsViewController: UITableViewController {
+class PostsViewController: UITableViewController {
     var cellHeights = [String: CGFloat]()
 
     class var TopicsViewRefreshNotificationKey: String! {
@@ -18,6 +18,10 @@ class TopicsViewController: UITableViewController {
     class var PostMoviePlaybackNotificationKey: String! {
         get { return "PostMoviePlaybackNotificationKey" }
     }
+    
+    class var PostFilterNotificationKey: String! {
+        get { return "PostFilterNotificationKey" }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +29,17 @@ class TopicsViewController: UITableViewController {
 
         registerNibCell("PostCell")
         registerNibCell("RefreshPreviousCell")
+        
+        self.navigationItem.title = "NYC"
 
         let postDataSource = self.tableView.dataSource as PostDataSource
+        postDataSource.postFilter = PostFilter.mappedFilters("NYC")
         postDataSource.refreshFromLocal()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshPrevious", name: TopicsViewController.TopicsViewRefreshNotificationKey, object: nil)
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshPrevious", name: PostsViewController.TopicsViewRefreshNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh:", name: PostRepository.PostCreatedNotificationKey, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "presentMovie:", name: TopicsViewController.PostMoviePlaybackNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "presentMovie:", name: PostsViewController.PostMoviePlaybackNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "filterPosts:", name: PostsViewController.PostFilterNotificationKey, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,6 +68,13 @@ class TopicsViewController: UITableViewController {
         
         let overlayView:UIView! = UIView()
         moviePlayer.moviePlayer.overlayView_xcd = overlayView;
+    }
+    
+    func filterPosts(notification: NSNotification) {
+        let postFilter = notification.object as PostFilter
+        let postDataSource = self.tableView.dataSource as PostDataSource
+        postDataSource.postFilter = postFilter
+        refresh(self)
     }
 
     func refreshPrevious() {

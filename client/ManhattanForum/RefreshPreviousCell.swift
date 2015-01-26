@@ -11,6 +11,6 @@ import Foundation
 class RefreshPreviousCell: UITableViewCell {
     @IBAction func notifyRefresh(sender: UIButton) {
         DDLogHelper.debug("Loading previous posts");
-        NSNotificationCenter.defaultCenter().postNotificationName(TopicsViewController.TopicsViewRefreshNotificationKey, object: self)
+        NSNotificationCenter.defaultCenter().postNotificationName(PostsViewController.TopicsViewRefreshNotificationKey, object: self)
     }
 }

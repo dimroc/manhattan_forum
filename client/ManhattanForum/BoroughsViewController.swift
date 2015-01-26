@@ -19,7 +19,14 @@ class BoroughsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)
+        let textLabel = cell!.contentView.subviews[0] as UILabel
+        NSLog("Selected Filter: \(textLabel.text)")
 
-
+        NSNotificationCenter.defaultCenter().postNotificationName(PostsViewController.PostFilterNotificationKey, object: PostFilter.mappedFilters(textLabel.text))
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 

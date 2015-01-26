@@ -11,12 +11,13 @@ import UIKit
 
 class PostDataSource: NSObject, UITableViewDataSource {
     var posts: Array<Post> = []
+    var postFilter: PostFilter = PostFilter.empty()
     var limit: Int {
         get { return 20 }
     }
 
     func refreshFromLocal() {
-        self.posts = self.buildPostsFromLocalStore()
+        self.posts = self.buildPostsFromLocalStore(currentQuery())
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -76,21 +77,18 @@ class PostDataSource: NSObject, UITableViewDataSource {
             
             if(newPosts.count > 0 ) {
                 let success: Bool = Post.pinAll(newPosts, withName: "Posts")
-                if(success) {
-                    self.posts = self.buildPostsFromLocalStore()
-                } else {
+                if(!success) {
                     DDLogHelper.debug("FAILED TO PIN OBJECTS")
                 }
             }
-            
+
+            self.posts = self.buildPostsFromLocalStore(self.currentQuery())
             return nil
         })
     }
     
-    private func buildPostsFromLocalStore() -> Array<Post> {
-        let query = defaultQuery()
+    private func buildPostsFromLocalStore(query: PFQuery) -> Array<Post> {
         query.fromPinWithName("Posts")
-        
         let objects = query.findObjects()
         DDLogHelper.debug("Built \(objects.count) posts from local data store")
         return objects as Array<Post>
@@ -99,7 +97,7 @@ class PostDataSource: NSObject, UITableViewDataSource {
     private func retrieveAsync() -> BFTask! {
         let lastBuild = self.posts.first
         DDLogHelper.debug("Retrieving remotely everything after \(lastBuild?.createdAt) with last build: \(lastBuild)")
-        let query = defaultQuery()
+        let query = currentQuery()
         query.limit = limit
 
         if (lastBuild != nil) {
@@ -122,13 +120,16 @@ class PostDataSource: NSObject, UITableViewDataSource {
             query.orderByAscending("createdAt")
         }
 
+        self.postFilter.assignToQuery(query)
         query.limit = limit
         return query.findObjectsInBackground()
     }
     
-    private func defaultQuery() -> PFQuery {
+    private func currentQuery() -> PFQuery {
         let query = Post.query()
         query.orderByDescending("createdAt")
+        self.postFilter.assignToQuery(query)
+
         return query
     }
 }

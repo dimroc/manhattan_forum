@@ -20,7 +20,7 @@ class PostCell: UITableViewCell {
     @IBAction func segueToPostViewController(sender: UIButton) {
         if(post?.type == "video") {
             DDLogHelper.debug("Playing Video for post \(post!)")
-            NSNotificationCenter.defaultCenter().postNotificationName(TopicsViewController.PostMoviePlaybackNotificationKey, object: post!)
+            NSNotificationCenter.defaultCenter().postNotificationName(PostsViewController.PostMoviePlaybackNotificationKey, object: post!)
         }
     }
     

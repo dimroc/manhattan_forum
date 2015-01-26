@@ -22,6 +22,7 @@
 		5E6C92E81A59E27A003E1921 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C92E71A59E27A003E1921 /* Post.swift */; };
 		5E6C92EA1A59E7DF003E1921 /* Papertrail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C92E91A59E7DF003E1921 /* Papertrail.swift */; };
 		5E6C92EE1A59F3B6003E1921 /* DDLogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */; };
+		5E825FCF1A76F5BB008197D6 /* PostFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FCE1A76F5BB008197D6 /* PostFilter.swift */; };
 		5E9687211A58BB40008BE878 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9687201A58BB40008BE878 /* PostCell.xib */; };
 		5E9687241A58BC86008BE878 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687231A58BC86008BE878 /* PostCell.swift */; };
 		5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687251A5994C6008BE878 /* PostDataSource.swift */; };
@@ -39,7 +40,7 @@
 		5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */; };
 		5E9C159119CF025800F6EBAA /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */; };
 		5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158419CF025800F6EBAA /* ParseHelper.swift */; };
-		5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158519CF025800F6EBAA /* TopicsViewController.swift */; };
+		5E9C159319CF025800F6EBAA /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C158519CF025800F6EBAA /* PostsViewController.swift */; };
 		5E9C159E19CF057000F6EBAA /* MFLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */; };
 		5E9C159F19CF057000F6EBAA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C159D19CF057000F6EBAA /* TestHelper.swift */; };
 		5E9C15A119CF058300F6EBAA /* geocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C15A019CF058300F6EBAA /* geocodeResponse.json */; };
@@ -83,6 +84,7 @@
 		5E6C92E71A59E27A003E1921 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5E6C92E91A59E7DF003E1921 /* Papertrail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Papertrail.swift; sourceTree = "<group>"; };
 		5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLogHelper.swift; sourceTree = "<group>"; };
+		5E825FCE1A76F5BB008197D6 /* PostFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFilter.swift; sourceTree = "<group>"; };
 		5E9687201A58BB40008BE878 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		5E9687231A58BC86008BE878 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5E9687251A5994C6008BE878 /* PostDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
@@ -100,7 +102,7 @@
 		5E9C158219CF025800F6EBAA /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		5E9C158319CF025800F6EBAA /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		5E9C158419CF025800F6EBAA /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
-		5E9C158519CF025800F6EBAA /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		5E9C158519CF025800F6EBAA /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		5E9C159919CF034C00F6EBAA /* ManhattanForum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ManhattanForum-Bridging-Header.h"; sourceTree = "<group>"; };
 		5E9C159C19CF057000F6EBAA /* MFLocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFLocationTests.swift; sourceTree = "<group>"; };
 		5E9C159D19CF057000F6EBAA /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
@@ -236,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9C157719CF025800F6EBAA /* BoroughsViewController.swift */,
-				5E9C158519CF025800F6EBAA /* TopicsViewController.swift */,
+				5E9C158519CF025800F6EBAA /* PostsViewController.swift */,
 				5E9C157819CF025800F6EBAA /* StartPostViewController.swift */,
 				5EB507851A7144A600F97441 /* FinishPostViewController.swift */,
 			);
@@ -268,6 +270,7 @@
 			children = (
 				5E9C158119CF025800F6EBAA /* MFLocation.swift */,
 				5E6C92E71A59E27A003E1921 /* Post.swift */,
+				5E825FCE1A76F5BB008197D6 /* PostFilter.swift */,
 				5E9687251A5994C6008BE878 /* PostDataSource.swift */,
 				5E193D071A28EC450033EAAE /* PostRepository.swift */,
 			);
@@ -503,7 +506,8 @@
 				5EF68AE51A684B770000E13D /* RefreshPreviousCell.swift in Sources */,
 				5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */,
 				5E9C158719CF025800F6EBAA /* StartPostViewController.swift in Sources */,
-				5E9C159319CF025800F6EBAA /* TopicsViewController.swift in Sources */,
+				5E825FCF1A76F5BB008197D6 /* PostFilter.swift in Sources */,
+				5E9C159319CF025800F6EBAA /* PostsViewController.swift in Sources */,
 				5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */,
 				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
 				5E6C92EA1A59E7DF003E1921 /* Papertrail.swift in Sources */,
