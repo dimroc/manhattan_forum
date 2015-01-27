@@ -8,17 +8,33 @@
 
 import UIKit
 
-class FeedbackViewController: UITableViewController {
+class FeedbackViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var selectPictureButton: UIButton!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var sendFeedbackButton: UIButton!
+    
+    var isSendable: Bool {
+        get { return countElements(messageTextView.text) > 0 && messageTextView.text != "Enter Message" }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.sendFeedbackButton.enabled = self.isSendable
     }
     
     @IBAction func sendFeedback(sender: AnyObject) {
-        DDLogHelper.debug("Sending Feedback!")
+        let feedback = Feedback()
+        feedback.email = emailTextField.text
+        feedback.message = messageTextView.text
+        
+        DDLogHelper.debug("Sending Feedback: \(feedback)")
+        feedback.saveEventually()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName(PostsViewController.ThankFeedbackNotificationKey, object: nil)
+    }
+
+    func textViewDidChange(textView: UITextView) {
+        self.sendFeedbackButton.enabled = self.isSendable
     }
 }

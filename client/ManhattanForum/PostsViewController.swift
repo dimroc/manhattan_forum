@@ -22,6 +22,10 @@ class PostsViewController: UITableViewController {
     class var PostFilterNotificationKey: String! {
         get { return "PostFilterNotificationKey" }
     }
+    
+    class var ThankFeedbackNotificationKey: String! {
+        get { return "ThankFeedbackNotificationKey" }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +43,7 @@ class PostsViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh:", name: PostRepository.PostCreatedNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "presentMovie:", name: PostsViewController.PostMoviePlaybackNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "filterPosts:", name: PostsViewController.PostFilterNotificationKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "thankFeedback", name: PostsViewController.ThankFeedbackNotificationKey, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +81,15 @@ class PostsViewController: UITableViewController {
         NSLog("Post filter name: \(postFilter.name)")
         self.navigationItem.title = postFilter.name
         refresh(self)
+    }
+    
+    func thankFeedback() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.presentViewController(
+                UIAlertControllerFactory.ok("Thanks for the feedback", message: "All feedback is welcome!"),
+                animated: true,
+                completion: nil)
+        })
     }
 
     func refreshPrevious() {

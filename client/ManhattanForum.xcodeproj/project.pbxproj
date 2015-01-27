@@ -24,6 +24,7 @@
 		5E6C92EE1A59F3B6003E1921 /* DDLogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */; };
 		5E825FCF1A76F5BB008197D6 /* PostFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FCE1A76F5BB008197D6 /* PostFilter.swift */; };
 		5E825FD11A7710DB008197D6 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FD01A7710DB008197D6 /* FeedbackViewController.swift */; };
+		5E825FD31A77C0A1008197D6 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FD21A77C0A1008197D6 /* Feedback.swift */; };
 		5E9687211A58BB40008BE878 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9687201A58BB40008BE878 /* PostCell.xib */; };
 		5E9687241A58BC86008BE878 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687231A58BC86008BE878 /* PostCell.swift */; };
 		5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687251A5994C6008BE878 /* PostDataSource.swift */; };
@@ -87,6 +88,7 @@
 		5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDLogHelper.swift; sourceTree = "<group>"; };
 		5E825FCE1A76F5BB008197D6 /* PostFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFilter.swift; sourceTree = "<group>"; };
 		5E825FD01A7710DB008197D6 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		5E825FD21A77C0A1008197D6 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		5E9687201A58BB40008BE878 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		5E9687231A58BC86008BE878 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5E9687251A5994C6008BE878 /* PostDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		5E9C159619CF028F00F6EBAA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5E825FD21A77C0A1008197D6 /* Feedback.swift */,
 				5E9C158119CF025800F6EBAA /* MFLocation.swift */,
 				5E6C92E71A59E27A003E1921 /* Post.swift */,
 				5E825FCE1A76F5BB008197D6 /* PostFilter.swift */,
@@ -532,6 +535,7 @@
 				5ED5E9AA1A3899DF009F24ED /* UIImage+Crop.m in Sources */,
 				5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */,
 				5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */,
+				5E825FD31A77C0A1008197D6 /* Feedback.swift in Sources */,
 				5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
