@@ -15,6 +15,7 @@
 #import "UIColor+Hex.h"
 #import "NSDate+TimeAgo.h"
 #import "MPMoviePlayerController+XCDOverlayView/MPMoviePlayerController+XCDOverlayView.h"
+#import "SZTextView.h"
 
 #import "CocoaLumberjack.h"
 #import "RMPaperTrailLogger.h"

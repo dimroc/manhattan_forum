@@ -14,6 +14,7 @@ target 'ManhattanForum' do
   pod 'ParseCrashReporting'
   pod 'ParseFacebookUtils'
   pod 'RNCryptor'
+  pod 'SZTextView'
   pod 'UIColor+Hex'
 end
 
@@ -26,5 +27,6 @@ target 'ManhattanForumTests' do
   pod 'Parse'
   pod 'ParseFacebookUtils'
   pod 'RNCryptor'
+  pod 'SZTextView'
   pod 'UIColor+Hex'
 end

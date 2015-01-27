@@ -11,16 +11,19 @@ import UIKit
 class FeedbackViewController: UITableViewController, UITextViewDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var selectPictureButton: UIButton!
-    @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var messageTextView: SZTextView!
     @IBOutlet weak var sendFeedbackButton: UIButton!
     
     var isSendable: Bool {
-        get { return countElements(messageTextView.text) > 0 && messageTextView.text != "Enter Message" }
+        get { return countElements(messageTextView.text) > 0 }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sendFeedbackButton.enabled = self.isSendable
+
+        messageTextView.placeholder = "Enter feedback here"
+        messageTextView.placeholderTextColor = UIColor.grayColor()
     }
     
     @IBAction func sendFeedback(sender: AnyObject) {
