@@ -94,7 +94,8 @@ class StartPostViewController: UIViewController, UIImagePickerControllerDelegate
             let picker = UIImagePickerController()
             picker.delegate = self;
             picker.allowsEditing = true;
-            picker.videoMaximumDuration = 15.0;
+            picker.videoMaximumDuration = 20.0;
+            picker.videoQuality = UIImagePickerControllerQualityType.TypeMedium
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.mediaTypes = [kUTTypeMovie]
             presentViewController(picker, animated: true, completion: nil)
