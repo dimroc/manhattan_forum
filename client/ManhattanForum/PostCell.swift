@@ -13,7 +13,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageButton: UIButton!
-    @IBOutlet weak var playImage: UIImageView!
+    @IBOutlet weak var playButton: UIButton!
 
     var post:Post? = nil
 
@@ -34,7 +34,7 @@ class PostCell: UITableViewCell {
         //self.messageLabel.textColor = safeColor(post)
         self.dateLabel.text = "\(post.createdAt.timeAgo()) \(timeFormatter.stringFromDate(post.createdAt))"
         self.locationLabel.text = post.neighborhoodDescription
-        self.playImage.hidden = true
+        self.playButton.hidden = true
         self.imageButton.setImage(UIImage(named: "imageLoadingPlaceholder"), forState: UIControlState.Normal)
 
         self.selectionStyle = UITableViewCellSelectionStyle.None;
@@ -64,7 +64,7 @@ class PostCell: UITableViewCell {
     }
     
     func prepareVideo(post: Post!) {
-        self.playImage.hidden = false
+        self.playButton.hidden = false
     }
     
     func safeColor(post: Post!) -> UIColor {
