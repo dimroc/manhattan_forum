@@ -8,15 +8,11 @@
 
 import UIKit
 
-class PostsViewController: UITableViewController {
+class PostsViewController: UITableViewController, PostHandable {
     var cellHeights = [String: CGFloat]()
 
     class var TopicsViewRefreshNotificationKey: String! {
         get { return "TopicsViewRefreshNotificationKey" }
-    }
-    
-    class var PostMoviePlaybackNotificationKey: String! {
-        get { return "PostMoviePlaybackNotificationKey" }
     }
     
     class var PostFilterNotificationKey: String! {
@@ -36,12 +32,12 @@ class PostsViewController: UITableViewController {
         
         let postDataSource = self.tableView.dataSource as PostDataSource
         self.navigationItem.title = "NYC"
+        postDataSource.postHandler = self
         postDataSource.postFilter = PostFilter.mappedFilters("NYC")
         postDataSource.refreshFromLocal()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshPrevious", name: PostsViewController.TopicsViewRefreshNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "refresh:", name: PostRepository.PostCreatedNotificationKey, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "presentMovie:", name: PostsViewController.PostMoviePlaybackNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "filterPosts:", name: PostsViewController.PostFilterNotificationKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "thankFeedback", name: PostsViewController.ThankFeedbackNotificationKey, object: nil)
     }
@@ -65,8 +61,7 @@ class PostsViewController: UITableViewController {
         handleRefresh(postDataSource.refresh())
     }
     
-    func presentMovie(notification: NSNotification) {
-        let post = notification.object as Post
+    func playPostVideo(post: Post!) {
         let moviePlayer = MPMoviePlayerViewController(contentURL: NSURL(string: post.video.url))
         self.presentMoviePlayerViewControllerAnimated(moviePlayer)
         

@@ -12,6 +12,7 @@ import UIKit
 class PostDataSource: NSObject, UITableViewDataSource {
     var posts: Array<Post> = []
     var postFilter: PostFilter = PostFilter.empty()
+    var postHandler: PostHandable? = nil
     var limit: Int {
         get { return 20 }
     }
@@ -57,7 +58,7 @@ class PostDataSource: NSObject, UITableViewDataSource {
         } else {
             let cellIdentifier = "PostCell"
             let cell: PostCell! = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as PostCell
-            cell.populateFromPost(self.posts[indexPath.row])
+            cell.populateFromPost(self.posts[indexPath.row], delegate: self.postHandler)
             return cell
         }
     }

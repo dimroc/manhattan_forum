@@ -13,9 +13,9 @@ class FeedbackViewController: UITableViewController, UITextViewDelegate, UIImage
     @IBOutlet weak var selectPictureButton: UIButton!
     @IBOutlet weak var messageTextView: SZTextView!
     @IBOutlet weak var sendFeedbackButton: UIButton!
-    
+
     var currentImage: UIImage? = nil
-    
+
     var isSendable: Bool {
         get { return countElements(messageTextView.text) > 0 }
     }
@@ -85,7 +85,7 @@ class FeedbackViewController: UITableViewController, UITextViewDelegate, UIImage
             }
             
             self.currentImage = chosenImage
-            self.selectPictureButton.titleLabel?.text = "Change"
+            self.selectPictureButton.setTitle("Change", forState: UIControlState.Normal)
         default:
             DDLogHelper.debug("## ERROR: Unsupported Media Type: \(mediaType)")
         }

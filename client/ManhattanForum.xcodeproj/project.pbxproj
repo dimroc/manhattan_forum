@@ -25,6 +25,10 @@
 		5E825FCF1A76F5BB008197D6 /* PostFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FCE1A76F5BB008197D6 /* PostFilter.swift */; };
 		5E825FD11A7710DB008197D6 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FD01A7710DB008197D6 /* FeedbackViewController.swift */; };
 		5E825FD31A77C0A1008197D6 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E825FD21A77C0A1008197D6 /* Feedback.swift */; };
+		5E826E841A7D9FAA0050EB46 /* PostCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E826E831A7D9FAA0050EB46 /* PostCommentsViewController.swift */; };
+		5E826E861A7DA6190050EB46 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E826E851A7DA6190050EB46 /* CommentCell.xib */; };
+		5E826E881A7DA6EE0050EB46 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E826E871A7DA6EE0050EB46 /* CommentCell.swift */; };
+		5E826E8A1A7DAB4D0050EB46 /* PostHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E826E891A7DAB4D0050EB46 /* PostHandable.swift */; };
 		5E9687211A58BB40008BE878 /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9687201A58BB40008BE878 /* PostCell.xib */; };
 		5E9687241A58BC86008BE878 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687231A58BC86008BE878 /* PostCell.swift */; };
 		5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9687251A5994C6008BE878 /* PostDataSource.swift */; };
@@ -89,6 +93,10 @@
 		5E825FCE1A76F5BB008197D6 /* PostFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFilter.swift; sourceTree = "<group>"; };
 		5E825FD01A7710DB008197D6 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		5E825FD21A77C0A1008197D6 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		5E826E831A7D9FAA0050EB46 /* PostCommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentsViewController.swift; sourceTree = "<group>"; };
+		5E826E851A7DA6190050EB46 /* CommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		5E826E871A7DA6EE0050EB46 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		5E826E891A7DAB4D0050EB46 /* PostHandable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHandable.swift; sourceTree = "<group>"; };
 		5E9687201A58BB40008BE878 /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
 		5E9687231A58BC86008BE878 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5E9687251A5994C6008BE878 /* PostDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDataSource.swift; sourceTree = "<group>"; };
@@ -232,6 +240,7 @@
 		5E9687221A58BC67008BE878 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E826E871A7DA6EE0050EB46 /* CommentCell.swift */,
 				5E9687231A58BC86008BE878 /* PostCell.swift */,
 				5EF68AE41A684B770000E13D /* RefreshPreviousCell.swift */,
 			);
@@ -246,6 +255,7 @@
 				5E9C157819CF025800F6EBAA /* StartPostViewController.swift */,
 				5EB507851A7144A600F97441 /* FinishPostViewController.swift */,
 				5E825FD01A7710DB008197D6 /* FeedbackViewController.swift */,
+				5E826E831A7D9FAA0050EB46 /* PostCommentsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -266,6 +276,7 @@
 				5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */,
 				5E6C92E91A59E7DF003E1921 /* Papertrail.swift */,
 				5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */,
+				5E826E891A7DAB4D0050EB46 /* PostHandable.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -294,6 +305,7 @@
 				5E0C3D9919CEFE0C008E2726 /* LaunchScreen.xib */,
 				5E9687201A58BB40008BE878 /* PostCell.xib */,
 				5EF68AE21A6849770000E13D /* RefreshPreviousCell.xib */,
+				5E826E851A7DA6190050EB46 /* CommentCell.xib */,
 			);
 			name = "User Interface";
 			sourceTree = "<group>";
@@ -409,6 +421,7 @@
 				5E0C3D9619CEFE0C008E2726 /* Main.storyboard in Resources */,
 				5E9C159019CF025800F6EBAA /* OpenSans-Bold.ttf in Resources */,
 				5E9687211A58BB40008BE878 /* PostCell.xib in Resources */,
+				5E826E861A7DA6190050EB46 /* CommentCell.xib in Resources */,
 				5E9C159119CF025800F6EBAA /* OpenSans-Regular.ttf in Resources */,
 				5E0C3D9B19CEFE0C008E2726 /* LaunchScreen.xib in Resources */,
 				5E9C158919CF025800F6EBAA /* Credentials.example.plist in Resources */,
@@ -513,6 +526,8 @@
 				5E9687261A5994C6008BE878 /* PostDataSource.swift in Sources */,
 				5E9C158719CF025800F6EBAA /* StartPostViewController.swift in Sources */,
 				5E825FCF1A76F5BB008197D6 /* PostFilter.swift in Sources */,
+				5E826E841A7D9FAA0050EB46 /* PostCommentsViewController.swift in Sources */,
+				5E826E881A7DA6EE0050EB46 /* CommentCell.swift in Sources */,
 				5E9C159319CF025800F6EBAA /* PostsViewController.swift in Sources */,
 				5E9A29B31A2CA74500F6AC9A /* BFTask.swift in Sources */,
 				5E9C158A19CF025800F6EBAA /* Credentials.swift in Sources */,
@@ -523,6 +538,7 @@
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
 				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
+				5E826E8A1A7DAB4D0050EB46 /* PostHandable.swift in Sources */,
 				5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */,
 				5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */,
 				5E9C158F19CF025800F6EBAA /* MFLocation.swift in Sources */,

@@ -10,30 +10,32 @@ import Foundation
 
 class PostCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
 
-    var post:Post? = nil
+    var post: Post? = nil
+    var delegate: PostHandable? = nil
 
     @IBAction func segueToPostViewController(sender: UIButton) {
-        if(post?.type == "video") {
+        if(post!.type == "video") {
             DDLogHelper.debug("Playing Video for post \(post!)")
-            NSNotificationCenter.defaultCenter().postNotificationName(PostsViewController.PostMoviePlaybackNotificationKey, object: post!)
+            self.delegate?.playPostVideo(post)
         }
     }
     
-    func populateFromPost(post: Post!) {
+    func populateFromPost(post: Post!, delegate: PostHandable?) {
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateFormat = "h:mm a"
         timeFormatter.timeZone = NSTimeZone(name: "EST")
 
         self.post = post
+        self.delegate = delegate
         self.messageLabel.text = post.message
         //self.messageLabel.textColor = safeColor(post)
         self.dateLabel.text = "\(post.createdAt.timeAgo()) \(timeFormatter.stringFromDate(post.createdAt))"
-        self.locationLabel.text = post.neighborhoodDescription
+        self.locationButton.setTitle(post.neighborhoodDescription, forState: UIControlState.Normal)
         self.playButton.hidden = true
         self.imageButton.setImage(UIImage(named: "imageLoadingPlaceholder"), forState: UIControlState.Normal)
 

@@ -279,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="362" y="-127"/>
         </scene>
-        <!--Topic Comments-->
+        <!--Post Comments-->
         <scene sceneID="Ybu-5v-VCb">
             <objects>
-                <tableViewController id="Vvu-Hf-aoD" sceneMemberID="viewController">
+                <tableViewController id="Vvu-Hf-aoD" userLabel="Post Comments" customClass="PostCommentsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kU7-8o-ft1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +301,7 @@
                             <outlet property="delegate" destination="Vvu-Hf-aoD" id="lBU-Zk-hRh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Topic Comments" id="Ks4-je-bdV"/>
+                    <navigationItem key="navigationItem" title="Comments" id="Ks4-je-bdV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK5-B1-cIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
