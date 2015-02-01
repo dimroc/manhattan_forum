@@ -29,7 +29,7 @@ class PostDataSource: NSObject, UITableViewDataSource {
             let messageLabel = UILabel(frame: CGRectMake(0, 0, tableView.bounds.size.width, tableView.bounds.size.height))
 
             messageLabel.text = "No posts!\nPlease pull down to refresh.";
-            messageLabel.textColor = UIColor.blackColor();
+            messageLabel.textColor = UIColor.whiteColor();
             messageLabel.numberOfLines = 0;
             messageLabel.textAlignment = NSTextAlignment.Center;
             messageLabel.font = UIFont(name: "OpenSans-Regular", size: 16)

@@ -1,5 +1,5 @@
 //
-//  PostDetailsViewController.swift
+//  PostCommentsViewController.swift
 //  ManhattanForum
 //
 //  Created by Dimitri Roche on 1/31/15.
@@ -9,13 +9,23 @@
 import Foundation
 import UIKit
 
-class PostDetailsViewController: UITableViewController {
+class PostCommentsViewController: UITableViewController {
     var cellHeights = [String: CGFloat]()
     var post: Post? = nil
 
     override func viewDidLoad() {
         registerNibCell("PostCell")
         registerNibCell("CommentCell")
+
+        // TODO: - http://stackoverflow.com/questions/13061251/how-to-add-a-toolbar-to-a-tableview-in-ios
+    }
+    
+    private func addToolbarBackupPlan() {
+        let frame: CGRect = CGRectMake(0, UIScreen.mainScreen().bounds.size.height - 44 - 44, UIScreen.mainScreen().bounds.size.width, 44)
+        let toolBar = UIToolbar(frame: frame)
+        toolBar.barStyle = UIBarStyle.Default;
+        toolBar.sizeToFit()
+        view.addSubview(toolBar)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,7 +63,7 @@ class PostDetailsViewController: UITableViewController {
     }
 }
 
-extension PostDetailsViewController: PostHandable {
+extension PostCommentsViewController: PostHandable {
     func playPostVideo(post: Post!) {
         presentMoviePlayerOverlay(NSURL(string: post.video.url)!)
     }

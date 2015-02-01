@@ -25,8 +25,7 @@ class PostCell: UITableViewCell {
         }
     }
     
-    @IBAction func showComments(sender: UIButton) {
-        DDLogHelper.debug("Showing comments for post \(post!.objectId)")
+    @IBAction func showDetails(sender: UIButton) {
         self.delegate?.showPostDetails(post)
     }
     

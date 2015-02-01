@@ -16,7 +16,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Dpm-JZ-Rdp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="shA-dO-gvu">
                                 <cells>
@@ -242,7 +242,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Vvu-Hf-aoD" kind="push" identifier="ShowPostDetailsSegue" id="6lx-ve-WJ5"/>
+                                    <segue destination="Vvu-Hf-aoD" kind="push" identifier="ShowPostDetailsSegue" id="5fT-Fv-fuu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -281,7 +281,7 @@
         <!--Post Comments-->
         <scene sceneID="Ybu-5v-VCb">
             <objects>
-                <tableViewController id="Vvu-Hf-aoD" userLabel="Post Comments" customClass="PostDetailsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Vvu-Hf-aoD" userLabel="Post Comments" customClass="PostCommentsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kU7-8o-ft1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,6 +315,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ddS-Yu-3Ui">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </toolbar>
                     <connections>
                         <segue destination="PUh-eJ-EnZ" kind="relationship" relationship="rootViewController" id="Hxw-aq-Et3"/>
                     </connections>
@@ -375,7 +379,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="j9c-nK-zzx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="Z8r-UI-Z1W">
                                 <cells>

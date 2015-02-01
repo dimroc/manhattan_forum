@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ParseHelper.launch(launchOptions)
         FontHelper.launch()
         Papertrail.launch()
+        AppearanceHelper.launch()
         return true
     }
 

@@ -39,7 +39,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="showComments:" destination="puE-yb-Nbu" eventType="touchUpInside" id="tlg-pl-l2Y"/>
+                            <action selector="showDetails:" destination="puE-yb-Nbu" eventType="touchUpInside" id="jtL-Tl-CIr"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-8i-7Jh" userLabel="Play Button">

@@ -17,6 +17,7 @@
 		5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D111A2CA3AB0033EAAE /* PFObject.swift */; };
 		5E1CB0351A3DEB120039C1BE /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */; };
 		5E3A29F51A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A29F41A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift */; };
+		5E3A29F71A7EAF58005D17D7 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A29F61A7EAF58005D17D7 /* AppearanceHelper.swift */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
@@ -86,6 +87,7 @@
 		5E193D111A2CA3AB0033EAAE /* PFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFObject.swift; sourceTree = "<group>"; };
 		5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		5E3A29F41A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+MPMoviePlayer.swift"; sourceTree = "<group>"; };
+		5E3A29F61A7EAF58005D17D7 /* AppearanceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */,
 				5E6C92E91A59E7DF003E1921 /* Papertrail.swift */,
 				5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */,
+				5E3A29F61A7EAF58005D17D7 /* AppearanceHelper.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				5EB507861A7144A600F97441 /* FinishPostViewController.swift in Sources */,
 				5E0C3D9119CEFE0C008E2726 /* AppDelegate.swift in Sources */,
 				5E193D081A28EC450033EAAE /* PostRepository.swift in Sources */,
+				5E3A29F71A7EAF58005D17D7 /* AppearanceHelper.swift in Sources */,
 				5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */,
 				5E9C158D19CF025800F6EBAA /* GoogleGeocoder.swift in Sources */,
 				5E826E8A1A7DAB4D0050EB46 /* PostHandable.swift in Sources */,

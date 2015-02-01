@@ -67,6 +67,7 @@ class PostsViewController: UITableViewController, PostHandable {
     }
     
     func showPostDetails(post: Post!) {
+        DDLogHelper.debug("Showing comments for post \(post!.objectId)")
         performSegueWithIdentifier("ShowPostDetailsSegue", sender: post)
     }
     
@@ -95,7 +96,7 @@ class PostsViewController: UITableViewController, PostHandable {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowPostDetailsSegue") {
-            let destination: PostDetailsViewController = segue.destinationViewController as PostDetailsViewController
+            let destination: PostCommentsViewController = segue.destinationViewController as PostCommentsViewController
             destination.post = sender as? Post
         }
     }
