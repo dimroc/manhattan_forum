@@ -228,14 +228,13 @@
             </objects>
             <point key="canvasLocation" x="1186" y="-898"/>
         </scene>
-        <!--Topics-->
+        <!--Posts-->
         <scene sceneID="dTL-qB-AUX">
             <objects>
-                <tableViewController id="PUh-eJ-EnZ" userLabel="Topics" customClass="PostsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="PUh-eJ-EnZ" userLabel="Posts" customClass="PostsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WZh-KA-h0C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="JsS-VE-2hg">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -252,7 +251,7 @@
                             <outlet property="delegate" destination="PUh-eJ-EnZ" id="nSW-fL-5Cw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Topics" id="iDh-La-eqh" userLabel="Topics">
+                    <navigationItem key="navigationItem" title="Posts" id="iDh-La-eqh" userLabel="Posts">
                         <barButtonItem key="leftBarButtonItem" image="lines" id="dIQ-EG-10a" userLabel="Menu">
                             <connections>
                                 <segue destination="9JZ-hK-vjS" kind="modal" id="sxD-dr-CgQ"/>
@@ -284,7 +283,7 @@
             <objects>
                 <tableViewController id="Vvu-Hf-aoD" userLabel="Post Comments" customClass="PostDetailsViewController" customModule="ManhattanForum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kU7-8o-ft1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -517,7 +516,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dTa-cU-nR6"/>
+        <segue reference="Hxw-aq-Et3"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
