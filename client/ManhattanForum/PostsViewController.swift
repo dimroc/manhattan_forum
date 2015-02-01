@@ -61,12 +61,13 @@ class PostsViewController: UITableViewController, PostHandable {
         handleRefresh(postDataSource.refresh())
     }
     
+    // MARK: - PostHandable Protocol
     func playPostVideo(post: Post!) {
-        let moviePlayer = MPMoviePlayerViewController(contentURL: NSURL(string: post.video.url))
-        self.presentMoviePlayerViewControllerAnimated(moviePlayer)
-        
-        let overlayView:UIView! = UIView()
-        moviePlayer.moviePlayer.overlayView_xcd = overlayView;
+        presentMoviePlayerOverlay(NSURL(string: post.video.url)!)
+    }
+    
+    func showPostDetails(post: Post!) {
+        performSegueWithIdentifier("ShowPostDetailsSegue", sender: post)
     }
     
     func filterPosts(notification: NSNotification) {
@@ -90,6 +91,13 @@ class PostsViewController: UITableViewController, PostHandable {
     func refreshPrevious() {
         let postDataSource = self.tableView.dataSource as PostDataSource
         handleRefresh(postDataSource.refreshPrevious())
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "ShowPostDetailsSegue") {
+            let destination: PostDetailsViewController = segue.destinationViewController as PostDetailsViewController
+            destination.post = sender as? Post
+        }
     }
 
     private func handleRefresh(task: BFTask!) {

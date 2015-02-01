@@ -38,6 +38,9 @@
                         <state key="normal" image="imageLoadingPlaceholder">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="showComments:" destination="puE-yb-Nbu" eventType="touchUpInside" id="tlg-pl-l2Y"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-8i-7Jh" userLabel="Play Button">
                         <rect key="frame" x="262" y="37" width="50" height="50"/>
@@ -45,7 +48,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="segueToPostViewController:" destination="puE-yb-Nbu" eventType="touchUpInside" id="q45-t8-uxk"/>
+                            <action selector="playMovie:" destination="puE-yb-Nbu" eventType="touchUpInside" id="vKw-Ns-uDK"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXV-qw-7G9" userLabel="Location Button">

@@ -10,4 +10,5 @@ import Foundation
 
 protocol PostHandable {
     func playPostVideo(post: Post!)
+    func showPostDetails(post: Post!)
 }

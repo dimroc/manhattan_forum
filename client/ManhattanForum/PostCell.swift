@@ -18,11 +18,16 @@ class PostCell: UITableViewCell {
     var post: Post? = nil
     var delegate: PostHandable? = nil
 
-    @IBAction func segueToPostViewController(sender: UIButton) {
+    @IBAction func playMovie(sender: UIButton) {
         if(post!.type == "video") {
-            DDLogHelper.debug("Playing Video for post \(post!)")
+            DDLogHelper.debug("Playing Video for post \(post!.objectId)")
             self.delegate?.playPostVideo(post)
         }
+    }
+    
+    @IBAction func showComments(sender: UIButton) {
+        DDLogHelper.debug("Showing comments for post \(post!.objectId)")
+        self.delegate?.showPostDetails(post)
     }
     
     func populateFromPost(post: Post!, delegate: PostHandable?) {
@@ -58,7 +63,7 @@ class PostCell: UITableViewCell {
             if(task.success) {
                 self.imageButton.setImage(UIImage(data: task.result as NSData!), forState: UIControlState.Normal)
             } else {
-                DDLogHelper.debug("Failed to retrieve image for post: \(post.description)")
+                DDLogHelper.debug("Failed to retrieve image for post: \(post)")
             }
             
             return nil

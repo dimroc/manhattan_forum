@@ -16,6 +16,7 @@
 		5E193D0C1A2985750033EAAE /* MFVideoAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D0B1A2985750033EAAE /* MFVideoAsset.m */; };
 		5E193D121A2CA3AB0033EAAE /* PFObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E193D111A2CA3AB0033EAAE /* PFObject.swift */; };
 		5E1CB0351A3DEB120039C1BE /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */; };
+		5E3A29F51A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3A29F41A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift */; };
 		5E3D147619D1A73C0001FB84 /* noHoodGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */; };
 		5E3D147819D1A9820001FB84 /* wrongKeysGeocodeResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */; };
 		5E5F023519E02BD10011E8E1 /* UIAlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */; };
@@ -84,6 +85,7 @@
 		5E193D0E1A2B3EBC0033EAAE /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/ManhattanForum-ekevinzlbwehjbdjpibmdbxqdqtm/Build/Products/Debug-iphoneos/PromiseKit.framework"; sourceTree = "<group>"; };
 		5E193D111A2CA3AB0033EAAE /* PFObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFObject.swift; sourceTree = "<group>"; };
 		5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		5E3A29F41A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+MPMoviePlayer.swift"; sourceTree = "<group>"; };
 		5E3D147519D1A73C0001FB84 /* noHoodGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noHoodGeocodeResponse.json; sourceTree = "<group>"; };
 		5E3D147719D1A9820001FB84 /* wrongKeysGeocodeResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wrongKeysGeocodeResponse.json; sourceTree = "<group>"; };
 		5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerFactory.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				5E0C3D9019CEFE0C008E2726 /* AppDelegate.swift */,
 				5E9687221A58BC67008BE878 /* Views */,
 				5E193D101A2CA05A0033EAAE /* Extensions */,
+				5E3A29F31A7E7430005D17D7 /* Protocols */,
 				5E9C159519CF028600F6EBAA /* Misc */,
 				5E9C159619CF028F00F6EBAA /* Models */,
 				5E9C159419CF026700F6EBAA /* Controllers */,
@@ -233,8 +236,19 @@
 			children = (
 				5E193D111A2CA3AB0033EAAE /* PFObject.swift */,
 				5E9A29B21A2CA74500F6AC9A /* BFTask.swift */,
+				5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */,
+				5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */,
+				5E3A29F41A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		5E3A29F31A7E7430005D17D7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5E826E891A7DAB4D0050EB46 /* PostHandable.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		5E9687221A58BC67008BE878 /* Views */ = {
@@ -271,12 +285,9 @@
 				5E5F023419E02BD10011E8E1 /* UIAlertControllerFactory.swift */,
 				5E193D0B1A2985750033EAAE /* MFVideoAsset.m */,
 				5E193D0D1A2985900033EAAE /* MFVideoAsset.h */,
-				5ED5E9A81A3899DF009F24ED /* UIImage+Crop.h */,
-				5ED5E9A91A3899DF009F24ED /* UIImage+Crop.m */,
 				5E1CB0341A3DEB120039C1BE /* ColorPalette.swift */,
 				5E6C92E91A59E7DF003E1921 /* Papertrail.swift */,
 				5E6C92ED1A59F3B6003E1921 /* DDLogHelper.swift */,
-				5E826E891A7DAB4D0050EB46 /* PostHandable.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -552,6 +563,7 @@
 				5E9C159219CF025800F6EBAA /* ParseHelper.swift in Sources */,
 				5E9C158619CF025800F6EBAA /* BoroughsViewController.swift in Sources */,
 				5E825FD31A77C0A1008197D6 /* Feedback.swift in Sources */,
+				5E3A29F51A7E9B8B005D17D7 /* UITableViewController+MPMoviePlayer.swift in Sources */,
 				5E9C158E19CF025800F6EBAA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
