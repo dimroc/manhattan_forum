@@ -67,8 +67,9 @@ class PostsViewController: UITableViewController, PostHandable {
     }
     
     func showPostDetails(post: Post!) {
-        DDLogHelper.debug("Showing comments for post \(post!.objectId)")
-        performSegueWithIdentifier("ShowPostDetailsSegue", sender: post)
+        // Disable the display of comments. Not worth it atm.
+        // DDLogHelper.debug("Showing comments for post \(post!.objectId)")
+        // performSegueWithIdentifier("ShowPostDetailsSegue", sender: post)
     }
     
     func filterPosts(notification: NSNotification) {
